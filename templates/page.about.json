@@ -1,0 +1,342 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "show_title": true,
+        "heading_font_size": "heading-large",
+        "show_content": true,
+        "text_font_size": "body-medium",
+        "align_text": "text-left",
+        "width": "wrapper",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "heading_tag": "automatic"
+      }
+    },
+    "section-double": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Crafting the Perfect Cup",
+            "padding_bottom": 16
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "About our Brand",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're more than a coffee brand—we're a community. We’re here to connect with fellow coffee lovers, share our passion, and explore the endless possibilities that coffee offers. From our local events and workshops to our online community, we’re all about bringing people together over a shared love of great coffee.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "is-reversed",
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "four-fifty-height-hero--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-10",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "section-announcement": {
+      "type": "section-announcement",
+      "blocks": {
+        "heading-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "The right roast for the right vibe.",
+            "heading_font_size": "heading-x-small"
+          }
+        }
+      },
+      "block_order": [
+        "heading-0"
+      ],
+      "settings": {
+        "slider_speed": 7,
+        "text_alignment": "center",
+        "marquee_speed": 100,
+        "direction": "ticker-rtl",
+        "message_spacing": 10,
+        "show_border": false,
+        "layout": "marquee",
+        "color_scheme": "scheme-11",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "section-multicolumn": {
+      "type": "section-multicolumn",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "column_width": 33,
+            "image_width": 80,
+            "image_aspect_ratio": 1.2,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "blob-three",
+            "title": "Quality Over Everything",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>From the moment our beans are hand-picked on sustainable farms, to the careful roasting process that brings out their unique flavors, every step is taken with precision and care. We believe that coffee should be fresh, flavorful, and ethically sourced, so you can feel good about every sip.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary hero__btn",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        },
+        "image-0": {
+          "type": "image",
+          "settings": {
+            "column_width": 33,
+            "image_width": 80,
+            "image_aspect_ratio": 1.2,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "blob-three",
+            "title": "Sustainability & Responsibility",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>We believe in doing good while making great coffee. That’s why we partner with farmers who practice sustainable agriculture, ensuring that our coffee is not only delicious but also responsibly sourced. We’re committed to reducing our environmental impact, from our eco-friendly packaging to our efforts to support the communities where our beans are grown.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary hero__btn",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        },
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "column_width": 33,
+            "image_width": 80,
+            "image_aspect_ratio": 1.2,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "blob-three",
+            "title": "A Community of Coffee Lovers",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Each of our blends is crafted to bring out the best in every bean, highlighting the distinct flavors and aromas that make each cup special. Whether you’re drawn to the bold, adventurous notes of our signature blends, or the refined, complex tastes of our single-origin selections, we’ve got something for every coffee enthusiast.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary hero__btn",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "image-0",
+        "image-1"
+      ],
+      "settings": {
+        "title": "",
+        "heading_font_size": "heading-medium",
+        "description": "",
+        "align_heading": "text-center",
+        "align_text": "text-center",
+        "width": "wrapper--full-padded",
+        "align_columns": "flex-align-top",
+        "layout_mobile": "1",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 0,
+        "heading_tag": "automatic"
+      }
+    },
+    "section-custom-content": {
+      "type": "section-custom-content",
+      "blocks": {
+        "video": {
+          "type": "video",
+          "settings": {
+            "show_video_popup": false,
+            "video_popup_social": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "title": "",
+            "heading_font_size": "heading-large",
+            "text": "",
+            "text_font_size": "body-medium",
+            "flex_align": "align--middle-center",
+            "link_text": "",
+            "link": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#ffffff",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "video"
+      ],
+      "settings": {
+        "borders": false,
+        "gutters": false,
+        "width": "wrapper--full-padded",
+        "height": "five-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 20
+      }
+    },
+    "section-custom-content-0": {
+      "type": "section-custom-content",
+      "blocks": {
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "title": "All Products",
+            "bg_color": "#343d66",
+            "color": "#fafafa"
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "heading_font_size": "heading-large",
+            "text": "",
+            "text_font_size": "body-medium",
+            "flex_align": "align--middle-center",
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "",
+            "link_text": "",
+            "link": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "collection",
+        "image-2"
+      ],
+      "settings": {
+        "borders": false,
+        "gutters": false,
+        "width": "wrapper--full-padded",
+        "height": "screen-height-one-half",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "section-press-logos": {
+      "type": "section-press-logos",
+      "blocks": {
+        "logo-item-text": {
+          "type": "logo-item-text",
+          "settings": {
+            "logo_width": 160,
+            "link": "",
+            "text": "",
+            "text_font_size": "body-x-large"
+          }
+        },
+        "logo-item-text-0": {
+          "type": "logo-item-text",
+          "settings": {
+            "logo_width": 160,
+            "link": "",
+            "text": "",
+            "text_font_size": "body-x-large"
+          }
+        },
+        "logo-item-text-1": {
+          "type": "logo-item-text",
+          "settings": {
+            "logo_width": 160,
+            "link": "",
+            "text": "",
+            "text_font_size": "body-x-large"
+          }
+        }
+      },
+      "block_order": [
+        "logo-item-text",
+        "logo-item-text-0",
+        "logo-item-text-1"
+      ],
+      "settings": {
+        "enable_heading_slider": false,
+        "logo_opacity": 60,
+        "title": "As seen in",
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 50
+      }
+    },
+    "section-divider": {
+      "type": "section-divider",
+      "settings": {
+        "show_line": true,
+        "width": "wrapper",
+        "color_scheme": "scheme-11",
+        "padding_top": 0,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "section-double",
+    "section-announcement",
+    "section-multicolumn",
+    "section-custom-content",
+    "section-custom-content-0",
+    "section-press-logos",
+    "section-divider"
+  ]
+}

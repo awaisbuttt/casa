@@ -1,0 +1,115 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section-custom-content": {
+      "type": "section-custom-content",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "title": "Our Story",
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image"
+      ],
+      "settings": {}
+    },
+    "main-page": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "section-custom-content-0": {
+      "type": "section-custom-content",
+      "blocks": {
+        "image-0": {
+          "type": "image",
+          "settings": {
+            "title": "How it started",
+            "link_text": ""
+          }
+        },
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "title": "How it's going",
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image-0",
+        "image-1"
+      ],
+      "settings": {}
+    },
+    "section-custom-content-1": {
+      "type": "section-custom-content",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "settings": {}
+    },
+    "section-custom-content-2": {
+      "type": "section-custom-content",
+      "blocks": {
+        "text-0": {
+          "type": "text",
+          "settings": {
+            "button_text": ""
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "text-0",
+        "image-2"
+      ],
+      "settings": {}
+    },
+    "section-custom-content-3": {
+      "type": "section-custom-content",
+      "blocks": {
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "newsletter"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-custom-content",
+    "main-page",
+    "section-custom-content-0",
+    "section-custom-content-1",
+    "section-custom-content-2",
+    "section-custom-content-3"
+  ]
+}

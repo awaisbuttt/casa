@@ -1,0 +1,659 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section-video": {
+      "type": "section-video",
+      "settings": {
+        "show_video_popup": false,
+        "video_popup_social": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "title": "Hydration-first beauty for skin that moves",
+        "heading_font_size": "heading-large",
+        "text": "<p>Casa Noon is skincare for real life — salt, sweat, sun, and everything after. Waterless. TSA-proof. Founder-created. Esthetician approved.</p>",
+        "text_font_size": "body-medium",
+        "flex_align": "align--bottom-left",
+        "link_text": "Your ritual starts here",
+        "link": "shopify://products/sabbatical-all-in-one-hydration-serum",
+        "button_type": "btn--primary",
+        "button_size": "btn--large",
+        "button_style": "btn--solid",
+        "show_arrow": false,
+        "image": "shopify://shop_images/girl-towel-edit-centered.jpg",
+        "desktop_height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-full--mobile",
+        "width": "wrapper--full",
+        "color_scheme": "",
+        "show_text_background": false,
+        "color": "#ffffff",
+        "overlay_type": "disabled",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "heading_tag": "automatic"
+      }
+    },
+    "section-announcement": {
+      "type": "section-announcement",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "POWERED BY THE OCEAN",
+            "heading_font_size": "heading-x-small"
+          }
+        },
+        "heading_qHCJ3m": {
+          "type": "heading",
+          "settings": {
+            "heading": "BUILT FOR THE SUN",
+            "heading_font_size": "heading-x-small"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "heading_qHCJ3m"
+      ],
+      "settings": {
+        "slider_speed": 7,
+        "text_alignment": "center",
+        "marquee_speed": 100,
+        "direction": "ticker-rtl",
+        "message_spacing": 10,
+        "show_border": false,
+        "layout": "marquee",
+        "color_scheme": "scheme-11",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "section-double": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Our essentials",
+            "padding_bottom": 16
+          }
+        },
+        "heading-0": {
+          "type": "heading",
+          "settings": {
+            "title": "One serum. Infinite results.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You don’t need a 10-step routine, just one product that keeps up. Post-ocean, pre-meeting, mid-flight.<br/>Sabbatical goes where your skin needs it most.<br/><br/>Powered by the <strong>Casa Complex™</strong> , our marine hydration shield that helps skin recover from sun, salt, and sweat.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 16
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Shop Sabbatical",
+            "button_url": "shopify://collections/all",
+            "button_type": "btn--secondary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading-0",
+        "text",
+        "buttons"
+      ],
+      "settings": {
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "is-reversed",
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-10",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "section-collection": {
+      "type": "section-collection",
+      "settings": {
+        "featured_collection": "",
+        "heading": "Our Best Sellers",
+        "heading_font_size": "heading-small",
+        "description": "<p>The best of the best.</p>",
+        "text_font_size": "body-medium",
+        "layout": "inline",
+        "link_text": "Shop Now",
+        "link_url": "",
+        "button_type": "btn--primary",
+        "button_size": "",
+        "button_style": "btn--solid",
+        "show_arrow": false,
+        "layout_desktop": "grid",
+        "grid": 3,
+        "rows": 1,
+        "width": "wrapper",
+        "layout_mobile": "1",
+        "color_scheme": "scheme-1",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "heading_tag": "automatic"
+      }
+    },
+    "section-countdown-timer": {
+      "type": "section-countdown-timer",
+      "blocks": {
+        "subheading-0": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Countdown is on"
+          }
+        },
+        "heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "New roast drops",
+            "heading_font_size": "heading-medium",
+            "heading_tag": "automatic"
+          }
+        },
+        "buttons-0": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Pre-order now",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_size": "btn--large",
+            "button_style": "btn--outline",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading-0",
+        "heading-1",
+        "buttons-0"
+      ],
+      "settings": {
+        "end_date": "2025-8-30",
+        "end_time": "11:59",
+        "period": "am",
+        "end_message": "<p>Offer has expired</p>",
+        "hide_on_complete": true,
+        "digits_font_size": "heading-large",
+        "text_font_size": "body-small",
+        "width": "wrapper",
+        "text_align": "text-left",
+        "height": "two-fifty-height-hero",
+        "mobile_height": "four-hundred-height-hero--mobile",
+        "text_align_mobile": "text-center--mobile",
+        "color_scheme": "scheme-4",
+        "digits_gradient": "",
+        "overlay_type": "disabled",
+        "padding_top": 6,
+        "padding_bottom": 2
+      }
+    },
+    "section-product": {
+      "type": "section-product",
+      "settings": {
+        "product": "",
+        "show_product_card": true,
+        "layout": "",
+        "limit": 3,
+        "scrolling_styles": "vertical",
+        "horizontal_scroll": false,
+        "color_scheme": "scheme-9"
+      }
+    },
+    "section-collections-list-hover": {
+      "type": "section-collections-list-hover",
+      "blocks": {
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": ""
+          }
+        },
+        "collection-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection",
+        "collection-0"
+      ],
+      "settings": {
+        "heading_font_size": "heading-x-large",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-three-quarters--mobile",
+        "color_scheme": "scheme-2",
+        "overlay_type": "disabled",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section-text-with-products": {
+      "type": "section-text-with-products",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image_position": 1,
+            "aspect_ratio": 1,
+            "width": 80,
+            "mobile_aspect_ratio": 1,
+            "mobile_width": 60
+          }
+        },
+        "image-0": {
+          "type": "image",
+          "settings": {
+            "image_position": 5,
+            "aspect_ratio": 1,
+            "width": 80,
+            "mobile_aspect_ratio": 1,
+            "mobile_width": 60
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "image-0"
+      ],
+      "settings": {
+        "subheading": "",
+        "heading": "More Than Just a Coffee Shop",
+        "width": "wrapper--full-padded",
+        "text_font_size_px_desktop": 60,
+        "text_align_desktop": "text-center",
+        "text_font_size_px_mobile": 50,
+        "text_align_mobile": "text-left--mobile",
+        "color_scheme": "",
+        "padding_top": 62,
+        "padding_bottom": 0
+      }
+    },
+    "section-multicolumn": {
+      "type": "section-multicolumn",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "column_width": 33,
+            "image_width": 70,
+            "image_aspect_ratio": 1.2,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "blob-three",
+            "title": "Live Music Nights",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Sip on your favorite brew while discovering your new favorite band.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary hero__btn",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "column_width": 33,
+            "image_width": 70,
+            "image_aspect_ratio": 1.2,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "blob-three",
+            "title": "Coffee Workshops",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Get hands-on with your coffee game—learn how to brew like a pro.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary hero__btn",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "column_width": 33,
+            "image_width": 70,
+            "image_aspect_ratio": 1.2,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "blob-three",
+            "title": "Pop-Up Events",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>From local art shows to indie markets, we’re all about supporting the creative community.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary hero__btn",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_font_size": "heading-medium",
+        "description": "",
+        "align_heading": "text-center",
+        "align_text": "text-center",
+        "width": "wrapper",
+        "align_columns": "flex-align-top",
+        "layout_mobile": "1",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 50,
+        "heading_tag": "automatic"
+      }
+    },
+    "section-hero-scrolling": {
+      "type": "section-hero-scrolling",
+      "blocks": {
+        "scrolling_text": {
+          "type": "scrolling_text",
+          "settings": {
+            "text": "<p>The right roast for the right vibe.</p>",
+            "color": "#f1a843"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link_text": "Shop Coffee",
+            "link": "",
+            "button_type": "btn--secondary",
+            "button_size": "btn--large",
+            "button_style": "btn--solid",
+            "show_arrow": false
+          }
+        },
+        "button-0": {
+          "type": "button",
+          "settings": {
+            "link_text": "Our Story",
+            "link": "",
+            "button_type": "btn--secondary",
+            "button_size": "btn--large",
+            "button_style": "btn--outline",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "scrolling_text",
+        "button",
+        "button-0"
+      ],
+      "settings": {
+        "link": "",
+        "message_spacing": 10,
+        "marquee_speed": 100,
+        "flex_align": "align--middle-center",
+        "type_font": "bricolage_grotesque_n8",
+        "text_font_size_px": 100,
+        "type_letter_spacing": 0,
+        "type_font_caps": false,
+        "scrolling_align": "align--middle-center",
+        "direction": "ticker-rtl",
+        "height": "screen-height-three-quarters",
+        "mobile_height": "screen-height-three-quarters--mobile",
+        "color_scheme": "",
+        "overlay_type": "disabled",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "section-press-logos": {
+      "type": "section-press-logos",
+      "blocks": {
+        "logo-item-header": {
+          "type": "logo-item-header",
+          "settings": {
+            "logo_width": 160,
+            "link": "",
+            "text": "The perfect blend of quality and cool. Their coffee is as vibrant as the people behind it, making every cup a unique experience.",
+            "heading_font_size": "heading-small"
+          }
+        },
+        "logo-item-header-0": {
+          "type": "logo-item-header",
+          "settings": {
+            "logo_width": 160,
+            "link": "",
+            "text": "Coffee isn’t just about the beans—it’s about the experience. From their ethically sourced origins to their killer branding, everything about this company screams passion and purpose.",
+            "heading_font_size": "heading-small"
+          }
+        },
+        "logo-item-header-1": {
+          "type": "logo-item-header",
+          "settings": {
+            "logo_width": 160,
+            "link": "",
+            "text": "Their small-batch roasts are bursting with personality, much like the community they’ve built around them. If you’re looking for coffee with soul, this is it.",
+            "heading_font_size": "heading-small"
+          }
+        }
+      },
+      "block_order": [
+        "logo-item-header",
+        "logo-item-header-0",
+        "logo-item-header-1"
+      ],
+      "settings": {
+        "enable_heading_slider": true,
+        "logo_opacity": 60,
+        "title": "In the Press",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 50
+      }
+    },
+    "section-divider": {
+      "type": "section-divider",
+      "settings": {
+        "show_line": true,
+        "width": "wrapper",
+        "color_scheme": "scheme-11",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "section-reviews": {
+      "type": "section-reviews",
+      "blocks": {
+        "review": {
+          "type": "review",
+          "settings": {
+            "title": "Lena S.",
+            "subheading": "Customer",
+            "review_content": "<p>The moment I tasted Groove’s Daydreamer blend, I knew I’d found my new favorite coffee. It’s smooth, comforting, and just the right balance of flavors. Perfect for those cozy mornings when you just want to relax.</p>",
+            "review_url": ""
+          }
+        },
+        "review-0": {
+          "type": "review",
+          "settings": {
+            "title": "Alex P.",
+            "subheading": "Customer",
+            "review_content": "<p>I love how Groove isn’t just about great coffee—it’s about a great experience. From the killer branding to the awesome events they host, I feel like I’m part of something really special. Plus, the Sun Chaser roast is my new obsession.</p>",
+            "review_url": ""
+          }
+        },
+        "review-1": {
+          "type": "review",
+          "settings": {
+            "title": "Mia T.",
+            "subheading": "Customer",
+            "review_content": "<p>From the first sip, I could tell that Groove puts a lot of love and care into their coffee. The Steady Beat Grid is my go-to for a reliable, balanced brew. It’s like a warm hug in a cup, and I can’t get enough.</p>",
+            "review_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "review",
+        "review-0",
+        "review-1"
+      ],
+      "settings": {
+        "show_featured_image": true,
+        "image_aspect_ratio": 1.3,
+        "show_quotation_marks": true,
+        "heading_font_size": "heading-x-small",
+        "text_align": "text-left",
+        "color_scheme": "",
+        "card_bg_color": "",
+        "padding_top": 80,
+        "padding_bottom": 100
+      }
+    },
+    "section-double-0": {
+      "type": "section-double",
+      "blocks": {
+        "subheading-1": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Find Your Vibe",
+            "padding_bottom": 16
+          }
+        },
+        "heading-2": {
+          "type": "heading",
+          "settings": {
+            "title": "Small Batches, Big Flavors",
+            "heading_font_size": "heading-large",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text-0": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Life’s too short for bad coffee, right? That’s why we’re here to shake things up with roasts that speak your language. </p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 16
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "product_list": [],
+            "show_product_card": true,
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "subheading-1",
+        "heading-2",
+        "text-0",
+        "product"
+      ],
+      "settings": {
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "",
+        "width": "wrapper--full",
+        "height": "seven-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "section-newsletter": {
+      "type": "section-newsletter",
+      "blocks": {
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "subheading": "",
+            "heading": "Sign up for our mailing list",
+            "heading_font_size": "heading-medium",
+            "text": "<p>Sign up for our newsletter to stay in the loop on all things Groove, from exclusive offers to behind-the-scenes stories. Let’s stay connected and keep the coffee love going strong.</p>",
+            "text_font_size": "body-medium",
+            "text_columns": 1,
+            "align_text": "text-center",
+            "button_text": "Join",
+            "show_arrow": false,
+            "terms": false,
+            "show_name": true,
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_social_links": false,
+            "bg_color": "",
+            "color": "",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter"
+      ],
+      "settings": {
+        "width": "wrapper",
+        "height": "three-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "color_scheme": "scheme-7",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "section-video",
+    "section-announcement",
+    "section-double",
+    "section-collection",
+    "section-countdown-timer",
+    "section-product",
+    "section-collections-list-hover",
+    "section-text-with-products",
+    "section-multicolumn",
+    "section-hero-scrolling",
+    "section-press-logos",
+    "section-divider",
+    "section-reviews",
+    "section-double-0",
+    "section-newsletter"
+  ]
+}

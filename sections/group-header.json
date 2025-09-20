@@ -1,0 +1,262 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "text_yAPWqz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Free shipping until 09/08/25 with code FREE SHIP</p>",
+            "target_url_enabled": false,
+            "target_url": "",
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        }
+      },
+      "block_order": [
+        "text_yAPWqz"
+      ],
+      "settings": {
+        "show_border": false,
+        "layout": "slider",
+        "slider_speed": 7,
+        "text_alignment": "center",
+        "show_arrows": false,
+        "marquee_speed": 100,
+        "message_spacing": 10,
+        "text_font_size": "body-small",
+        "color_scheme": "scheme-6",
+        "border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "toolbar": {
+          "type": "toolbar",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Toolbar</p>",
+            "menu": "",
+            "show_border": false,
+            "border_color": "",
+            "border_opacity": 50,
+            "show_social_links": true,
+            "show_gift_card": true,
+            "show_locale_selector": true,
+            "show_globe_icon": true,
+            "show_country_selector": true,
+            "show_country_name": false,
+            "show_country_flag": true,
+            "color_scheme": "",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "image": {
+          "type": "image",
+          "settings": {
+            "position": "1",
+            "aspect_ratio": 1.5,
+            "wide_image": false,
+            "overlay_type": "text",
+            "title": "",
+            "heading_font_size": "heading-medium",
+            "link_text": "",
+            "text_font_size": "body-medium",
+            "link": "",
+            "text_color": ""
+          }
+        },
+        "image-0": {
+          "type": "image",
+          "settings": {
+            "position": "1",
+            "aspect_ratio": 1.5,
+            "wide_image": false,
+            "overlay_type": "text",
+            "title": "",
+            "heading_font_size": "heading-medium",
+            "link_text": "",
+            "text_font_size": "body-medium",
+            "link": "",
+            "text_color": ""
+          }
+        },
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "position": "1",
+            "aspect_ratio": 0.5,
+            "wide_image": true,
+            "overlay_type": "text",
+            "title": "Our Blog",
+            "heading_font_size": "heading-medium",
+            "link_text": "",
+            "text_font_size": "body-medium",
+            "link": "",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "toolbar",
+        "image",
+        "image-0",
+        "image-1"
+      ],
+      "settings": {
+        "header_sticky": false,
+        "header_style": "logo_center_menu_left",
+        "show_separator_line": false,
+        "header_border_color": "",
+        "separator_opacity": 50,
+        "show_icons": true,
+        "icon_as_circle": false,
+        "cart_icon_family": "cart",
+        "logo": "shopify://shop_images/CasaNoon-horizontal-black.svg",
+        "logo_max_limit": 215,
+        "logo_max_limit_mobile": 120,
+        "main_menu_linklist": "main-menu",
+        "mobile_menu_linklist": "",
+        "enable_search": true,
+        "show_social_icons": true,
+        "button_text": "on sale now",
+        "button_link": "",
+        "button_type": "btn--secondary",
+        "show_locale_selector": true,
+        "show_globe_icon": true,
+        "show_country_selector": true,
+        "show_country_name": false,
+        "show_country_flag": false,
+        "highlight_item": "Sale",
+        "highlight_item_color": "#d02e2e",
+        "transparent_logo": "shopify://shop_images/CasaNoon-horizontal-white.svg",
+        "transparent_home": true,
+        "transparent_collection": true,
+        "transparent_article": false,
+        "transparent_page": true,
+        "transparent_product_page": false,
+        "secondary_menu_linklist": "",
+        "tertiary_menu_linklist": "",
+        "padding_top": 15,
+        "padding_bottom": 15
+      }
+    },
+    "mobile-menu": {
+      "type": "mobile-menu",
+      "blocks": {
+        "menu": {
+          "type": "menu",
+          "settings": {
+            "mobile_menu_linklist": "",
+            "text_font_size": "body-large",
+            "highlight_item": "Sale",
+            "highlight_item_color": "#d02e2e",
+            "padding": true,
+            "padding_bottom": 14
+          }
+        },
+        "divider": {
+          "type": "divider",
+          "settings": {
+            "show_line": false,
+            "padding_bottom": 14
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/casanoon-packing-mockup-1.jpg",
+            "image_url": "shopify://collections/all",
+            "image_alignment": "left",
+            "image_width": 100,
+            "pin_to_bottom": false,
+            "padding_bottom": 14
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop all",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "pin_to_bottom": true,
+            "padding_bottom": 14
+          }
+        },
+        "socials": {
+          "type": "socials",
+          "settings": {
+            "width": "full",
+            "pin_to_bottom": true,
+            "padding_bottom": 14
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "image_width": 20,
+            "text_font_size": "body-medium",
+            "bg_color": "",
+            "padding": false,
+            "pin_to_bottom": false,
+            "padding_bottom": 14
+          }
+        },
+        "collection-0": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "image_width": 20,
+            "text_font_size": "body-medium",
+            "bg_color": "",
+            "padding": false,
+            "pin_to_bottom": false,
+            "padding_bottom": 14
+          }
+        }
+      },
+      "block_order": [
+        "menu",
+        "divider",
+        "image-2",
+        "button",
+        "socials",
+        "collection",
+        "collection-0"
+      ],
+      "settings": {
+        "logo_max_limit": 120,
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header",
+    "mobile-menu"
+  ]
+}

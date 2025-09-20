@@ -1,0 +1,512 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product": {
+      "type": "product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "subheading_option": "breadcrumb",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 8
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "text_font_size": "body-medium",
+            "padding_bottom": 16
+          }
+        },
+        "icon": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-box",
+            "icon_size": 20,
+            "icon_color": "",
+            "text": "<p>Free shipping on orders over $50</p>",
+            "text_font_size": "body-small",
+            "width": "full",
+            "padding_bottom": 16
+          }
+        },
+        "variants": {
+          "type": "variants",
+          "settings": {
+            "info_page": "",
+            "size_chart_style": "ruler",
+            "option_font_size": "body-medium",
+            "value_font_size": "body-x-small",
+            "subscriptions_enable_selectors": false,
+            "padding_bottom": 16
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "show_quantity": true,
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--outline",
+            "show_payment_button": true,
+            "button_type_dynamic": "btn--primary",
+            "button_size_dynamic": "",
+            "button_style_dynamic": "btn--solid",
+            "show_gift_card_recipient": false,
+            "padding_bottom": 32
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "heading_font_size": "body-medium",
+            "text": "<p>Get in touch with us at any time.</p>",
+            "text_font_size": "body-medium",
+            "text_alignment": "text-left",
+            "layout": "left",
+            "padding_bottom": 16
+          }
+        },
+        "tab_richtext": {
+          "type": "tab_richtext",
+          "settings": {
+            "show_description": true,
+            "show_read_more": false,
+            "title_1": "Description",
+            "raw_content_1": "<p><strong>Your skin’s well-deserved break.</strong></p><p>A hydration-first serum designed for the in-between hours: post-sun, mid-flight, after hot yoga, before your day begins—or whenever your skin says, “I need a moment.”<br/><br/><strong>Powered by the Casa Complex™</strong>—our proprietary marine blend of microalgae, ocean minerals, and nutrient-dense botanicals—and featuring RetinART, a next-gen retinoid alternative that delivers radiance without the burn.<br/><br/>This multitasking, waterless serum deeply hydrates, brightens, and fortifies your skin barrier while visibly improving the look of tone, texture, and sun stress. All glow, no guesswork.</p>",
+            "title_2": "Why you'll love it",
+            "raw_content_2": "<ul><li>Brightens + boosts glow</li><li>Reduces the look of sun spots and discoloration</li><li>Supports skin barrier health before and after sun exposure</li><li>Gentle enough for daily use—no dryness, no peeling</li><li>Balmy texture that melts in, never pills</li><li>Formulated for all skin types, especially those on the go</li></ul>",
+            "title_3": "How To Use",
+            "raw_content_3": "<p>Apply 2–3 drops morning and night after cleansing.</p><p>Use it solo or layer under moisturizer or SPF.</p><p>Perfect post-ocean, mid-flight, or anytime skin needs a reset.</p>",
+            "title_4": "Ingredients",
+            "raw_content_4": "<h4>🌿 <strong>Microalgae</strong></h4><p>Rich in amino acids and skin-repairing nutrients.</p><p><strong>Why we love it:</strong> It's ocean-born resilience in a bottle—revitalizes dull, sun-tired skin.</p><h4>🌊 <strong>Ocean Minerals</strong></h4><p>Restore and balance pH, deliver trace elements, and support skin structure.</p><p><strong>Why we love it:</strong> They replenish what salt, sweat, and sun strip away.</p><h4>🍑 <strong>Sea Buckthorn</strong></h4><p>Loaded with omega-7 and antioxidants to brighten and repair.</p><p><strong>Why we love it:</strong> It brings the glow—and softens sun-stressed spots.</p><h4>🌻 <strong>Meadowfoam</strong></h4><p>Locks in hydration with a velvety finish.</p><p><strong>Why we love it:</strong> A moisture seal that never feels heavy.</p><h4>🍵 <strong>Green Tea</strong></h4><p>Calms inflammation and defends against environmental stress.</p><p><strong>Why we love it:</strong> Your daily antioxidant ritual, minus the redness.</p><h4>🥥 <strong>Coconut Extract</strong></h4><p>Softens and smooths while enhancing skin barrier integrity.</p><p><strong>Why we love it:</strong> Balmy, silky hydration without greasiness.</p><h4>🧬 <strong>RetinART™</strong></h4><p>A science-backed botanical alternative to traditional retinol.</p><p><strong>Why we love it:</strong> Retinol results without the retinol drama—gentle, effective, glow-boosting</p>",
+            "title_5": "",
+            "raw_content_5": "",
+            "padding_bottom": 0
+          }
+        },
+        "divider": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "padding_bottom": 8
+          }
+        },
+        "upsell": {
+          "type": "upsell",
+          "settings": {
+            "upsell_product": "",
+            "upsell_product_list": [],
+            "show_available_upsell_only": false,
+            "layout": "stacked",
+            "autoplay": false,
+            "autoplay_speed": 8,
+            "bg_color": "#e2dcca",
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "icon",
+        "variants",
+        "buttons",
+        "text",
+        "tab_richtext",
+        "divider",
+        "upsell"
+      ],
+      "settings": {
+        "product_sticky_enable": true,
+        "variant_image_scroll": true,
+        "show_cart_bar": true,
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "image_layout": "stacked",
+        "image_size": "stretch",
+        "mobile_image_style": "thumbs",
+        "color_scheme": "scheme-1",
+        "padding_top": 100,
+        "padding_bottom": 30
+      }
+    },
+    "section-accordion": {
+      "type": "section-accordion",
+      "blocks": {
+        "text-0": {
+          "type": "text",
+          "settings": {
+            "title": "How to brew",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>For the best experience, we recommend brewing with a [specific method, if applicable, e.g., pour-over, French press, etc.]. Use [recommended amount] of coffee per [amount of water] for a perfect cup every time. Experiment with grind size and brew time to find your sweet spot.</p>"
+          }
+        },
+        "text-1": {
+          "type": "text",
+          "settings": {
+            "title": "How should I store my coffee to keep it fresh?",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>To keep your coffee as fresh as possible, store it in an airtight container in a cool, dark place. Avoid exposure to light, heat, and moisture. We recommend using the coffee within two weeks of opening for the best flavor.</p>"
+          }
+        },
+        "text-2": {
+          "type": "text",
+          "settings": {
+            "title": "Is it available in whole bean or pre-ground?",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>We offer it in both whole bean and pre-ground options. Whole beans are ideal for those who prefer to grind their coffee fresh before brewing, while our pre-ground option is convenient for quick, easy brewing.</p>"
+          }
+        },
+        "text-3": {
+          "type": "text",
+          "settings": {
+            "title": "What’s the best grind size?",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>The best grind size depends on your brewing method. For a French press, use a coarse grind. For pour-over or drip coffee, a medium grind is ideal. If you’re making espresso, go for a fine grind. Adjust the grind size to suit your personal taste and brewing preferences.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text-0",
+        "text-1",
+        "text-2",
+        "text-3"
+      ],
+      "settings": {
+        "default_open": false,
+        "title": "FAQ",
+        "heading_font_size": "heading-x-small",
+        "show_icon": false,
+        "icon_name": "icon-award",
+        "icon_size": 20,
+        "width": "wrapper",
+        "color_scheme": "",
+        "icon_color": "",
+        "padding_top": 30,
+        "padding_bottom": 0
+      }
+    },
+    "section-accordion-0": {
+      "type": "section-accordion",
+      "blocks": {
+        "icon-0": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-check-circle",
+            "icon_size": 20,
+            "icon_color": "#545454",
+            "title": "Microalgae",
+            "heading_font_size": "heading-x-small",
+            "icon_alignment": "left",
+            "text": "<p>Rich in amino acids and skin-repairing nutrients.</p><p><strong>Why we love it:</strong> It's ocean-born resilience in a bottle—revitalizes dull, sun-tired skin.</p>",
+            "text_alignment": "text-left"
+          }
+        },
+        "icon-1": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-check-circle",
+            "icon_size": 20,
+            "icon_color": "#545454",
+            "title": "Ocean Minerals",
+            "heading_font_size": "heading-x-small",
+            "icon_alignment": "left",
+            "text": "<p>Restore and balance pH, deliver trace elements, and support skin structure.</p><p><strong>Why we love it:</strong> They replenish what salt, sweat, and sun strip away.</p>",
+            "text_alignment": "text-left"
+          }
+        },
+        "icon-2": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-check-circle",
+            "icon_size": 20,
+            "icon_color": "#545454",
+            "title": "Sea Buckthorn",
+            "heading_font_size": "heading-x-small",
+            "icon_alignment": "left",
+            "text": "<p>Loaded with omega-7 and antioxidants to brighten and repair.</p><p><strong>Why we love it:</strong> It brings the glow—and softens sun-stressed spots.</p>",
+            "text_alignment": "text-left"
+          }
+        },
+        "icon_rHb8hA": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-check-circle",
+            "icon_size": 20,
+            "icon_color": "",
+            "title": "Meadowfoam",
+            "heading_font_size": "heading-x-small",
+            "icon_alignment": "left",
+            "text": "<p>Locks in hydration with a velvety finish.</p><p><strong>Why we love it:</strong> A moisture seal that never feels heavy.</p>",
+            "text_alignment": "text-left"
+          }
+        },
+        "icon_G4V9KR": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "title": "Green Tea",
+            "heading_font_size": "heading-small",
+            "icon_alignment": "left",
+            "text": "<p>Calms inflammation and defends against environmental stress.</p><p><strong>Why we love it:</strong> Your daily antioxidant ritual, minus the redness.</p>",
+            "text_alignment": "text-left"
+          }
+        },
+        "icon_N6m8d8": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "title": "Icon heading",
+            "heading_font_size": "heading-small",
+            "icon_alignment": "left",
+            "text": "<p>Use this to answer some common questions you hear from your customers. You could discuss product details, size fit, shipping policies, or anything you think would help merchants make an informed decision about your products. This section will appear across all products.</p>",
+            "text_alignment": "text-left"
+          }
+        }
+      },
+      "block_order": [
+        "icon-0",
+        "icon-1",
+        "icon-2",
+        "icon_rHb8hA",
+        "icon_G4V9KR",
+        "icon_N6m8d8"
+      ],
+      "settings": {
+        "default_open": false,
+        "title": "Our Ingredients",
+        "heading_font_size": "heading-x-small",
+        "show_icon": false,
+        "icon_name": "icon-fast-shipment",
+        "icon_size": 20,
+        "width": "wrapper",
+        "color_scheme": "",
+        "icon_color": "#545454",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section-accordion-1": {
+      "type": "section-accordion",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "title": "Ethically Sourced, Sustainably Grown",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>We’re passionate about where our coffee comes from. That’s why we partner directly with farmers who share our commitment to ethical practices and sustainable farming. Every bean is carefully selected to ensure that you’re enjoying the highest quality coffee that’s good for you and good for the planet.</p>",
+            "aspect_ratio": 0.7
+          }
+        },
+        "image-0": {
+          "type": "image",
+          "settings": {
+            "title": "Small-Batch Roasting for Peak Freshness",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Quality over quantity—that’s our mantra. Each batch of our coffee is roasted in small quantities to guarantee peak freshness and flavor. This hands-on approach allows us to maintain the highest standards and deliver a coffee experience that’s second to none.</p>",
+            "aspect_ratio": 0.7
+          }
+        },
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "title": "Commitment to Community",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>We believe in the power of community, both locally and globally. That’s why we support initiatives that give back to coffee-growing regions and invest in our local communities. With us, your purchase has a positive impact, far beyond your morning cup.</p>",
+            "aspect_ratio": 0.7
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "image-0",
+        "image-1"
+      ],
+      "settings": {
+        "default_open": false,
+        "title": "Why our coffee stands out",
+        "heading_font_size": "heading-x-small",
+        "show_icon": false,
+        "icon_name": "icon-award",
+        "icon_size": 20,
+        "width": "wrapper",
+        "color_scheme": "",
+        "icon_color": "#545454",
+        "padding_top": 0,
+        "padding_bottom": 30
+      }
+    },
+    "section-reviews": {
+      "type": "section-reviews",
+      "blocks": {
+        "review": {
+          "type": "review",
+          "settings": {
+            "title": "Kenny P.",
+            "subheading": "Customer",
+            "review_content": "<p>This is the best coffee I’ve ever had—smooth, bold, and perfectly balanced. It’s become my new morning ritual, and I look forward to it every day. The aroma and taste are simply unbeatable, making it a must-try for any coffee lover.</p>",
+            "review_url": ""
+          }
+        },
+        "review-0": {
+          "type": "review",
+          "settings": {
+            "title": "Nadia L.",
+            "subheading": "Customer",
+            "review_content": "<p>This has completely changed how I view coffee, turning it into a rich and complex experience with every sip. I love experimenting with different brewing methods just to see how the flavors evolve. I’m now a lifelong fan and can’t imagine my mornings without it.</p>",
+            "review_url": ""
+          }
+        },
+        "review-1": {
+          "type": "review",
+          "settings": {
+            "title": "Jamal B.",
+            "subheading": "Customer",
+            "review_content": "<p>This roast exceeded my expectations with its rich, layered flavor profile. It’s perfect for those moments when I want to enjoy something truly exceptional. I’ve shared it with friends, and it’s quickly become my go-to coffee.</p>",
+            "review_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "review",
+        "review-0",
+        "review-1"
+      ],
+      "settings": {
+        "show_featured_image": true,
+        "image_aspect_ratio": 1.3,
+        "show_quotation_marks": true,
+        "heading_font_size": "heading-x-small",
+        "text_align": "text-left",
+        "color_scheme": "",
+        "card_bg_color": "",
+        "padding_top": 50,
+        "padding_bottom": 100
+      }
+    },
+    "section-custom-content": {
+      "type": "section-custom-content",
+      "blocks": {
+        "video": {
+          "type": "video",
+          "settings": {
+            "show_video_popup": false,
+            "video_popup_social": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "title": "",
+            "heading_font_size": "heading-large",
+            "text": "",
+            "text_font_size": "body-medium",
+            "flex_align": "align--middle-center",
+            "link_text": "",
+            "link": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#ffffff",
+            "overlay_type": "disabled",
+            "heading_tag": "automatic"
+          }
+        },
+        "text-4": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "title": "Why You’ll Love It",
+            "heading_font_size": "heading-medium",
+            "text": "<ul><li><strong>Ethically Sourced</strong>: We’re committed to supporting farmers who grow our beans with care and respect for the land.</li><li><strong>Small-Batch Roasted</strong>: Each batch is roasted to order, ensuring that your coffee arrives fresh and full of flavor.</li><li><strong>Versatile Brew</strong>: Perfect for your favorite brewing methods—whether it’s pour-over, French press, or espresso.</li></ul>",
+            "text_font_size": "body-large",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "show_social_links": false,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "bg_color": "rgba(0,0,0,0)",
+            "color": "",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "video",
+        "text-4"
+      ],
+      "settings": {
+        "borders": false,
+        "gutters": false,
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "related": {
+      "type": "related",
+      "blocks": {
+        "related-0": {
+          "type": "related",
+          "settings": {
+            "product_recommendations_heading": "Related products"
+          }
+        },
+        "recent": {
+          "type": "recent",
+          "settings": {
+            "product_recently_heading": "Recently viewed"
+          }
+        }
+      },
+      "block_order": [
+        "related-0",
+        "recent"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_tabs": true,
+        "heading_alignment": "text-center",
+        "heading_font_size": "heading-small",
+        "limit": 4,
+        "layout_desktop": "slider",
+        "grid": 4,
+        "rows": 3,
+        "layout_mobile": "slider",
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "product",
+    "section-accordion",
+    "section-accordion-0",
+    "section-accordion-1",
+    "section-reviews",
+    "section-custom-content",
+    "related"
+  ]
+}
