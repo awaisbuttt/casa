@@ -48,27 +48,6 @@
     "header": {
       "type": "header",
       "blocks": {
-        "toolbar": {
-          "type": "toolbar",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Toolbar</p>",
-            "menu": "",
-            "show_border": false,
-            "border_color": "",
-            "border_opacity": 50,
-            "show_social_links": true,
-            "show_gift_card": true,
-            "show_locale_selector": true,
-            "show_globe_icon": true,
-            "show_country_selector": true,
-            "show_country_name": false,
-            "show_country_flag": true,
-            "color_scheme": "",
-            "padding_top": 0,
-            "padding_bottom": 0
-          }
-        },
         "image": {
           "type": "image",
           "settings": {
@@ -116,7 +95,6 @@
         }
       },
       "block_order": [
-        "toolbar",
         "image",
         "image-0",
         "image-1"
@@ -130,24 +108,16 @@
         "show_icons": true,
         "icon_as_circle": false,
         "cart_icon_family": "cart",
-        "logo": "shopify://shop_images/CasaNoon-horizontal-black.svg",
         "logo_max_limit": 215,
         "logo_max_limit_mobile": 120,
         "main_menu_linklist": "main-menu",
         "mobile_menu_linklist": "",
         "enable_search": true,
-        "show_social_icons": true,
-        "button_text": "on sale now",
+        "button_text": "",
         "button_link": "",
         "button_type": "btn--secondary",
-        "show_locale_selector": true,
-        "show_globe_icon": true,
-        "show_country_selector": true,
-        "show_country_name": false,
-        "show_country_flag": false,
         "highlight_item": "Sale",
         "highlight_item_color": "#d02e2e",
-        "transparent_logo": "shopify://shop_images/CasaNoon-horizontal-white.svg",
         "transparent_home": true,
         "transparent_collection": true,
         "transparent_article": false,
@@ -183,7 +153,6 @@
         "image-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/casanoon-packing-mockup-1.jpg",
             "image_url": "shopify://collections/all",
             "image_alignment": "left",
             "image_width": 100,
