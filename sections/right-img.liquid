@@ -1,198 +1,117 @@
-{% schema %}
-{
-  "name": "SCMA",
-  "settings": [
-    {
-      "type": "text",
-      "id": "badge",
-      "label": "Top Label",
-      "default": "CASA COMPLEX™"
-    },
-    {
-      "type": "text",
-      "id": "heading_top",
-      "label": "Heading (Top Line)",
-      "default": "Hydration you"
-    },
-    {
-      "type": "text",
-      "id": "heading_bottom",
-      "label": "Heading (Bottom Line)",
-      "default": "can feel"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "Description",
-      "default": "<p><strong>The Casa Complex™</strong> is our signature marine </br> blend. Think: microalgae, ocean minerals, and </br>adaptogens that replenish and support your</br> skin barrier.</p><ul><li>Locks in hydration</li><li>Calms sun-stressed skin</li><li>Works before, during, and after exposure</li></ul>"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "LEARN MORE"
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Right Image"
-    },
-    {
-      "type": "richtext",
-      "id": "image_text",
-      "label": "Overlay Text on Image",
-      "default": "<p>Waterless.<br>Performance-backed.<br>Skin that feels like yours.</p>"
-    }
-  ],
-  "presets": [
-    {
-      "name": "SCMA Section"
-    }
-  ]
-}
-{% endschema %}
-
-<div class="scma-section">
-  <div class="scma-wrapper">
-
-    <!-- LEFT TEXT -->
-    <div class="scma-left">
-      {% if section.settings.badge != blank %}
-        <span class="scma-badge">{{ section.settings.badge }}</span>
-      {% endif %}
-
-      <h2 class="scma-heading">
-        {% if section.settings.heading_top != blank %}
-          <div class="scma-heading-top">{{ section.settings.heading_top }}</div>
-        {% endif %}
-        {% if section.settings.heading_bottom != blank %}
-          <div class="scma-heading-bottom">{{ section.settings.heading_bottom }}</div>
-        {% endif %}
-      </h2>
-
-      <div class="scma-description">{{ section.settings.description }}</div>
-
-      {% if section.settings.button_text != blank %}
-        <a href="{{ section.settings.button_link }}" class="scma-btn">{{ section.settings.button_text }}</a>
+<div class="scma-wrapper">
+  {% if section.settings.image != blank %}
+    <div class="scma-image-container">
+      <img src="{{ section.settings.image | image_url: width: 1200 }}" alt="Selected Image" class="scma-image">
+      {% if section.settings.image_text != blank %}
+        <p class="scma-overlay">{{ section.settings.image_text }}</p>
       {% endif %}
     </div>
+  {% endif %}
 
-    <!-- RIGHT IMAGE -->
-    <div class="scma-right">
-      {% if section.settings.image != blank %}
-        <div class="scma-image" style="background-image: url({{ section.settings.image | img_url: '2000x' }});">
-          {% if section.settings.image_text != blank %}
-            <div class="scma-overlay">{{ section.settings.image_text }}</div>
-          {% endif %}
+  {% if section.settings.collection != blank %}
+    <div class="scma-products">
+      {% for product in collections[section.settings.collection].products %}
+        <div class="scma-product">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.price | money }}</p>
+          </a>
         </div>
-      {% endif %}
+      {% endfor %}
     </div>
-
-  </div>
+  {% endif %}
 </div>
 
 <style>
-.scma-section {
-  background: #f9f7f1;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .scma-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
 }
 
-.scma-left {
-  flex: 1 1 50%;
-  padding: 90px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.scma-image-container {
+  position: relative;
+  flex: 1;
 }
-
-.scma-right {
-  flex: 1 1 50%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.scma-badge {
-  color: #6a7de7;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.scma-heading {
-  font-size: 56px;
-  margin: 10px 0;
-  font-weight: 700;
-  line-height: 1.2;
-}
-.scma-heading-top { display: block; }
-.scma-heading-bottom { display: block; font-style: italic; }
-
-.scma-description {
-  margin: 15px 0;
-  line-height: 1.6;
-  font-size: 20px;
-}
-
-.scma-btn {
-  display: inline-block;
-  background: #E0E07E;
-  color: black;
-  font-weight: bold;
-  font-size: 14px;
-  text-decoration: none;
-  text-align: center;
-
-  width: 195px;
-  height: 48px;
-  line-height: 48px;
-  min-width: 150px;
-  
-  border-radius: 300px;
-  transition: all 0.3s ease;
-}
-.scma-btn:hover { background: #d0d06e; }
 
 .scma-image {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
   width: 100%;
-  min-height: 100%;
-  display: flex;
-  align-items: center;   /* vertical center */
-  justify-content: center; /* horizontal center */
-  position: relative;
+  height: auto;
+  border-radius: 8px;
 }
 
 .scma-overlay {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #d6d636;
   font-family: cursive;
   font-size: 1.6rem;
   text-align: center;
   max-width: 80%;
+  white-space: pre-line; /* ✅ Line breaks (\n) render honge */
 }
 
-@media(max-width: 768px) {
-  .scma-left, .scma-right { flex: 1 1 100%; }
-  .scma-image { height: 400px; }
-  .scma-btn { width: 180px; height: 44px; line-height: 44px; font-size: 13px; }
-  .scma-overlay { font-size: 1.1rem; padding: 0 10px; }
+.scma-products {
+  flex: 1.5;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.scma-product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.scma-product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.scma-product h3 {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.scma-product p {
+  color: #333;
+  font-weight: bold;
 }
 </style>
+
+{% schema %}
+{
+  "name": "Image with Products",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select Image"
+    },
+    {
+      "type": "text",
+      "id": "image_text",
+      "label": "Overlay Text on Image",
+      "default": "Waterless.\nPerformance-backed.\nSkin that feels like yours."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Products"
+    }
+  ]
+}
+{% endschema %}
