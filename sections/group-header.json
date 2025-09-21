@@ -108,6 +108,7 @@
         "show_icons": true,
         "icon_as_circle": false,
         "cart_icon_family": "cart",
+        "logo": "shopify://shop_images/Horizontal_Casa_Noon_Logo_1.png",
         "logo_max_limit": 215,
         "logo_max_limit_mobile": 120,
         "main_menu_linklist": "main-menu",
