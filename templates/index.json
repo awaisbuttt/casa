@@ -638,6 +638,22 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
+    },
+    "nova_product_DPQTDd": {
+      "type": "NOVAProduct",
+      "name": "NOVA Product with Text",
+      "settings": {
+        "background_image": "shopify://shop_images/dbfcb608-94a6-47d5-813e-89fae0f5c074_1.png",
+        "product": "",
+        "product_short_desc": "ALL-IN-ONE HYDRATION SERUM",
+        "badge": "CASA COMPLEX™",
+        "heading_top": "Hydration you",
+        "heading_bottom": "can feel",
+        "description": "<p><strong>The Casa Complex™</strong> is our signature marine blend. Think: microalgae, ocean minerals, and adaptogens that replenish and support your skin barrier.</p><ul><li>Locks in hydration</li><li>Calms sun‑stressed skin</li><li>Works before, during, and after exposure</li></ul>",
+        "button_link": "",
+        "button_text": "LEARN MORE",
+        "image_text": "Waterless. Performance-backed. Skin that feels like yours."
+      }
     }
   },
   "order": [
@@ -655,6 +671,7 @@
     "section-divider",
     "section-reviews",
     "section-double-0",
-    "section-newsletter"
+    "section-newsletter",
+    "nova_product_DPQTDd"
   ]
 }
