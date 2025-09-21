@@ -90,6 +90,20 @@
         "image_text": ""
       }
     },
+    "right_img_YHdXWB": {
+      "type": "right-img",
+      "name": "SCMA Section",
+      "settings": {
+        "badge": "CASA COMPLEX™",
+        "heading_top": "Hydration you",
+        "heading_bottom": "can feel",
+        "description": "<p><strong>The Casa Complex™</strong> is our signature marine <br/> blend. Think: microalgae, ocean minerals, and <br/>adaptogens that replenish and support your<br/> skin barrier.</p><ul><li>Locks in hydration</li><li>Calms sun‑stressed skin</li><li>Works before, during, and after exposure</li></ul>",
+        "button_link": "",
+        "button_text": "LEARN MORE",
+        "image": "shopify://shop_images/auzenir-_monteiro-dupe_1.png",
+        "image_text": ""
+      }
+    },
     "section-double": {
       "type": "section-double",
       "blocks": {
@@ -654,26 +668,13 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
-    },
-    "right_img_iedNbr": {
-      "type": "right-img",
-      "name": "SCMA Section",
-      "settings": {
-        "badge": "CASA COMPLEX™",
-        "heading_top": "Hydration you",
-        "heading_bottom": "can feel",
-        "description": "<p><strong>The Casa Complex™</strong> is our signature marine <br/> blend. Think: microalgae, ocean minerals, and <br/>adaptogens that replenish and support your<br/> skin barrier.</p><ul><li>Locks in hydration</li><li>Calms sun‑stressed skin</li><li>Works before, during, and after exposure</li></ul>",
-        "button_link": "",
-        "button_text": "LEARN MORE",
-        "image": "shopify://shop_images/auzenir-_monteiro-dupe_1.png",
-        "image_text": ""
-      }
     }
   },
   "order": [
     "section-video",
     "section-announcement",
     "nova_product_UCjdGJ",
+    "right_img_YHdXWB",
     "section-double",
     "section-collection",
     "section-countdown-timer",
@@ -686,7 +687,6 @@
     "section-divider",
     "section-reviews",
     "section-double-0",
-    "section-newsletter",
-    "right_img_iedNbr"
+    "section-newsletter"
   ]
 }
