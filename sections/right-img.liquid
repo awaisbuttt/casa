@@ -43,10 +43,10 @@
       "label": "Right Image"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "image_text",
       "label": "Overlay Text on Image",
-      "default": "Waterless. </br> Performance-backed. </br> Skin that feels like yours."
+      "default": "<p>Waterless.<br>Performance-backed.<br>Skin that feels like yours.</p>"
     }
   ],
   "presets": [
@@ -87,7 +87,7 @@
       {% if section.settings.image != blank %}
         <div class="scma-image" style="background-image: url({{ section.settings.image | img_url: '2000x' }});">
           {% if section.settings.image_text != blank %}
-            <p class="scma-overlay">{{ section.settings.image_text }}</p>
+            <div class="scma-overlay">{{ section.settings.image_text }}</div>
           {% endif %}
         </div>
       {% endif %}
