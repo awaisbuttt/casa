@@ -644,15 +644,15 @@
       "name": "NOVA Product with Text",
       "settings": {
         "background_image": "shopify://shop_images/dbfcb608-94a6-47d5-813e-89fae0f5c074_1.png",
-        "product": "",
+        "product": "sabbatical",
         "product_short_desc": "ALL-IN-ONE HYDRATION SERUM",
-        "badge": "CASA COMPLEX™",
-        "heading_top": "Hydration you",
-        "heading_bottom": "can feel",
-        "description": "<p><strong>The Casa Complex™</strong> is our signature marine blend. Think: microalgae, ocean minerals, and adaptogens that replenish and support your skin barrier.</p><ul><li>Locks in hydration</li><li>Calms sun‑stressed skin</li><li>Works before, during, and after exposure</li></ul>",
+        "badge": "our essentials",
+        "heading_top": "One serum.",
+        "heading_bottom": "Infinite rituals.",
+        "description": "<p>You don’t need a 10-step routine, just one product that keeps up. Post-ocean, pre-meeting, mid-flight.Sabbatical goes where your skin needs it most.<br/><br/></p><p>Powered by the Casa Complex™ , our marine hydration shield that helps skin recover from sun, salt, and sweat.<br/><br/></p>",
         "button_link": "",
-        "button_text": "LEARN MORE",
-        "image_text": "Waterless. Performance-backed. Skin that feels like yours."
+        "button_text": "Shop sabbatical",
+        "image_text": ""
       }
     }
   },
