@@ -24,7 +24,7 @@
       "type": "richtext",
       "id": "description",
       "label": "Description",
-      "default": "<p><strong>The Casa Complex™</strong> is our signature marine </br> blend. Think: microalgae, ocean minerals, and </br>adaptogens that replenish and support your</br> skin barrier.</p><ul><li>Locks in hydration</li><li>Calms sun‑stressed skin</li><li>Works before, during, and after exposure</li></ul>"
+      "default": "<p><strong>The Casa Complex™</strong> is our signature marine </br> blend. Think: microalgae, ocean minerals, and </br>adaptogens that replenish and support your</br> skin barrier.</p><ul><li>Locks in hydration</li><li>Calms sun-stressed skin</li><li>Works before, during, and after exposure</li></ul>"
     },
     {
       "type": "url",
@@ -175,16 +175,13 @@
   width: 100%;
   min-height: 100%;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
   position: relative;
 }
 
 .scma-overlay {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   color: #d6d636;
   font-family: cursive;
   font-size: 1.6rem;
