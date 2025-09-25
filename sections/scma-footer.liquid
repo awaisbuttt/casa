@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <!-- Right Section (Columns unchanged – same as पहले वाला) -->
+    <!-- Right Section (Columns in row on mobile) -->
     <div class="scma-footer-right">
       <!-- SCMA Pages Column -->
       <div class="scma-footer-column">
@@ -86,22 +86,232 @@
 </footer>
 
 <style>
-/* SAME CSS as पहले वाला */
-.scma-footer { background:#f8f6f0; padding:40px 20px; font-family:serif; font-size:14px; }
-.scma-footer-content { display:flex; justify-content:space-between; flex-wrap:wrap; padding:0 30px; }
-.scma-footer-left { max-width:300px; padding-right:30px; }
-.scma-footer-heading { font-weight:bold; margin-bottom:.3em; font-size:18px; }
-.scma-footer-subheading { margin-bottom:1em; font-size:16px; }
-.scma-footer-social { margin-top:20px; }
-.scma-social-icon { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; border:1px solid #999; color:#999; margin-right:15px; transition:all .3s ease; background:transparent; }
-.scma-social-icon:hover { background:#999; color:#fff; transform:scale(1.1); }
-.scma-icon { width:20px; height:20px; fill:currentColor; }
-.scma-footer-right { display:flex; gap:60px; padding-left:30px; }
-.scma-footer-column h4 { font-style:italic; font-size:14px; margin-bottom:15px; text-transform:uppercase; letter-spacing:1px; }
-.scma-footer-column ul { list-style:none; padding:0; margin:0; }
-.scma-footer-column li { margin-bottom:10px; }
-.scma-footer-column a { text-decoration:none; color:#333; font-size:14px; transition:color .3s ease; }
-.scma-footer-column a:hover { text-decoration:underline; color:#555; }
+/* Desktop/Tablet Styles (Unchanged) */
+.scma-footer { 
+  background:#f8f6f0; 
+  padding:40px 20px; 
+  font-family:serif; 
+  font-size:14px; 
+}
+
+.scma-footer-content { 
+  display:flex; 
+  justify-content:space-between; 
+  flex-wrap:wrap; 
+  padding:0 30px; 
+}
+
+.scma-footer-left { 
+  max-width:300px; 
+  padding-right:30px; 
+}
+
+.scma-footer-heading { 
+  font-weight:bold; 
+  margin-bottom:.3em; 
+  font-size:18px; 
+}
+
+.scma-footer-subheading { 
+  margin-bottom:1em; 
+  font-size:16px; 
+}
+
+.scma-footer-social { 
+  margin-top:20px; 
+}
+
+.scma-social-icon { 
+  display:inline-flex; 
+  align-items:center; 
+  justify-content:center; 
+  width:40px; 
+  height:40px; 
+  border-radius:50%; 
+  border:1px solid #999; 
+  color:#999; 
+  margin-right:15px; 
+  transition:all .3s ease; 
+  background:transparent; 
+}
+
+.scma-social-icon:hover { 
+  background:#999; 
+  color:#fff; 
+  transform:scale(1.1); 
+}
+
+.scma-icon { 
+  width:20px; 
+  height:20px; 
+  fill:currentColor; 
+}
+
+.scma-footer-right { 
+  display:flex; 
+  gap:60px; 
+  padding-left:30px; 
+}
+
+.scma-footer-column h4 { 
+  font-style:italic; 
+  font-size:14px; 
+  margin-bottom:15px; 
+  text-transform:uppercase; 
+  letter-spacing:1px; 
+}
+
+.scma-footer-column ul { 
+  list-style:none; 
+  padding:0; 
+  margin:0; 
+}
+
+.scma-footer-column li { 
+  margin-bottom:10px; 
+}
+
+.scma-footer-column a { 
+  text-decoration:none; 
+  color:#333; 
+  font-size:14px; 
+  transition:color .3s ease; 
+}
+
+.scma-footer-column a:hover { 
+  text-decoration:underline; 
+  color:#555; 
+}
+
+/* Mobile Styles - Increased Padding */
+@media (max-width: 768px) {
+  .scma-footer {
+    padding: 30px 25px; /* Increased left/right padding from 15px to 25px */
+  }
+  
+  .scma-footer-content {
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .scma-footer-left {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .scma-footer-right {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding-left: 0;
+    padding-bottom: 10px;
+    margin: 0 -25px; /* Adjusted negative margin to match increased padding */
+    padding-left: 25px; /* Increased left padding */
+    padding-right: 25px; /* Increased right padding */
+    justify-content: center;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .scma-footer-right::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scma-footer-column {
+    flex: 0 0 auto;
+    min-width: 140px;
+    text-align: left;
+  }
+  
+  .scma-footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  
+  .scma-footer-column li {
+    margin-bottom: 8px;
+  }
+  
+  .scma-footer-column a {
+    font-size: 13px;
+  }
+  
+  .scma-footer-social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .scma-social-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 0;
+  }
+  
+  .scma-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Small Mobile Styles - Increased Padding */
+@media (max-width: 480px) {
+  .scma-footer {
+    padding: 25px 20px; /* Increased left/right padding from 10px to 20px */
+  }
+  
+  .scma-footer-left {
+    margin-bottom: 20px;
+  }
+  
+  .scma-footer-heading {
+    font-size: 16px;
+  }
+  
+  .scma-footer-subheading {
+    font-size: 14px;
+  }
+  
+  .scma-footer-right {
+    gap: 8px;
+    margin: 0 -20px; /* Adjusted negative margin to match increased padding */
+    padding-left: 20px; /* Increased left padding */
+    padding-right: 20px; /* Increased right padding */
+  }
+  
+  .scma-footer-column {
+    min-width: 110px;
+  }
+  
+  .scma-footer-column h4 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .scma-footer-column a {
+    font-size: 12px;
+  }
+  
+  .scma-footer-social {
+    gap: 8px;
+  }
+  
+  .scma-social-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .scma-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
 </style>
 
 {% schema %}
