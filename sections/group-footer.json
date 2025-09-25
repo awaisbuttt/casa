@@ -11,43 +11,6 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
-    "scma_footer_Hphjeh": {
-      "type": "scma-footer",
-      "name": "SCMA Footer",
-      "settings": {
-        "scma-instagram-link": "",
-        "scma-tiktok-link": "",
-        "scma-pinterest-link": "",
-        "scma-facebook-link": "",
-        "scma-youtube-link": "",
-        "scma-twitter-link": "",
-        "scma-pages-title": "Pages",
-        "scma-pages-text-1": "Home",
-        "scma-pages-link-1": "",
-        "scma-pages-text-2": "Blog",
-        "scma-pages-link-2": "",
-        "scma-pages-text-3": "Contact",
-        "scma-pages-link-3": "",
-        "scma-pages-text-4": "FAQ",
-        "scma-pages-link-4": "",
-        "scma-about-title": "About",
-        "scma-about-text-1": "Our Story",
-        "scma-about-link-1": "",
-        "scma-about-text-2": "Ingredients",
-        "scma-about-link-2": "",
-        "scma-about-text-3": "Casa Complex",
-        "scma-about-link-3": "",
-        "scma-about-text-4": "RetinART",
-        "scma-about-link-4": "",
-        "scma-shop-title": "Shop",
-        "scma-shop-text-1": "Sabbatical Serum",
-        "scma-shop-link-1": "",
-        "scma-shop-text-2": "Shop All",
-        "scma-shop-link-2": "",
-        "scma-shop-text-3": "Search",
-        "scma-shop-link-3": ""
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -133,7 +96,6 @@
     }
   },
   "order": [
-    "scma_footer_Hphjeh",
     "footer",
     "section-anchor-logo",
     "section-supporting-menu"
