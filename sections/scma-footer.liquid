@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <!-- Right Section (Columns) -->
+    <!-- Right Section (Columns unchanged – same as पहले वाला) -->
     <div class="scma-footer-right">
       <!-- SCMA Pages Column -->
       <div class="scma-footer-column">
@@ -86,70 +86,81 @@
 </footer>
 
 <style>
-.scma-footer {
-  background:#f8f6f0;
-  padding:40px 20px;
-  font-family:serif;
-  font-size:14px;
-}
-.scma-footer-content {
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-}
-.scma-footer-left {
-  max-width:300px;
-  padding-right:30px;
-}
-.scma-footer-heading {
-  font-weight:bold;
-  margin-bottom:.3em;
-  font-size:18px;
-}
-.scma-footer-subheading {
-  margin-bottom:1em;
-  font-size:16px;
-}
-.scma-footer-social {
-  margin-top:20px;
-}
-.scma-social-icon {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:40px;height:40px;
-  border-radius:50%;
-  border:1px solid #999;
-  color:#999;
-  margin-right:10px;
-  transition:all .3s ease;
-  background:transparent;
-}
-.scma-social-icon:hover {
-  background:#999;
-  color:#fff;
-  transform:scale(1.1);
-}
+/* SAME CSS as पहले वाला */
+.scma-footer { background:#f8f6f0; padding:40px 20px; font-family:serif; font-size:14px; }
+.scma-footer-content { display:flex; justify-content:space-between; flex-wrap:wrap; padding:0 30px; }
+.scma-footer-left { max-width:300px; padding-right:30px; }
+.scma-footer-heading { font-weight:bold; margin-bottom:.3em; font-size:18px; }
+.scma-footer-subheading { margin-bottom:1em; font-size:16px; }
+.scma-footer-social { margin-top:20px; }
+.scma-social-icon { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; border:1px solid #999; color:#999; margin-right:15px; transition:all .3s ease; background:transparent; }
+.scma-social-icon:hover { background:#999; color:#fff; transform:scale(1.1); }
 .scma-icon { width:20px; height:20px; fill:currentColor; }
-.scma-footer-right {
-  display:flex;
-  gap:60px;
-}
-
-/* Responsive Styles */
-@media(max-width:1024px){
-  .scma-footer-right{ gap:30px; }
-}
-@media(max-width:768px){
-  .scma-footer-content{ flex-direction:column; align-items:center; text-align:center; }
-  .scma-footer-left{ max-width:100%; padding:0; margin-bottom:20px; }
-  .scma-footer-right{ flex-direction:column; gap:30px; padding:0; }
-  .scma-footer-column h4{ font-size:16px; }
-}
-@media(max-width:480px){
-  .scma-social-icon{ width:35px;height:35px; margin:0 5px; }
-  .scma-icon{ width:18px;height:18px; }
-  .scma-footer-column h4{ font-size:14px; }
-  .scma-footer-column a{ font-size:13px; }
-}
+.scma-footer-right { display:flex; gap:60px; padding-left:30px; }
+.scma-footer-column h4 { font-style:italic; font-size:14px; margin-bottom:15px; text-transform:uppercase; letter-spacing:1px; }
+.scma-footer-column ul { list-style:none; padding:0; margin:0; }
+.scma-footer-column li { margin-bottom:10px; }
+.scma-footer-column a { text-decoration:none; color:#333; font-size:14px; transition:color .3s ease; }
+.scma-footer-column a:hover { text-decoration:underline; color:#555; }
 </style>
+
+{% schema %}
+{
+  "name": "SCMA Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Social Media Links"
+    },
+    { "type": "url", "id": "scma-instagram-link", "label": "Instagram Link" },
+    { "type": "url", "id": "scma-tiktok-link", "label": "TikTok Link" },
+    { "type": "url", "id": "scma-pinterest-link", "label": "Pinterest Link" },
+    { "type": "url", "id": "scma-facebook-link", "label": "Facebook Link" },
+    { "type": "url", "id": "scma-youtube-link", "label": "YouTube Link" },
+    { "type": "url", "id": "scma-twitter-link", "label": "Twitter / X Link" },
+
+    {
+      "type": "header",
+      "content": "SCMA Pages Column"
+    },
+    { "type": "text", "id": "scma-pages-title", "label": "Pages Column Title", "default": "Pages" },
+    { "type": "text", "id": "scma-pages-text-1", "label": "Pages Link 1 Text", "default": "Home" },
+    { "type": "url", "id": "scma-pages-link-1", "label": "Pages Link 1 URL" },
+    { "type": "text", "id": "scma-pages-text-2", "label": "Pages Link 2 Text", "default": "Blog" },
+    { "type": "url", "id": "scma-pages-link-2", "label": "Pages Link 2 URL" },
+    { "type": "text", "id": "scma-pages-text-3", "label": "Pages Link 3 Text", "default": "Contact" },
+    { "type": "url", "id": "scma-pages-link-3", "label": "Pages Link 3 URL" },
+    { "type": "text", "id": "scma-pages-text-4", "label": "Pages Link 4 Text", "default": "FAQ" },
+    { "type": "url", "id": "scma-pages-link-4", "label": "Pages Link 4 URL" },
+
+    {
+      "type": "header",
+      "content": "SCMA About Column"
+    },
+    { "type": "text", "id": "scma-about-title", "label": "About Column Title", "default": "About" },
+    { "type": "text", "id": "scma-about-text-1", "label": "About Link 1 Text", "default": "Our Story" },
+    { "type": "url", "id": "scma-about-link-1", "label": "About Link 1 URL" },
+    { "type": "text", "id": "scma-about-text-2", "label": "About Link 2 Text", "default": "Ingredients" },
+    { "type": "url", "id": "scma-about-link-2", "label": "About Link 2 URL" },
+    { "type": "text", "id": "scma-about-text-3", "label": "About Link 3 Text", "default": "Casa Complex" },
+    { "type": "url", "id": "scma-about-link-3", "label": "About Link 3 URL" },
+    { "type": "text", "id": "scma-about-text-4", "label": "About Link 4 Text", "default": "RetinART" },
+    { "type": "url", "id": "scma-about-link-4", "label": "About Link 4 URL" },
+
+    {
+      "type": "header",
+      "content": "SCMA Shop Column"
+    },
+    { "type": "text", "id": "scma-shop-title", "label": "Shop Column Title", "default": "Shop" },
+    { "type": "text", "id": "scma-shop-text-1", "label": "Shop Link 1 Text", "default": "Sabbatical Serum" },
+    { "type": "url", "id": "scma-shop-link-1", "label": "Shop Link 1 URL" },
+    { "type": "text", "id": "scma-shop-text-2", "label": "Shop Link 2 Text", "default": "Shop All" },
+    { "type": "url", "id": "scma-shop-link-2", "label": "Shop Link 2 URL" },
+    { "type": "text", "id": "scma-shop-text-3", "label": "Shop Link 3 Text", "default": "Search" },
+    { "type": "url", "id": "scma-shop-link-3", "label": "Shop Link 3 URL" }
+  ],
+  "presets": [
+    { "name": "SCMA Footer", "category": "Footer" }
+  ]
+}
+{% endschema %}
