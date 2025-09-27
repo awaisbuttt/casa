@@ -9,41 +9,15 @@
  */
 {
   "sections": {
-    "section-hero": {
-      "type": "section-hero",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "Contact Us",
-            "heading_font_size": "heading-large",
-            "heading_tag": "automatic"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Tell your brand's story through images.</p>",
-            "text_font_size": "body-large"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+    "baner_img_jbN4NW": {
+      "type": "baner-img",
+      "name": "SCMA Banner",
       "settings": {
-        "link": "",
-        "width": "wrapper--full",
-        "height": "five-fifty-height-hero",
-        "flex_align_desktop": "align--bottom-left-desktop",
-        "mobile_height": "four-fifty-height-hero--mobile",
-        "flex_align_mobile": "align--bottom-left-mobile",
-        "color_scheme": "scheme-2",
-        "show_text_background": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_placeholder": true
+        "banner_image": "shopify://shop_images/1-1093_2_2.png",
+        "banner_heading": "Contact Us",
+        "banner_text1": "Lorem ipsum dolor sit amet, consectetur",
+        "banner_text2": "adipiscing elit. Nunc vulputate libero et.",
+        "banner_text3": ""
       }
     },
     "main-page": {
@@ -197,7 +171,7 @@
     }
   },
   "order": [
-    "section-hero",
+    "baner_img_jbN4NW",
     "main-page",
     "contact-form",
     "section-accordion-group"

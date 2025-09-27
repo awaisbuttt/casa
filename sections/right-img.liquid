@@ -98,7 +98,7 @@
 
 <style>
 .scma-section {
-  background: #f9f7f1;
+  background: #F4F3EC;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -109,6 +109,7 @@
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
+  background: #F4F3EC;
 }
 
 .scma-left {
@@ -118,6 +119,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: #F4F3EC;
 }
 
 .scma-right {
@@ -125,6 +127,7 @@
   padding: 0;
   margin: 0;
   display: flex;
+  background: #F4F3EC;
 }
 
 .scma-badge {
@@ -135,9 +138,9 @@
 }
 
 .scma-heading {
-  font-size: 56px;
+  font-size: 40px;
   margin: 10px 0;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
 }
 .scma-heading-top { display: block; }
@@ -175,16 +178,16 @@
   width: 100%;
   min-height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   position: relative;
 }
 
 .scma-overlay {
   position: absolute;
-  bottom: 20px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   color: #d6d636;
   font-family: cursive;
   font-size: 1.6rem;
@@ -192,10 +195,75 @@
   max-width: 80%;
 }
 
+/* Tablet responsiveness */
+@media(max-width: 1024px) {
+  .scma-left {
+    padding: 60px 40px;
+  }
+  .scma-heading {
+    font-size: 48px;
+  }
+  .scma-description {
+    font-size: 18px;
+  }
+  .scma-overlay {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile responsiveness */
 @media(max-width: 768px) {
-  .scma-left, .scma-right { flex: 1 1 100%; }
-  .scma-image { height: 400px; }
-  .scma-btn { width: 180px; height: 44px; line-height: 44px; font-size: 13px; }
-  .scma-overlay { font-size: 1.1rem; padding: 0 10px; }
+  .scma-left, .scma-right { 
+    flex: 1 1 100%; 
+  }
+  .scma-left {
+    padding: 40px 20px;
+    order: 2;
+  }
+  .scma-right {
+    order: 1;
+  }
+  .scma-image { 
+    height: 300px; 
+  }
+  .scma-btn { 
+    width: 160px; 
+    height: 44px; 
+    line-height: 44px; 
+    font-size: 13px; 
+  }
+  .scma-overlay { 
+    font-size: 1rem; 
+    padding: 0 15px;
+  }
+  .scma-heading {
+    font-size: 36px;
+  }
+  .scma-description {
+    font-size: 16px;
+  }
+  .scma-badge {
+    font-size: 16px;
+  }
+}
+
+/* Small mobile responsiveness */
+@media(max-width: 480px) {
+  .scma-left {
+    padding: 30px 15px;
+  }
+  .scma-heading {
+    font-size: 30px;
+  }
+  .scma-description {
+    font-size: 15px;
+  }
+  .scma-image { 
+    height: 250px; 
+  }
+  .scma-overlay { 
+    font-size: 0.9rem; 
+    padding: 0 10px;
+  }
 }
 </style>

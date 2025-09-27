@@ -1,0 +1,163 @@
+<!-- /sections/formulas-icons.liquid -->
+<style>
+  .formulas-icons {
+    padding: 30px 0;
+    background: #A1CECB;
+  }
+  
+  .formulas-icons h2 {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .icon-item {
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .icon-wrapper img {
+    width: 35px;
+    height: auto;
+    filter: brightness(0%);
+    margin-bottom: 10px;
+  }
+  
+  .icon-item p {
+    font-weight: 500;
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .icon-item p:last-child {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* Tablet styles */
+  @media screen and (min-width: 768px) {
+    .formulas-icons {
+      padding: 40px 0;
+    }
+    
+    .formulas-icons h2 {
+      font-size: 28px;
+      margin-bottom: 35px;
+    }
+    
+    .icon-wrapper img {
+      width: 40px;
+    }
+    
+    .icon-item p {
+      font-size: 17px;
+    }
+  }
+
+  /* Desktop styles */
+  @media screen and (min-width: 1024px) {
+    .formulas-icons {
+      padding: 50px 0;
+    }
+    
+    .formulas-icons h2 {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .icons-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+    
+    .icon-wrapper img {
+      width: 45px;
+    }
+    
+    .icon-item p {
+      font-size: 18px;
+    }
+  }
+</style>
+
+<section class="formulas-icons">
+  <div class="page-width">
+    <h2>{{ section.settings.heading }}</h2>
+    
+    <div class="icons-grid">
+      {% for block in section.blocks %}
+        <div class="icon-item">
+          {% if block.settings.icon != blank %}
+            <div class="icon-wrapper">
+              <img 
+                src="{{ block.settings.icon | image_url }}" 
+                alt="{{ block.settings.title }}"
+                loading="lazy"
+              >
+            </div>
+          {% endif %}
+          
+          <p>{{ block.settings.title }}</p>
+          <p>{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Formulas Icons Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Our formulas are always:"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_block",
+      "name": "Icon + Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Upload Icon (SVG/PNG/JPG)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Waterless"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Description",
+          "default": "(for potency + less waste)"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Formulas Icons Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

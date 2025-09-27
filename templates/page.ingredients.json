@@ -9,108 +9,6 @@
  */
 {
   "sections": {
-    "baner_img_HqVJri": {
-      "type": "baner-img",
-      "name": "SCMA Banner",
-      "settings": {
-        "banner_image": "shopify://shop_images/isabela-vanacore-dupe_9_-extended_1.png",
-        "banner_heading": "Our Ingredients",
-        "banner_text1": "Every ingredient is chosen for a reason. Get to know our",
-        "banner_text2": "hand-picked selections, and our shining star RetinART™",
-        "banner_text3": ""
-      }
-    },
-    "ingredients_auto_carousel_waEDdh": {
-      "type": "Ingredients-Auto-Carousel",
-      "blocks": {
-        "ingredient_nRDKaj": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/resource-database-8tDBTlOcQs0-unsplash_1_1.png",
-            "title": "Microalgae",
-            "text": "Rich in amino acids and skin-repairing nutrients.\n\nWhy we love it: It's ocean-born resilience in a bottle—revitalizes dull, sun-tired skin."
-          }
-        },
-        "ingredient_PYf3aT": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/faruk-tokluoglu-Cgi1Zi3WEtU-unsplash_1.png",
-            "title": "Ocean Minerals",
-            "text": "Restore and balance pH, deliver trace elements, and support skin structure.\nWhy we love it: They replenish what salt, sweat, and sun strip away."
-          }
-        },
-        "ingredient_GXbQQz": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/ekaterina-shishina-Sy9cEOlg4eI-unsplash_1.png",
-            "title": "Sea Buckthorn",
-            "text": "Loaded with omega-7 and antioxidants to brighten and repair.\nWhy we love it: It brings the glow—and softens sun-stressed spots."
-          }
-        },
-        "ingredient_7qkBTn": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/walter-frehner-1ApakgiCm4w-unsplash_1.png",
-            "title": "Meadowfoam",
-            "text": "Locks in hydration with a velvety finish.\nWhy we love it: A moisture seal that never feels heavy."
-          }
-        }
-      },
-      "block_order": [
-        "ingredient_nRDKaj",
-        "ingredient_PYf3aT",
-        "ingredient_GXbQQz",
-        "ingredient_7qkBTn"
-      ],
-      "name": "Ingredients Auto Carousel",
-      "settings": {
-        "heading": "What we're made of",
-        "subtext": "Our formulas are clean without compromise because your skin deserves efficacy, not just aesthetics."
-      }
-    },
-    "flora_wxaT3L": {
-      "type": "Flora",
-      "name": "Flora Section",
-      "settings": {
-        "badge": "MEET RETINART™",
-        "heading": "Science-forward skin renewal, reimagined for real life.",
-        "description": "<p><strong>RetinART™ </strong>is a patent‑pending active derived from sustainable microalgae, clinically shown to deliver retinol‑like results—without irritation, peeling, or sensitivity.</p>",
-        "accordion1_title": "What It Does",
-        "accordion1_text": "<p>Locks in hydration, calms stressed skin, and supports your skin barrier with marine-derived actives.</p>",
-        "accordion2_title": "How It Works",
-        "accordion2_text": "<p>Powered by sustainable microalgae and adaptogens, this blend replenishes skin before, during, and after environmental stress.</p>",
-        "image": "shopify://shop_images/uros-miloradovic-7bMynojPirs-unsplash_1.png",
-        "image_text": ""
-      }
-    },
-    "statistics_banner_ketgLr": {
-      "type": "Statistics-Banner",
-      "name": "Statistics Banner",
-      "settings": {
-        "title": "The Numbers Don't Lie",
-        "subtitle": "Clinically backed. Derm-approved. Sensory-tested.",
-        "background_color": "#a1cecb",
-        "stat_1_value": "+57%",
-        "stat_1_label": "Moisture",
-        "stat_2_value": "46%",
-        "stat_2_label": "Redness",
-        "stat_3_value": ">60%",
-        "stat_3_label": "Improvement in complexion evenness"
-      }
-    },
-    "custom_banner_nRrYKf": {
-      "type": "Custom-Banner",
-      "name": "Custom Banners",
-      "settings": {
-        "banner_image": "shopify://shop_images/awaii_512b7605-ce50-4439-be43-62878372089e.jpg",
-        "banner_heading": "Hydration that actually keeps up",
-        "banner_subheading": "No overthinking. No overpacking. Just one serum that goes with you.",
-        "button_1_text": "SHOP SABBATICAL",
-        "button_1_link": "",
-        "button_2_text": "TAKE THE QUIZ",
-        "button_2_link": ""
-      }
-    },
     "blog_post_header_LUznmj": {
       "type": "Blog-Post-Header",
       "disabled": true,
@@ -180,11 +78,6 @@
     }
   },
   "order": [
-    "baner_img_HqVJri",
-    "ingredients_auto_carousel_waEDdh",
-    "flora_wxaT3L",
-    "statistics_banner_ketgLr",
-    "custom_banner_nRrYKf",
     "blog_post_header_LUznmj",
     "blog_with_related_EyWyqW",
     "blog_steps_with_sidebar_NtkMxm",

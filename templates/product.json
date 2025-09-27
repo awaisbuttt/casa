@@ -105,7 +105,7 @@
         "upsell": {
           "type": "upsell",
           "settings": {
-            "upsell_product": "",
+            "upsell_product": "product-name-3",
             "upsell_product_list": [],
             "show_available_upsell_only": false,
             "layout": "stacked",
@@ -137,7 +137,7 @@
         "image_size": "stretch",
         "mobile_image_style": "thumbs",
         "color_scheme": "scheme-1",
-        "padding_top": 100,
+        "padding_top": 0,
         "padding_bottom": 30
       }
     },
@@ -357,35 +357,27 @@
         "review": {
           "type": "review",
           "settings": {
-            "title": "Kenny P.",
+            "title": "Carmen",
             "subheading": "Customer",
-            "review_content": "<p>This is the best coffee I’ve ever had—smooth, bold, and perfectly balanced. It’s become my new morning ritual, and I look forward to it every day. The aroma and taste are simply unbeatable, making it a must-try for any coffee lover.</p>",
+            "review_content": "<p>“I used this post-hike and post-flight—and my skin still felt like I’d been on a spa weekend. Obsessed.”<br/><br/></p>",
+            "featured_image": "shopify://shop_images/IMG_3056_2.png",
             "review_url": ""
           }
         },
         "review-0": {
           "type": "review",
           "settings": {
-            "title": "Nadia L.",
-            "subheading": "Customer",
-            "review_content": "<p>This has completely changed how I view coffee, turning it into a rich and complex experience with every sip. I love experimenting with different brewing methods just to see how the flavors evolve. I’m now a lifelong fan and can’t imagine my mornings without it.</p>",
-            "review_url": ""
-          }
-        },
-        "review-1": {
-          "type": "review",
-          "settings": {
-            "title": "Jamal B.",
-            "subheading": "Customer",
-            "review_content": "<p>This roast exceeded my expectations with its rich, layered flavor profile. It’s perfect for those moments when I want to enjoy something truly exceptional. I’ve shared it with friends, and it’s quickly become my go-to coffee.</p>",
+            "title": "Malakani Severson",
+            "subheading": "Esthetician",
+            "review_content": "<p>“One of the only products I packed on my Big Island jungle adventure! Has not disappointed. Texture, smell, efficacy: all 10s.”<br/><br/></p>",
+            "featured_image": "shopify://shop_images/CasaNoon-2_3.png",
             "review_url": ""
           }
         }
       },
       "block_order": [
         "review",
-        "review-0",
-        "review-1"
+        "review-0"
       ],
       "settings": {
         "show_featured_image": true,
@@ -407,6 +399,8 @@
           "settings": {
             "show_video_popup": false,
             "video_popup_social": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "image": "shopify://shop_images/auzenir-_monteiro-dupe_1_2.png",
+            "mobile_image": "shopify://shop_images/auzenir-_monteiro-dupe_1_2.png",
             "title": "",
             "heading_font_size": "heading-large",
             "text": "",
@@ -431,7 +425,7 @@
             "subheading": "",
             "title": "Why You’ll Love It",
             "heading_font_size": "heading-medium",
-            "text": "<ul><li><strong>Ethically Sourced</strong>: We’re committed to supporting farmers who grow our beans with care and respect for the land.</li><li><strong>Small-Batch Roasted</strong>: Each batch is roasted to order, ensuring that your coffee arrives fresh and full of flavor.</li><li><strong>Versatile Brew</strong>: Perfect for your favorite brewing methods—whether it’s pour-over, French press, or espresso.</li></ul>",
+            "text": "<ul><li>Brightens + boosts glow</li><li>Reduces the look of sun spots and discoloration</li><li>Supports skin barrier health before and after sun exposure</li><li>Gentle enough for daily use—no dryness, no peeling</li><li>Balmy texture that melts in, never pills</li><li>Formulated for all skin types, especially those on the go</li></ul>",
             "text_font_size": "body-large",
             "button_text": "",
             "button_url": "",
@@ -498,6 +492,19 @@
         "padding_top": 30,
         "padding_bottom": 0
       }
+    },
+    "custom_banner_hJzf3U": {
+      "type": "Custom-Banner",
+      "name": "Custom Banners",
+      "settings": {
+        "banner_image": "shopify://shop_images/awaii_512b7605-ce50-4439-be43-62878372089e.jpg",
+        "banner_heading": "Hydration that actually keeps up",
+        "banner_subheading": "No overthinking. No overpacking. Just one serum that goes with you.",
+        "button_1_text": "SHOP SABBATICAL",
+        "button_1_link": "",
+        "button_2_text": "TAKE THE QUIZ",
+        "button_2_link": ""
+      }
     }
   },
   "order": [
@@ -507,6 +514,7 @@
     "section-accordion-1",
     "section-reviews",
     "section-custom-content",
-    "related"
+    "related",
+    "custom_banner_hJzf3U"
   ]
 }

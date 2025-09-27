@@ -1,0 +1,126 @@
+<style>
+  .blog-post-header {
+    text-align: center;
+    margin-top: 0; 
+    padding: 5px 60px 30px 60px; /* Desktop original */
+    background-color: #F4F3EC;   /* नई creamy background 🎨 */
+     margin-bottom: 50px;
+  }
+
+  .blog-post-header h1 {
+    font-size: 56px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .blog-post-header p {
+    font-size: 17px;
+    color: #000; 
+    margin-bottom: 20px;
+  }
+
+  .blog-post-header img {
+    max-width: 100%;
+    border-radius: 4px;
+    padding-left: 100px;   
+    padding-right: 100px;
+    box-sizing: border-box;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Tablet responsive */
+  @media (max-width: 1024px) {
+    .blog-post-header {
+      padding: 5px 40px 25px 40px;
+    }
+
+    .blog-post-header img {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .blog-post-header {
+      padding: 5px 20px 20px 20px;
+    }
+    
+    .blog-post-header h1 {
+      font-size: 32px;
+    }
+
+    .blog-post-header p {
+      font-size: 14px;
+    }
+
+    .blog-post-header img {
+      padding-left: 15px; 
+      padding-right: 15px;
+    }
+  }
+
+  /* Very small phones */
+  @media (max-width: 480px) {
+    .blog-post-header {
+      padding: 5px 10px;
+    }
+
+    .blog-post-header h1 {
+      font-size: 26px;
+    }
+  }
+</style>
+
+<section class="blog-post-header">
+  <h1>
+    {{ section.settings.blog_title }}
+  </h1>
+  <p>
+    {{ section.settings.post_date }} &nbsp; • &nbsp; By {{ section.settings.author_name }}
+  </p>
+  {% if section.settings.featured_image != blank %}
+    <img src="{{ section.settings.featured_image | img_url: '1200x800' }}" 
+         alt="{{ section.settings.blog_title }}" />
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Blog Post Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "blog_title",
+      "label": "Blog Title",
+      "default": "Blog post title goes here"
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Author Name",
+      "default": "Andrea Dubecki"
+    },
+    {
+      "type": "text",
+      "id": "post_date",
+      "label": "Post Date",
+      "default": "September 04, 2024"
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "Featured Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Post Header",
+      "category": "Blog"
+    }
+  ]
+}
+{% endschema %}

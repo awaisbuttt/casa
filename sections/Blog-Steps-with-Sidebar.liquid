@@ -1,0 +1,280 @@
+{% schema %}
+{
+  "name": "Blog Steps with Sidebar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "blog_heading",
+      "label": "Blog Heading",
+      "default": "An H3 heading for this blog goes here"
+    },
+    {
+      "type": "richtext",
+      "id": "blog_steps",
+      "label": "Blog Steps",
+      "default": "<p><strong>1. Measure Your Coffee and Water</strong><br>The ideal ratio for cold brew is 1:4—that's 1 part coffee to 4 parts water...</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "extra_content",
+      "label": "Extra Content Below",
+      "default": "<h3>Another H3 heading here</h3><ul><li>Use Fresh, Coarse Grounds...</li></ul>"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_title1",
+      "label": "Sidebar Article Title 1",
+      "default": "How to Brew: Pour Over"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_date1",
+      "label": "Sidebar Article Date 1",
+      "default": "September 04, 2024"
+    },
+    {
+      "type": "image_picker",
+      "id": "sidebar_image1",
+      "label": "Sidebar Article Image 1"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_title2",
+      "label": "Sidebar Article Title 2",
+      "default": "A Commitment to Quality and Fairness"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_date2",
+      "label": "Sidebar Article Date 2",
+      "default": "September 04, 2024"
+    },
+    {
+      "type": "image_picker",
+      "id": "sidebar_image2",
+      "label": "Sidebar Article Image 2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Steps with Sidebar",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}
+
+<!-- BLOG MAIN + SIDEBAR -->
+<div id="isolated-blog-section-{{ section.id }}" class="isolated-blog-container">
+  <!-- LEFT SIDE BLOG -->
+  <div class="isolated-blog-main">
+    <h3>{{ section.settings.blog_heading }}</h3>
+    <div class="isolated-blog-steps">
+      {{ section.settings.blog_steps }}
+    </div>
+
+    <!-- EXTRA CONTENT BELOW -->
+    <div class="isolated-blog-extra">
+      {{ section.settings.extra_content }}
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE SIDEBAR -->
+  <div class="isolated-blog-sidebar">
+    <div class="isolated-sidebar-article">
+      <div class="isolated-article-info">
+        <div class="isolated-article-title">{{ section.settings.sidebar_title1 }}</div>
+        <div class="isolated-article-date">{{ section.settings.sidebar_date1 }}</div>
+      </div>
+      {% if section.settings.sidebar_image1 != blank %}
+        <img src="{{ section.settings.sidebar_image1 | img_url: '500x' }}" alt="Article 1" class="isolated-article-image">
+      {% endif %}
+    </div>
+
+    <div class="isolated-sidebar-article">
+      {% if section.settings.sidebar_image2 != blank %}
+        <img src="{{ section.settings.sidebar_image2 | img_url: '500x' }}" alt="Article 2" class="isolated-article-image">
+      {% endif %}
+      <div class="isolated-article-info">
+        <div class="isolated-article-title">{{ section.settings.sidebar_title2 }}</div>
+        <div class="isolated-article-date">{{ section.settings.sidebar_date2 }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ISOLATED BLOG SECTION - WON'T AFFECT OTHER PAGES */
+#isolated-blog-section-{{ section.id }}.isolated-blog-container { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  gap: 120px; 
+  margin: 40px 0; 
+  padding: 0 160px; 
+  box-sizing: border-box;
+  background-color: #F4F3EC;
+  width: 100%;
+}
+
+/* LEFT BLOG CONTENT */
+#isolated-blog-section-{{ section.id }} .isolated-blog-main { 
+  flex: 2; 
+}
+
+#isolated-blog-section-{{ section.id }} .isolated-blog-main h3 { 
+  font-size: 22px; 
+  font-weight: 600; 
+  margin-bottom: 15px; 
+  margin-top: -180px;
+  padding: 5px;
+  color: #000 !important;
+}
+
+#isolated-blog-section-{{ section.id }} .isolated-blog-steps p, 
+#isolated-blog-section-{{ section.id }} .isolated-blog-extra p, 
+#isolated-blog-section-{{ section.id }} .isolated-blog-extra li { 
+  font-size: 15px; 
+  line-height: 1.6; 
+  margin-bottom: 18px;
+  color: #000 !important;
+}
+
+#isolated-blog-section-{{ section.id }} .isolated-blog-extra h3 { 
+  font-size: 20px; 
+  font-weight: 600; 
+  margin-top: 30px; 
+  margin-bottom: 15px;
+  padding: 5px;
+  color: #000 !important;
+}
+
+#isolated-blog-section-{{ section.id }} .isolated-blog-extra h4 { 
+  font-size: 17px; 
+  font-weight: 600; 
+  margin-top: 25px; 
+  margin-bottom: 10px;
+  padding: 5px;
+  color: #000 !important;
+}
+
+#isolated-blog-section-{{ section.id }} .isolated-blog-extra ul { 
+  margin-left: 18px; 
+}
+
+/* SIDEBAR */
+#isolated-blog-section-{{ section.id }} .isolated-blog-sidebar { 
+  flex: 1; 
+  max-width: 260px; 
+  margin-top: -70px;
+}
+
+#isolated-blog-section-{{ section.id }} .isolated-sidebar-article { 
+  margin-bottom: 30px; 
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#isolated-blog-section-{{ section.id }} .isolated-article-info { 
+  padding: 12px; 
+}
+
+#isolated-blog-section-{{ section.id }} .isolated-article-title { 
+  font-size: 16px; 
+  font-weight: 600; 
+  margin-bottom: 4px;
+  color: #000 !important;
+}
+
+#isolated-blog-section-{{ section.id }} .isolated-article-date { 
+  font-size: 13px; 
+  margin-bottom: 8px;
+  color: #000 !important;
+}
+
+#isolated-blog-section-{{ section.id }} .isolated-article-image { 
+  width: 100%; 
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  #isolated-blog-section-{{ section.id }}.isolated-blog-container { 
+    padding: 0 80px; 
+    gap: 80px; 
+  }
+}
+
+@media (max-width: 992px) {
+  #isolated-blog-section-{{ section.id }}.isolated-blog-container { 
+    padding: 0 40px; 
+    gap: 60px; 
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-blog-main h3 { 
+    margin-top: -120px; 
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-blog-sidebar { 
+    margin-top: -40px; 
+  }
+}
+
+@media (max-width: 768px) {
+  #isolated-blog-section-{{ section.id }}.isolated-blog-container { 
+    flex-direction: column; 
+    gap: 30px; 
+    padding: 0 20px; 
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-blog-main h3 { 
+    margin-top: 0; 
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-blog-sidebar { 
+    max-width: 100%; 
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-sidebar-article { 
+    width: calc(50% - 10px); 
+    margin-bottom: 0; 
+  }
+}
+
+@media (max-width: 480px) {
+  #isolated-blog-section-{{ section.id }}.isolated-blog-container { 
+    padding: 0 15px; 
+    gap: 20px; 
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-blog-steps p, 
+  #isolated-blog-section-{{ section.id }} .isolated-blog-extra p, 
+  #isolated-blog-section-{{ section.id }} .isolated-blog-extra li { 
+    font-size: 14px; 
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-blog-main h3 { 
+    font-size: 20px; 
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-blog-extra h3 { 
+    font-size: 18px; 
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-blog-extra h4 { 
+    font-size: 16px; 
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-blog-sidebar { 
+    flex-direction: column; 
+  }
+  
+  #isolated-blog-section-{{ section.id }} .isolated-sidebar-article { 
+    width: 100%; 
+  }
+}
+</style>

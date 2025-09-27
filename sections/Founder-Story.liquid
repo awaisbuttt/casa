@@ -1,0 +1,264 @@
+<style>
+/* Section Wrapper with Stripes */
+.founder-section {
+  background-image: repeating-linear-gradient(
+    to right,
+    #2e4a2e 0px,
+    #2e4a2e 120px,
+    #6baacb 120px,
+    #6baacb 233px
+  );
+  background-size: 226px 100%;
+  padding: 60px 20px;
+}
+
+/* Card Container (Row) */
+.founder-card {
+  background: #F4F3EC;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  max-width: 1150px;
+  margin: auto;
+  gap: 80px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex-wrap: wrap;
+}
+
+/* Left Text Block */
+.founder-text {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.story-label {
+  color: #1d64d3 !important;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.founder-text h2 {
+  font-size: 45px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+}
+
+.founder-text p {
+  color: #000;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+}
+
+/* ✅ Updated button class */
+.founder-btn {
+  padding: 12px 24px;
+  border: 1px solid black;
+  border-radius: 30px;
+  font-weight: bold;
+  color: black;
+  background: transparent;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: fit-content;
+  margin-top: 15px;
+}
+.founder-btn:hover {
+  background: black;
+  color: white;
+}
+
+/* Right Image Collage */
+.collage-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 320px;
+  max-width: 400px;  
+  height: 420px;     
+  margin: auto;
+}
+
+/* Collage images positioned absolutely */
+.collage-wrapper img {
+  position: absolute;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Original Image placements */
+.img1 {
+  width: 220px; height: 270px;
+  top: 8px; left: -4px;
+  transform: rotate(3deg);
+}
+.img2 {
+  width: 180px; height: 90px;
+  top: 20px; left: 200px;
+  transform: rotate(4deg);
+}
+.img3 {
+  width: 160px; height: 115px;
+  top: 250px; left: 70px;
+}
+.img4 {
+  width: 145px; height: 195px;
+  top: 110px; left: 190px;
+}
+.img5 {
+  width: 58px; height: 75px;
+  top: 265px; left: 10px;
+}
+.img6 {
+  width: 120px; height: 26px;
+  top: 310px; left: 250px;
+  transform: rotate(5deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .founder-card {
+    padding: 50px;
+    gap: 60px;
+  }
+  .founder-text h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .founder-card {
+    gap: 40px;
+    padding: 40px;
+  }
+  .founder-text h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-card {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+  }
+  .founder-text {
+    max-width: 100%;
+  }
+  .founder-text h2 {
+    font-size: 32px;
+  }
+  .founder-text p {
+    font-size: 15px;
+  }
+  /* Keep collage original size but center it */
+  .collage-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .founder-section {
+    padding: 40px 15px;
+  }
+  .founder-card {
+    padding: 25px;
+    gap: 25px;
+  }
+  .story-label {
+    font-size: 16px;
+  }
+  .founder-text h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  .founder-text p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .founder-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  /* Scale collage slightly */
+  .collage-wrapper {
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+}
+</style>
+
+<div class="founder-section">
+  <div class="founder-card">
+
+    <!-- Left Text -->
+    <div class="founder-text">
+      <p class="story-label">{{ section.settings.label }}</p>
+      <h2>{{ section.settings.title }}</h2>
+      <p>{{ section.settings.text1 }}</p>
+      <p>{{ section.settings.text2 }}</p>
+      <p>{{ section.settings.text3 }}</p>
+      <p>{{ section.settings.text4 }}</p>
+      <a href="{{ section.settings.button_link }}" class="founder-btn">{{ section.settings.button_text }}</a>
+    </div>
+
+    <!-- Right Collage -->
+    <div class="collage-wrapper">
+      {% if section.settings.image1 != blank %}
+        <img src="{{ section.settings.image1 | img_url: '600x' }}" class="img1" alt="">
+      {% endif %}
+      {% if section.settings.image2 != blank %}
+        <img src="{{ section.settings.image2 | img_url: '600x' }}" class="img2" alt="">
+      {% endif %}
+      {% if section.settings.image3 != blank %}
+        <img src="{{ section.settings.image3 | img_url: '600x' }}" class="img3" alt="">
+      {% endif %}
+      {% if section.settings.image4 != blank %}
+        <img src="{{ section.settings.image4 | img_url: '600x' }}" class="img4" alt="">
+      {% endif %}
+      {% if section.settings.image5 != blank %}
+        <img src="{{ section.settings.image5 | img_url: '600x' }}" class="img5" alt="">
+      {% endif %}
+      {% if section.settings.image6 != blank %}
+        <img src="{{ section.settings.image6 | img_url: '600x' }}" class="img6" alt="">
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Founder Story",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Top Label", "default": "FOUNDER'S STORY" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Why Casa Noon Exists" },
+    { "type": "textarea", "id": "text1", "label": "Paragraph 1" },
+    { "type": "textarea", "id": "text2", "label": "Paragraph 2" },
+    { "type": "textarea", "id": "text3", "label": "Paragraph 3" },
+    { "type": "textarea", "id": "text4", "label": "Paragraph 4" },
+    { "type": "text", "id": "button_text", "label": "Button Text", "default": "ALL ABOUT ANDI" },
+    { "type": "url", "id": "button_link", "label": "Button Link" },
+    { "type": "image_picker", "id": "image1", "label": "Collage Image 1" },
+    { "type": "image_picker", "id": "image2", "label": "Collage Image 2" },
+    { "type": "image_picker", "id": "image3", "label": "Collage Image 3" },
+    { "type": "image_picker", "id": "image4", "label": "Collage Image 4" },
+    { "type": "image_picker", "id": "image5", "label": "Collage Image 5" },
+    { "type": "image_picker", "id": "image6", "label": "Collage Image 6" }
+  ],
+  "presets": [
+    { "name": "Founder Story Row With Collage" }
+  ]
+}
+{% endschema %}

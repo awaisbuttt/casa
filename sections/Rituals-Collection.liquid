@@ -1,0 +1,360 @@
+{% schema %}
+{
+  "name": "Rituals Collection",
+  "class": "rituals-collection-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "For your daily rituals"
+    },
+    {
+      "type": "richtext",
+      "id": "quote",
+      "label": "Quote/Description",
+      "default": "<p>Elevate your everyday with our carefully curated collection of essentials designed to bring comfort and style to your daily routines.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "SHOP THE COLLECTION"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "collection",
+      "id": "featured_collection",
+      "label": "Featured Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "label": "Products to Show",
+      "default": 9
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rituals Collection",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="rituals-collection">
+  <div class="rituals-wrapper">
+    
+    <!-- Left content -->
+    <div class="collection-info">
+      <h2 class="collection-heading">{{ section.settings.heading }}</h2>
+      <div class="collection-quote">{{ section.settings.quote }}</div>
+      {% if section.settings.button_text != blank %}
+        <a href="{{ section.settings.button_link }}" class="collection-button">
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+
+    <!-- Right products -->
+    <div class="collection-products-wrapper">
+      <button class="scroll-btn scroll-left" id="scrollLeft"></button>
+      <div class="collection-products" id="scrollProducts">
+        {% if section.settings.featured_collection != blank %}
+          {% for product in collections[section.settings.featured_collection].products limit: section.settings.products_to_show %}
+            <div class="product-item">
+              <a href="{{ product.url }}" class="product-image">
+                <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+              </a>
+              <div class="product-info">
+                <h3 class="product-name"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+                <p class="product-price">{{ product.price | money }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          {% for i in (1..section.settings.products_to_show) %}
+            <div class="product-item">
+              <div class="product-image">
+                <img src="https://via.placeholder.com/300x300" alt="Product">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name"><a href="#!">Product Name</a></h3>
+                <p class="product-price">$33.00</p>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <button class="scroll-btn scroll-right" id="scrollRight"></button>
+    </div>
+
+  </div>
+</div>
+
+<style>
+.rituals-collection {
+  padding:60px 0;
+  background:#F4F3EC;
+}
+.rituals-wrapper {
+  display:flex;
+  align-items:flex-start;
+  gap:100px;
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* Left info */
+.collection-info { 
+  flex:0 0 35%;
+  margin-top:-35px;  
+  margin-left:40px;
+}
+.collection-heading {
+  font-size:36px;
+  font-weight:600;
+  margin-bottom:20px;
+  color:#000;
+}
+.collection-quote {
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:30px;
+  color:#000;
+}
+.collection-button {
+  font-size:16px;
+  font-weight:500;
+  text-transform:uppercase;
+  color:#000;
+  border-bottom:1px solid #000;
+  text-decoration:none;
+  padding-bottom:4px;
+  transition:0.3s;
+}
+.collection-button:hover { color:#555; border-color:#555; }
+
+/* Products */
+.collection-products-wrapper {
+  position:relative;
+  flex:1;
+  overflow:hidden;
+}
+.collection-products {
+  display:flex;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+}
+.collection-products::-webkit-scrollbar { display:none; }
+
+.product-item {
+  flex:0 0 40%;   
+  text-align:center;
+  padding:10px;    
+  box-sizing:border-box;
+}
+.product-image {
+  display:block;
+  width:100%;
+  height:300px;
+  overflow:hidden;
+  position: relative;
+  margin: 0 auto;
+}
+.product-image img {
+  width:100%;  
+  height:100%;
+  object-fit:cover;
+  transition:transform .3s ease;
+}
+.product-item:hover img { transform:scale(1.05); }
+
+/* Product name and price closer */
+.product-name { 
+  font-size:16px; 
+  margin:10px 0 2px;  
+}
+.product-name a {
+  color:#000;
+  text-decoration:none;
+  transition: color 0.3s ease;
+}
+.product-name a:hover {
+  color:#555;
+}
+.product-price { 
+  font-size:15px; 
+  color:#000;
+  margin:0;
+}
+
+/* Scroll buttons aligned to img center */
+.scroll-btn {
+  position: absolute;
+  top: 150px;                /* Half of product-image height (300px) */
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0;
+}
+.scroll-btn:hover {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+.scroll-btn::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+}
+.scroll-left { left: 0; display:none; }
+.scroll-right { right: 0; }
+.scroll-left::before { transform: rotate(135deg); }
+.scroll-right::before { transform: rotate(-45deg); }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .rituals-wrapper {
+    gap: 60px;
+    padding: 0 30px;
+  }
+  .collection-info {
+    margin-left: 20px;
+  }
+  .product-item {
+    flex: 0 0 45%;
+  }
+}
+
+@media (max-width: 900px) {
+  .rituals-wrapper { 
+    flex-direction:column; 
+    gap: 40px;
+  }
+  .collection-info { 
+    flex:0 0 100%; 
+    margin-top:0;
+    margin-left:0;
+    text-align: center;
+  } 
+  .collection-heading {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .collection-quote {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .product-item { 
+    flex:0 0 60%; 
+    padding:8px;
+  }
+  .scroll-btn { 
+    top: 150px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rituals-collection {
+    padding: 40px 0;
+  }
+  .rituals-wrapper {
+    padding: 0 15px;
+  }
+  .collection-heading {
+    font-size: 28px;
+  }
+  .collection-quote {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .collection-button {
+    font-size: 14px;
+  }
+  .product-item { 
+    flex:0 0 85%; 
+    padding:6px;
+  }
+  .product-image {
+    height: 250px;
+  }
+  .scroll-btn { 
+    top: 125px; /* Adjusted for smaller image height */
+    width: 32px;
+    height: 32px;
+  }
+  .scroll-btn::before {
+    width: 6px;
+    height: 6px;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-heading {
+    font-size: 24px;
+  }
+  .product-item { 
+    flex:0 0 95%; 
+  }
+  .product-image {
+    height: 220px;
+  }
+  .scroll-btn { 
+    top: 110px; /* Adjusted for smaller image height */
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.getElementById("scrollProducts");
+  const btnLeft = document.getElementById("scrollLeft");
+  const btnRight = document.getElementById("scrollRight");
+
+  function updateButtons() {
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    btnLeft.style.display = container.scrollLeft > 10 ? "flex" : "none";
+    btnRight.style.display = container.scrollLeft < maxScroll - 10 ? "flex" : "none";
+  }
+
+  btnRight.addEventListener("click", function() {
+    container.scrollBy({ left: container.clientWidth * 0.6, behavior: "smooth" });
+    setTimeout(updateButtons, 400);
+  });
+
+  btnLeft.addEventListener("click", function() {
+    container.scrollBy({ left: -container.clientWidth * 0.6, behavior: "smooth" });
+    setTimeout(updateButtons, 400);
+  });
+
+  container.addEventListener("scroll", updateButtons);
+  updateButtons(); // init
+});
+</script>

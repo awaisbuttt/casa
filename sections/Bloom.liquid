@@ -1,0 +1,304 @@
+{% schema %}
+{
+  "name": "Bloom",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Top Label",
+      "default": "FEATURED POST"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Title of blog post\ngoes right here"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit\nNunc vulputate libero et velit interdum, ac aliquet odio\nmattis. Class aptent taciti sociosqu ad litora torquent.."
+    },
+    {
+      "type": "text",
+      "id": "readmore_text",
+      "label": "Read More Text",
+      "default": "Read More"
+    },
+    {
+      "type": "url",
+      "id": "readmore_url",
+      "label": "Read More Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Right Image"
+    },
+    {
+      "type": "text",
+      "id": "image_text",
+      "label": "Overlay Text on Image",
+      "default": "Waterless. Performance-backed. Skin that feels like yours."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bloom Section"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="bloom-section">
+  <div class="bloom-wrapper">
+
+    <!-- LEFT CONTENT -->
+    <div class="bloom-left">
+      {% if section.settings.badge != blank %}
+        <span class="bloom-badge">{{ section.settings.badge }}</span>
+      {% endif %}
+
+      {% if section.settings.heading != blank %}
+        <h2 class="bloom-heading">{{ section.settings.heading | escape | newline_to_br }}</h2>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <div class="bloom-description">{{ section.settings.description | escape | newline_to_br }}</div>
+      {% endif %}
+
+      {% if section.settings.readmore_text != blank %}
+        <a href="{{ section.settings.readmore_url }}" class="bloom-readmore">{{ section.settings.readmore_text }}</a>
+      {% endif %}
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="bloom-right">
+      {% if section.settings.image != blank %}
+        <div class="bloom-image" style="background-image: url({{ section.settings.image | img_url: '2000x' }});">
+          {% if section.settings.image_text != blank %}
+            <p class="bloom-overlay">{{ section.settings.image_text }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* 🌸 Bloom Section Styling */
+.bloom-section {
+  background: #eae9df;
+  width: 100%;
+  margin-top:-20px;
+  padding: 0;
+  overflow: hidden; /* Prevents horizontal scroll */
+}
+
+.bloom-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  min-height: 500px; /* Minimum height for desktop */
+}
+
+/* Left Column */
+.bloom-left {
+  flex: 1 1 50%;
+  padding: 80px 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #eae9df;
+}
+
+/* Small uppercase label */
+.bloom-badge {
+  color: #3b5ed6;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+/* Heading with line breaks */
+.bloom-heading {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 20px;
+  font-family: Georgia, serif;
+  color: #111;
+}
+
+.bloom-heading br {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Description with line breaks */
+.bloom-description {
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;
+  max-width: 520px;
+}
+
+.bloom-description br {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Read More link */
+.bloom-readmore {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #111;
+  padding-bottom: 1px;
+  width: fit-content;
+  transition: color 0.3s, border-color 0.3s;
+  margin-top: auto; /* Pushes button to bottom */
+}
+
+.bloom-readmore:hover {
+  color: #3b5ed6;
+  border-color: #3b5ed6;
+}
+
+/* Right image column */
+.bloom-right {
+  flex: 1 1 50%;
+  display: flex;
+  min-height: 400px; /* Minimum height for image */
+}
+
+.bloom-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.bloom-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d6d636;
+  font-family: cursive;
+  font-size: 1.6rem;
+  text-align: center;
+  max-width: 80%;
+  padding: 0 15px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Better readability */
+}
+
+/* Responsive - Tablets */
+@media(max-width: 991px) {
+  .bloom-left {
+    padding: 60px 40px;
+  }
+  .bloom-heading {
+    font-size: 36px;
+  }
+  .bloom-description {
+    font-size: 17px;
+  }
+  .bloom-overlay {
+    font-size: 1.4rem;
+  }
+}
+
+/* Responsive - Mobile */
+@media(max-width: 768px) {
+  .bloom-wrapper {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .bloom-left, .bloom-right {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  
+  .bloom-left {
+    padding: 40px 20px;
+    order: 2; /* Content below image on mobile */
+  }
+  
+  .bloom-right {
+    order: 1; /* Image first on mobile */
+    min-height: 300px;
+  }
+  
+  .bloom-image {
+    min-height: 300px;
+  }
+  
+  .bloom-heading {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .bloom-badge {
+    margin-bottom: 15px;
+  }
+  
+  .bloom-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .bloom-overlay {
+    font-size: 1.1rem;
+    bottom: 15px;
+    padding: 0 10px;
+  }
+  
+  .bloom-readmore {
+    margin-top: 20px;
+  }
+}
+
+/* Responsive - Small Mobile */
+@media(max-width: 480px) {
+  .bloom-left {
+    padding: 30px 15px;
+  }
+  
+  .bloom-heading {
+    font-size: 24px;
+  }
+  
+  .bloom-description {
+    font-size: 15px;
+  }
+  
+  .bloom-overlay {
+    font-size: 1rem;
+  }
+  
+  .bloom-right {
+    min-height: 250px;
+  }
+  
+  .bloom-image {
+    min-height: 250px;
+  }
+}
+</style>

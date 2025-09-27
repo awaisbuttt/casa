@@ -1,0 +1,289 @@
+{% schema %}
+{
+  "name": "Blog with Related",
+  "settings": [
+    {
+      "type": "text",
+      "id": "blog_heading",
+      "label": "Blog Heading",
+      "default": "An H3 heading for this blog post goes here"
+    },
+    {
+      "type": "textarea",
+      "id": "blog_content",
+      "label": "Blog Content",
+      "default": "When the temperature rises, there's nothing quite like a smooth, refreshing glass of cold brew coffee..."
+    },
+    {
+      "type": "image_picker",
+      "id": "related_image",
+      "label": "Product Image"
+    },
+    {
+      "type": "text",
+      "id": "related_title",
+      "label": "Product Title",
+      "default": "Sabbatical Serum"
+    },
+    {
+      "type": "text",
+      "id": "related_price",
+      "label": "Product Price",
+      "default": "$33.00"
+    },
+    {
+      "type": "url",
+      "id": "related_link",
+      "label": "Product Link"
+    },
+    {
+      "type": "text",
+      "id": "extra_heading",
+      "label": "Extra Section Heading",
+      "default": "Another smaller heading"
+    },
+    {
+      "type": "textarea",
+      "id": "extra_content",
+      "label": "Extra Section Content",
+      "default": "Unlike iced coffee, which is brewed hot and then cooled..."
+    },
+    {
+      "type": "text",
+      "id": "recent_article_title",
+      "label": "Recent Article Title",
+      "default": "The Perfect Espresso Martini"
+    },
+    {
+      "type": "text",
+      "id": "recent_article_date",
+      "label": "Recent Article Date",
+      "default": "September 04, 2024"
+    },
+    {
+      "type": "image_picker",
+      "id": "recent_article_image",
+      "label": "Recent Article Image"
+    },
+    {
+      "type": "text",
+      "id": "steps_heading",
+      "label": "Steps Heading",
+      "default": "Cold Brew Steps"
+    },
+    {
+      "type": "textarea",
+      "id": "steps_content",
+      "label": "Steps Content",
+      "default": "• Coarsely Ground Coffee...\n• Cold Water..."
+    },
+    {
+      "type": "image_picker",
+      "id": "steps_image",
+      "label": "Steps Image"
+    },
+    {
+      "type": "text",
+      "id": "steps_image_title",
+      "label": "Steps Image Title",
+      "default": "Measure Your Coffee and Water"
+    },
+    {
+      "type": "text",
+      "id": "steps_image_date",
+      "label": "Steps Image Date",
+      "default": "September 05, 2024"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog with Related + Extra Image",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}
+
+<!-- FULL SECTION WRAPPER -->
+<div class="custom-blog-wrapper">
+
+  <!-- BLOG WITH RELATED PRODUCT -->
+  <div class="custom-blog-related">
+    <div class="custom-blog-main">
+      <h3>{{ section.settings.blog_heading }}</h3>
+      <p>{{ section.settings.blog_content }}</p>
+    </div>
+
+    <div class="custom-related-products">
+      <h4>Related products</h4>
+      <div class="custom-related-card">
+        {% if section.settings.related_link != blank %}
+          <a href="{{ section.settings.related_link }}">
+        {% endif %}
+            {% if section.settings.related_image != blank %}
+              <img src="{{ section.settings.related_image | img_url: '300x' }}" alt="{{ section.settings.related_title }}" class="custom-related-img">
+            {% endif %}
+            <div class="custom-related-info">
+              <div class="custom-related-title">{{ section.settings.related_title }}</div>
+              <div class="custom-related-price">{{ section.settings.related_price }}</div>
+            </div>
+        {% if section.settings.related_link != blank %}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- EXTRA SECTION BELOW WITH RECENT ARTICLE IMAGE -->
+  <div class="custom-extra-wrapper">
+    <div class="custom-extra-main">
+      <h4>{{ section.settings.extra_heading }}</h4>
+      <p>{{ section.settings.extra_content }}</p>
+    </div>
+
+    <div class="custom-extra-articles">
+      <h5>Recent articles</h5>
+      <div class="custom-article-card">
+        <div class="custom-article-info">
+          <div class="custom-article-title">{{ section.settings.recent_article_title }}</div>
+          <div class="custom-article-date">{{ section.settings.recent_article_date }}</div>
+        </div>
+        {% if section.settings.recent_article_image != blank %}
+          <img src="{{ section.settings.recent_article_image | img_url: '500x' }}" alt="Recent article image" class="custom-article-img">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW SECTION: COLD BREW STEPS -->
+  <div class="custom-steps-wrapper">
+    <div class="custom-steps-main">
+      <h4>{{ section.settings.steps_heading }}</h4>
+      <p style="white-space: pre-line;">{{ section.settings.steps_content }}</p>
+    </div>
+
+    <div class="custom-steps-image">
+      <div class="custom-steps-info">
+        <div class="custom-steps-title">{{ section.settings.steps_image_title }}</div>
+        <div class="custom-steps-date">{{ section.settings.steps_image_date }}</div>
+      </div>
+      {% if section.settings.steps_image != blank %}
+        <img src="{{ section.settings.steps_image | img_url: '500x' }}" alt="Steps image" class="custom-steps-img">
+      {% endif %}
+    </div>
+  </div>
+
+</div><!-- END custom-blog-wrapper -->
+
+<style>
+/* SECTION BACKGROUND */
+.custom-blog-wrapper {
+  background: #F4F3EC;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+/* BLOG */
+.custom-blog-related { display: flex; justify-content: space-between; align-items: flex-start; gap: 120px; margin: 40px 0; padding: 0 160px; box-sizing: border-box; }
+.custom-blog-main { flex: 2; }
+.custom-blog-main h3 { font-size: 22px; font-weight: 600; margin-bottom: 10px; }
+.custom-blog-main p { font-size: 15px; line-height: 1.6; }
+.custom-related-products { flex: 1; max-width: 260px; margin: 0 auto; }
+.custom-related-products h4 { font-size: 18px; font-weight: 600; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
+.custom-related-card { display: flex; align-items: stretch; border: 1px solid #e5e5e5; background: #F4F3EC; overflow: hidden; }
+.custom-related-card a { display: flex; align-items: stretch; text-decoration: none; color: inherit; width: 100%; }
+.custom-related-img { width: 100px; object-fit: cover; border-right: 1px solid #eee; background: #F4F3EC; }
+.custom-related-info { padding: 12px; }
+.custom-related-title { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+.custom-related-price { font-size: 14px; }
+
+/* EXTRA */
+.custom-extra-wrapper { display: flex; justify-content: space-between; align-items: flex-start; gap: 120px; margin: 40px 0; padding: 0 160px; margin-top:-50px; }
+.custom-extra-main { flex: 2; }
+.custom-extra-main h4 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+.custom-extra-main p { font-size: 15px; line-height: 1.6; }
+.custom-extra-articles { flex: 1; max-width: 260px; }
+.custom-extra-articles h5 { font-size: 16px; font-weight: 600; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+.custom-article-card { background: #F4F3EC; overflow: hidden; }
+.custom-article-info { padding: 12px; }
+.custom-article-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.custom-article-date { font-size: 13px; margin-bottom: 8px; }
+.custom-article-img { width: 100%; object-fit: cover; background: #F4F3EC; }
+
+/* STEPS */
+.custom-steps-wrapper { display: flex; justify-content: space-between; align-items: flex-start; gap: 120px; margin: 40px 0; padding: 0 160px; }
+.custom-steps-main { flex: 2; margin-top:-110px; }
+.custom-steps-main h4 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+.custom-steps-main p { font-size: 15px; line-height: 1.6; }
+.custom-steps-image { flex: 1; max-width: 260px; margin-top:-30px; }
+.custom-steps-info { margin-bottom: 10px; }
+.custom-steps-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.custom-steps-date { font-size: 13px; margin-bottom: 8px; }
+.custom-steps-img { width: 100%; object-fit: cover; display: block; background: #F4F3EC; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .custom-blog-related, 
+  .custom-extra-wrapper, 
+  .custom-steps-wrapper { 
+    flex-direction: column; 
+    gap: 20px; 
+    padding: 0 15px; 
+    margin: 20px 0;
+  }
+  
+  .custom-extra-wrapper { margin-top: 20px; }
+  .custom-steps-main, .custom-steps-image { margin-top: 0; }
+  
+  .custom-related-products, 
+  .custom-extra-articles, 
+  .custom-steps-image { 
+    max-width: 100%; 
+    width: 100%;
+  }
+  
+  .custom-related-img { width: 80px; }
+  .custom-article-img, .custom-steps-img { width: 100%; height: auto; }
+  
+  .custom-related-info, .custom-article-info { padding: 10px; }
+  .custom-steps-info { margin-bottom: 8px; }
+  
+  .custom-blog-main h3 { font-size: 18px; }
+  .custom-blog-main p, 
+  .custom-extra-main p, 
+  .custom-steps-main p { 
+    font-size: 14px; 
+    line-height: 1.5;
+  }
+  
+  .custom-related-products h4, 
+  .custom-extra-articles h5, 
+  .custom-steps-main h4 { 
+    font-size: 16px; 
+    margin-bottom: 10px;
+  }
+  
+  .custom-related-title, 
+  .custom-article-title, 
+  .custom-steps-title { 
+    font-size: 14px; 
+    margin-bottom: 3px;
+  }
+  
+  .custom-related-price, 
+  .custom-article-date, 
+  .custom-steps-date { 
+    font-size: 12px; 
+  }
+  
+  .custom-related-card, .custom-article-card { flex-direction: row; }
+  .custom-steps-image { display: flex; flex-direction: column; }
+}
+
+/* FORCE BLACK TEXT INSIDE SECTION */
+.custom-blog-wrapper,
+.custom-blog-wrapper * {
+  color: #000 !important;
+}
+</style>

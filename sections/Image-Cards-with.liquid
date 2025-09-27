@@ -1,0 +1,223 @@
+{% schema %}
+{
+  "name": "Image Cards with",
+  "settings": [
+    {
+      "type": "text",
+      "id": "top_heading",
+      "label": "Top Heading",
+      "default": "Skincare Made to Move."
+    },
+    {
+      "type": "text",
+      "id": "bottom_heading",
+      "label": "Bottom Heading",
+      "default": "Shared by The Women Who Do"
+    },
+    {
+      "type": "textarea",
+      "id": "top_text",
+      "label": "Top Text",
+      "default": "Real skin. Real movement. Real-life rituals."
+    },
+    {
+      "type": "textarea",
+      "id": "bottom_text",
+      "label": "Bottom Text",
+      "default": "From post-swim mist downs to mid-flight resets, here's how the Casa community uses Sabbatical."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "SHOP SABBATICAL"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/collections/all"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [
+    {
+      "name": "Image Cards Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  /* Base styles */
+  .custom-image-cards {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #F4F3EC;
+  }
+  
+  .custom-image-cards .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .custom-image-cards .headings-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  
+  .custom-image-cards h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 0;
+    color: #1a1a1a;
+    line-height: 1.2 !important;
+  }
+  
+  .custom-image-cards .text-wrapper {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    color: #444;
+  }
+  
+  .custom-image-cards p {
+    font-size: 20px;
+    margin: 0 0 2px 0 !important;
+    line-height: 1.4 !important;
+  }
+  
+  .custom-image-cards .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 195px;
+    height: 48px;
+    background: #E0E07E;
+    color: #000;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  /* --- Updated responsive Grid Layout for Image Cards --- */
+  .custom-image-cards .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    margin-top: 35px;
+  }
+  
+  .custom-image-cards .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  
+  .custom-image-cards .card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4; /* keeps images proportional */
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
+  
+  /* RESPONSIVE TYPOGRAPHY + BUTTON ADJUSTMENTS */
+  @media screen and (max-width: 992px) {
+    .custom-image-cards h2 {
+      font-size: 30px;
+    }
+    .custom-image-cards p {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .custom-image-cards {
+      padding: 40px 0;
+    }
+    .custom-image-cards h2 {
+      font-size: 26px;
+    }
+    .custom-image-cards p {
+      font-size: 16px;
+    }
+    .custom-image-cards .cta-button {
+      width: 170px;
+      height: 44px;
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .custom-image-cards {
+      padding: 30px 0;
+    }
+    .custom-image-cards h2 {
+      font-size: 22px;
+    }
+    .custom-image-cards p {
+      font-size: 15px;
+    }
+    .custom-image-cards .cta-button {
+      width: 150px;
+      height: 40px;
+      font-size: 12px;
+    }
+  }
+</style>
+
+<section class="custom-image-cards">
+  <div class="container">
+    
+    <!-- Two Headings tightly spaced -->
+    <div class="headings-wrapper">
+      <h2>{{ section.settings.top_heading }}</h2>
+      <h2>{{ section.settings.bottom_heading }}</h2>
+    </div>
+
+    <!-- Two Texts -->
+    <div class="text-wrapper">
+      <p>{{ section.settings.top_text }}</p>
+      <p>{{ section.settings.bottom_text }}</p>
+    </div>
+
+    <!-- Button -->
+    <a href="{{ section.settings.button_link }}" class="cta-button">
+      {{ section.settings.button_text }}
+    </a>
+
+    <!-- Images Grid -->
+    <div class="card-wrapper">
+      {% for block in section.blocks %}
+        <div class="card">
+          {% if block.settings.card_image != blank %}
+            <img src="{{ block.settings.card_image | img_url: '600x' }}" alt="card image">
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,143 @@
+{% schema %}
+{
+  "name": "Testimonial With Logos",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "testimonial_text",
+      "label": "Testimonial Text",
+      "default": "My skin was constantly in recovery mode — sun exposure, dry cabin air, long days on set or backstage. I didn’t need another 10-step routine. I needed hydration that actually held."
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_1",
+      "label": "Logo 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_2",
+      "label": "Logo 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_3",
+      "label": "Logo 3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial With Logos",
+      "category": "Testimonials"
+    }
+  ]
+}
+{% endschema %}
+
+<section id="testimonial-logos">
+  <div id="testimonial-wrapper">
+    <p id="testimonial-text">"{{ section.settings.testimonial_text }}"</p>
+    <p id="as-seen-in">AS SEEN IN</p>
+    <div id="logos">
+      {% if section.settings.logo_1 != blank %}
+        <img src="{{ section.settings.logo_1 | img_url: '200x' }}" alt="Logo 1">
+      {% endif %}
+      {% if section.settings.logo_2 != blank %}
+        <img src="{{ section.settings.logo_2 | img_url: '200x' }}" alt="Logo 2">
+      {% endif %}
+      {% if section.settings.logo_3 != blank %}
+        <img src="{{ section.settings.logo_3 | img_url: '200x' }}" alt="Logo 3">
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+/* 🎨 Base section */
+#testimonial-logos {
+  text-align: center;
+  padding: 40px 15px;
+  background-color: #F4F3EC;
+  margin-top: 40px;
+}
+
+/* ✨ Testimonial text */
+#testimonial-text {
+  font-size: clamp(18px, 3vw, 32px); /* responsive scaling */
+  line-height: 1.5;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  font-style: italic;
+  color: #000;
+}
+
+/* 📰 "As Seen In" text */
+#as-seen-in {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+/* 🔥 Logos container */
+#logos {
+  display: flex;
+  flex-wrap: wrap;   /* allows wrapping for mobile */
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+/* 🖼️ Logo sizing */
+#logos img {
+  max-height: 60px;   /* ✅ Bigger on desktop */
+  max-width: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 📱 Tablet Breakpoint */
+@media (max-width: 768px) {
+  #testimonial-logos {
+    padding: 30px 10px;
+  }
+
+  #testimonial-text {
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+  #logos {
+    gap: 25px;
+  }
+
+  #logos img {
+    max-height: 45px;
+    max-width: 140px;
+  }
+}
+
+/* 📱 Mobile Breakpoint */
+@media (max-width: 480px) {
+  #testimonial-logos {
+    padding: 25px 10px;
+  }
+
+  #testimonial-text {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  #logos {
+    flex-direction: column; /* stack vertically */
+    gap: 18px;
+  }
+
+  #logos img {
+    max-height: 40px;
+    max-width: 100px;
+  }
+}
+</style>
