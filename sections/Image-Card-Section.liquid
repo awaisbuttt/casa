@@ -1,0 +1,450 @@
+{% schema %}
+{
+  "name": "SCMA Image Card Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_label",
+      "label": "Top Label Text (Blue)",
+      "default": "COMMUNITY RITUALS"
+    },
+    {
+      "type": "text",
+      "id": "heading_top",
+      "label": "Heading Top Line",
+      "default": "More than skincare."
+    },
+    {
+      "type": "text",
+      "id": "heading_bottom",
+      "label": "Heading Bottom Line",
+      "default": "This is how we live it."
+    },
+    {
+      "type": "text",
+      "id": "subheading_top",
+      "label": "Subheading Top Line",
+      "default": "We're not chasing trends — we're building what skin actually needs in the sun and in real life."
+    },
+    {
+      "type": "text",
+      "id": "subheading_bottom",
+      "label": "Subheading Bottom Line",
+      "default": "Join the women who've made Sabbatical a ritual."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+          "type": "url",
+          "id": "card_image_link",
+          "label": "Image Link"
+        },
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title",
+          "default": "Join the List"
+        },
+        {
+          "type": "text",
+          "id": "card_description_top",
+          "label": "Card Description Top",
+          "default": "Lorem ipsum dolor sit amet,"
+        },
+        {
+          "type": "text",
+          "id": "card_description_bottom",
+          "label": "Card Description Bottom",
+          "default": "consectetur adipiscing elit."
+        },
+        {
+          "type": "text",
+          "id": "card_button_text",
+          "label": "Button Text",
+          "default": "SIGN UP"
+        },
+        {
+          "type": "url",
+          "id": "card_button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "range",
+          "id": "radius_top_left",
+          "label": "Top Left Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 40,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "radius_top_right",
+          "label": "Top Right Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 40,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "radius_bottom_right",
+          "label": "Bottom Right Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 40,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "radius_bottom_left",
+          "label": "Bottom Left Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 40,
+          "unit": "px"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "SCMA Image Card Section",
+      "category": "Custom",
+      "blocks": [
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="scma-cards">
+  <div class="scma-header">
+    {% if section.settings.section_label != blank %}
+      <p class="scma-label">{{ section.settings.section_label }}</p>
+    {% endif %}
+    
+    <h2>
+      {{ section.settings.heading_top }}<br>
+      <em>{{ section.settings.heading_bottom }}</em>
+    </h2>
+    
+    <div class="scma-subheading">
+      <p>{{ section.settings.subheading_top }}</p>
+      <p>{{ section.settings.subheading_bottom }}</p>
+    </div>
+  </div>
+  
+  <div class="scma-card-wrapper">
+    {% for block in section.blocks %}
+      <div class="scma-card" {{ block.shopify_attributes }}>
+        
+        {% if block.settings.card_image %}
+          <div class="scma-card-image"
+               style="border-radius: {{ block.settings.radius_top_left }}px 
+                                   {{ block.settings.radius_top_right }}px 
+                                   {{ block.settings.radius_bottom_right }}px 
+                                   {{ block.settings.radius_bottom_left }}px;">
+            
+            {% if block.settings.card_image_link != blank %}
+              <a href="{{ block.settings.card_image_link }}" target="_blank">
+                <img src="{{ block.settings.card_image | img_url: '400x400' }}" alt="{{ block.settings.card_title }}">
+              </a>
+            {% else %}
+              <img src="{{ block.settings.card_image | img_url: '400x400' }}" alt="{{ block.settings.card_title }}">
+            {% endif %}
+            
+          </div>
+        {% endif %}
+        
+        <div class="scma-card-content">
+          <h3>{{ block.settings.card_title }}</h3>
+          
+          <div class="scma-card-desc">
+            {% if block.settings.card_description_top != blank %}
+              <p>{{ block.settings.card_description_top }}</p>
+            {% endif %}
+            {% if block.settings.card_description_bottom != blank %}
+              <p>{{ block.settings.card_description_bottom }}</p>
+            {% endif %}
+          </div>
+          
+          {% if block.settings.card_button_text != blank and block.settings.card_button_link != blank %}
+            <a href="{{ block.settings.card_button_link }}" target="_blank" class="scma-link-btn">
+              {{ block.settings.card_button_text }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+.scma-cards {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f7f5ef;
+}
+
+.scma-header {
+  margin-bottom: 40px;
+}
+
+/* Blue Label (unchanged, keep it blue) */
+.scma-label {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #1f4fc9;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Heading */
+.scma-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  color: #000; /* Black text */
+}
+.scma-header h2 em {
+  font-style: italic;
+}
+
+/* Subheading */
+.scma-subheading p {
+  font-size: 16px;
+  color: #000; /* Black text */
+  margin: 5px 0;
+}
+
+/* Cards */
+.scma-card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.scma-card {
+  width: 280px;
+  text-align: center;
+  background: transparent;
+}
+.scma-card-image {
+  width: 85%;
+  height: 280px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #fff;
+  margin-bottom: 15px;
+  position: relative;
+}
+.scma-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.scma-card-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Card Content */
+.scma-card-content h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #000; /* Black text */
+}
+.scma-card-desc p {
+  font-size: 14px;
+  color: #000; /* Black text */
+  margin: 3px 0;
+}
+
+/* Button = Text with underline */
+.scma-link-btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000; /* Black text */
+  text-decoration: none;
+  margin-top: 12px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #000;
+  transition: all 0.3s ease;
+}
+.scma-link-btn:hover {
+  color: #333;
+  border-color: #333;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .scma-card-wrapper {
+    gap: 30px;
+  }
+  .scma-card {
+    width: 250px;
+  }
+  .scma-card-image {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .scma-cards {
+    padding: 40px 15px;
+  }
+  
+  .scma-header {
+    margin-bottom: 30px;
+  }
+  
+  .scma-header h2 {
+    font-size: 28px;
+  }
+  
+  .scma-subheading p {
+    font-size: 15px;
+  }
+  
+  .scma-card-wrapper {
+    gap: 25px;
+  }
+  
+  .scma-card {
+    width: 220px;
+  }
+  
+  .scma-card-image {
+    height: 220px;
+  }
+  
+  .scma-card-content h3 {
+    font-size: 16px;
+  }
+  
+  .scma-card-desc p {
+    font-size: 13px;
+  }
+  
+  .scma-link-btn {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scma-cards {
+    padding: 30px 15px;
+  }
+  
+  .scma-header {
+    margin-bottom: 25px;
+  }
+  
+  .scma-header h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .scma-subheading p {
+    font-size: 14px;
+  }
+  
+  .scma-card-wrapper {
+    gap: 20px;
+  }
+  
+  .scma-card {
+    width: calc(50% - 10px);
+    max-width: 200px;
+  }
+  
+  .scma-card-image {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .scma-card-content h3 {
+    font-size: 15px;
+    margin: 8px 0 4px;
+  }
+  
+  .scma-card-desc p {
+    font-size: 12px;
+    margin: 2px 0;
+  }
+  
+  .scma-link-btn {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .scma-cards {
+    padding: 25px 10px;
+  }
+  
+  .scma-header h2 {
+    font-size: 22px;
+  }
+  
+  .scma-subheading p {
+    font-size: 13px;
+  }
+  
+  .scma-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .scma-card {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .scma-card-image {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .scma-cards {
+    padding: 20px 10px;
+  }
+  
+  .scma-header h2 {
+    font-size: 20px;
+  }
+  
+  .scma-subheading p {
+    font-size: 12px;
+  }
+  
+  .scma-card-image {
+    height: 200px;
+  }
+}
+</style>

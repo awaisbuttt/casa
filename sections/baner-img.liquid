@@ -1,0 +1,146 @@
+<section class="scma-banner section-overlay-header">
+  <div class="scma-banner__image" 
+       style="background-image: url({{ section.settings.banner_image | img_url: 'master' }});">
+    <div class="scma-banner__content">
+      <h2>{{ section.settings.banner_heading }}</h2>
+      <p>{{ section.settings.banner_text1 }}</p>
+      <p>{{ section.settings.banner_text2 }}</p>
+      <p>{{ section.settings.banner_text3 }}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ---- Base SCMA Banner ---- */
+.scma-banner {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background Hero image */
+.scma-banner__image {
+  min-height: 60vh;
+  height: 75vh; /* fallback for desktop */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* align left */
+  align-items: flex-end;       /* align to bottom */
+}
+
+/* Overlay */
+.scma-banner__image::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3); /* dark overlay for text contrast */
+  z-index: 1;
+}
+
+/* Content */
+.scma-banner__content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;  
+  max-width: 700px;
+  margin: 5vw; /* fluid margin for spacing */
+}
+
+.scma-banner__content h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem); /* fluid typography */
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+
+.scma-banner__content p {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  margin: 4px 0;
+  color: #ffffff;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .scma-banner__image {
+    height: 75vh;
+  }
+  .scma-banner__content {
+    margin: 40px;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .scma-banner__image {
+    height: 65vh;
+    justify-content: center; 
+    align-items: flex-end;
+    text-align: center;
+  }
+  .scma-banner__content {
+    margin: 20px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .scma-banner__image {
+    height: 55vh;
+  }
+  .scma-banner__content h2 {
+    font-weight: 600;
+  }
+  .scma-banner__content p {
+    line-height: 1.4;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "SCMA Banner",
+  "class": "section-overlay-header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_heading",
+      "label": "Heading",
+      "default": "The Casa Story"
+    },
+    {
+      "type": "text",
+      "id": "banner_text1",
+      "label": "Line 1",
+      "default": "Built for women who live in motion,"
+    },
+    {
+      "type": "text",
+      "id": "banner_text2",
+      "label": "Line 2",
+      "default": "find calm in chaos,"
+    },
+    {
+      "type": "text",
+      "id": "banner_text3",
+      "label": "Line 3",
+      "default": "and crave something that works without asking for too much"
+    }
+  ],
+  "presets": [
+    {
+      "name": "SCMA Banner",
+      "category": "Banner"
+    }
+  ]
+}
+{% endschema %}

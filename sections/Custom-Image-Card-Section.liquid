@@ -1,0 +1,389 @@
+{% schema %}
+{
+  "name": "Custom Image Card Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_label",
+      "label": "Top Label Text (Blue)",
+      "default": "COMMUNITY RITUALS"
+    },
+    {
+      "type": "text",
+      "id": "heading_top",
+      "label": "Heading Top Line",
+      "default": "More than skincare."
+    },
+    {
+      "type": "text",
+      "id": "heading_bottom",
+      "label": "Heading Bottom Line",
+      "default": "This is how we live it."
+    },
+
+    /* 🔹 Three Subheadings */
+    {
+      "type": "text",
+      "id": "subheading_top",
+      "label": "Subheading Top Line",
+      "default": "We’re not chasing trends — we’re building what skin actually needs in the sun and in real life."
+    },
+    {
+      "type": "text",
+      "id": "subheading_middle",
+      "label": "Subheading Middle Line",
+      "default": "Casa Noon is skincare made for in‑between hours and in‑the‑elements moments. It’s a daily reset — no filters, no fluff."
+    },
+    {
+      "type": "text",
+      "id": "subheading_bottom",
+      "label": "Subheading Bottom Line",
+      "default": "And it was built for you."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+          "type": "url",
+          "id": "card_image_link",
+          "label": "Image Link"
+        },
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title",
+          "default": "Join the List"
+        },
+        {
+          "type": "text",
+          "id": "card_description_top",
+          "label": "Card Description Top",
+          "default": "Lorem ipsum dolor sit amet,"
+        },
+        {
+          "type": "text",
+          "id": "card_description_bottom",
+          "label": "Card Description Bottom",
+          "default": "consectetur adipiscing elit."
+        },
+        {
+          "type": "text",
+          "id": "card_button_text",
+          "label": "Button Text",
+          "default": "SIGN UP"
+        },
+        {
+          "type": "url",
+          "id": "card_button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "range",
+          "id": "radius_top_left",
+          "label": "Top Left Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 40,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "radius_top_right",
+          "label": "Top Right Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 40,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "radius_bottom_right",
+          "label": "Bottom Right Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 40,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "radius_bottom_left",
+          "label": "Bottom Left Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 40,
+          "unit": "px"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Custom Image Card Section",
+      "category": "Custom",
+      "blocks": [
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="customcard-cards">
+  <div class="customcard-header">
+    {% if section.settings.section_label != blank %}
+      <p class="customcard-label">{{ section.settings.section_label }}</p>
+    {% endif %}
+    
+    <h2>
+      {{ section.settings.heading_top }}<br>
+      <em>{{ section.settings.heading_bottom }}</em>
+    </h2>
+    
+    <!-- 🔹 Three Subheadings -->
+    <div class="customcard-subheading">
+      {% if section.settings.subheading_top != blank %}
+        <p>{{ section.settings.subheading_top }}</p>
+      {% endif %}
+      {% if section.settings.subheading_middle != blank %}
+        <p>{{ section.settings.subheading_middle }}</p>
+      {% endif %}
+      {% if section.settings.subheading_bottom != blank %}
+        <p>{{ section.settings.subheading_bottom }}</p>
+      {% endif %}
+    </div>
+  </div>
+  
+  <div class="customcard-card-wrapper">
+    {% for block in section.blocks %}
+      <div class="customcard-card" {{ block.shopify_attributes }}>
+        
+        {% if block.settings.card_image %}
+          <div class="customcard-card-image"
+               style="border-radius: {{ block.settings.radius_top_left }}px 
+                                   {{ block.settings.radius_top_right }}px 
+                                   {{ block.settings.radius_bottom_right }}px 
+                                   {{ block.settings.radius_bottom_left }}px;">
+            
+            {% if block.settings.card_image_link != blank %}
+              <a href="{{ block.settings.card_image_link }}" target="_blank">
+                <img src="{{ block.settings.card_image | img_url: '400x400' }}" alt="{{ block.settings.card_title }}">
+              </a>
+            {% else %}
+              <img src="{{ block.settings.card_image | img_url: '400x400' }}" alt="{{ block.settings.card_title }}">
+            {% endif %}
+            
+          </div>
+        {% endif %}
+        
+        <div class="customcard-card-content">
+          <h3>{{ block.settings.card_title }}</h3>
+          
+          <div class="customcard-card-desc">
+            {% if block.settings.card_description_top != blank %}
+              <p>{{ block.settings.card_description_top }}</p>
+            {% endif %}
+            {% if block.settings.card_description_bottom != blank %}
+              <p>{{ block.settings.card_description_bottom }}</p>
+            {% endif %}
+          </div>
+          
+          {% if block.settings.card_button_text != blank and block.settings.card_button_link != blank %}
+            <a href="{{ block.settings.card_button_link }}" target="_blank" class="customcard-link-btn">
+              {{ block.settings.card_button_text }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+.customcard-cards {
+  text-align: center;
+  padding: 50px 20px;
+  background: #A1CECB; /* 🔹 Background color */
+  max-width:100%;   /* keeps it neat on ultra-wide screens */
+  margin: 0 auto;
+}
+
+.customcard-header {
+  margin-bottom: 40px;
+}
+
+/* Blue Label */
+.customcard-label {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #1f4fc9;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Heading */
+.customcard-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  color: #222;
+}
+.customcard-header h2 em {
+  font-style: italic;
+}
+
+/* Subheadings */
+.customcard-subheading p {
+  font-size: 16px;
+  color: #000;
+  margin: 5px 0;
+}
+
+/* Cards */
+.customcard-card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.customcard-card {
+  width: 280px;
+  text-align: center;
+  background: transparent;
+}
+.customcard-card-image {
+  width: 85%;
+  height: 280px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #fff;
+  margin: 0 auto 15px;
+  position: relative;
+}
+.customcard-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.customcard-card-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Card Content */
+.customcard-card-content h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Card Descriptions */
+.customcard-card-desc p {
+  font-size: 14px;
+  color: #000;
+  margin: 3px 0;
+}
+
+/* Button */
+.customcard-link-btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #111;
+  text-decoration: none;
+  margin-top: 12px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #111;
+  transition: all 0.3s ease;
+}
+.customcard-link-btn:hover {
+  color: #555;
+  border-color: #555;
+}
+
+/* ========================= */
+/* RESPONSIVE STYLING MAGIC ✨ */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .customcard-card-wrapper {
+    gap: 30px;
+  }
+  .customcard-card {
+    width: 45%;
+  }
+  .customcard-header h2 {
+    font-size: 28px;
+  }
+  .customcard-subheading p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .customcard-cards {
+    padding: 40px 15px;
+  }
+  .customcard-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .customcard-card {
+    width: 100%;
+    max-width: 320px;
+  }
+  .customcard-card-image {
+    width: 100%;
+    height: 220px;
+  }
+  .customcard-header h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  .customcard-subheading p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .customcard-cards {
+    padding: 30px 10px;
+  }
+  .customcard-card-image {
+    height: 200px;
+  }
+  .customcard-header h2 {
+    font-size: 20px;
+  }
+  .customcard-subheading p {
+    font-size: 13px;
+  }
+  .customcard-card-content h3 {
+    font-size: 16px;
+  }
+  .customcard-card-desc p {
+    font-size: 13px;
+  }
+  .customcard-link-btn {
+    font-size: 13px;
+  }
+}
+</style>

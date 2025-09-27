@@ -9,14 +9,27 @@
  */
 {
   "sections": {
+    "baner_img_jwc4kK": {
+      "type": "baner-img",
+      "name": "SCMA Banner",
+      "settings": {
+        "banner_image": "shopify://shop_images/bui-hoang-long-RpZ3d0kAjH0-unsplash_1.png",
+        "banner_heading": "All Products",
+        "banner_text1": "Skincare for real life — salt, sweat, sun, and everything after.",
+        "banner_text2": "Waterless. TSA-proof. Founder-created. Esthetician approved.",
+        "banner_text3": ""
+      }
+    },
     "collection-image-with-title": {
       "type": "collection-image-with-title",
+      "disabled": true,
       "settings": {
         "show_title": true,
         "show_description": true,
         "flex_align": "align--bottom-left",
         "color_scheme": "scheme-2",
         "show_text_background": false,
+        "overlay_type": "disabled",
         "show_image": true,
         "banner_layout": "overlay",
         "height": "five-fifty-height-hero",
@@ -30,7 +43,7 @@
       "settings": {
         "subcollection_layout": "grid",
         "subcollection_description": false,
-        "select_image": "collection",
+        "select_image": "product",
         "color_scheme": "",
         "color": "#ffffff",
         "bg_color": "",
@@ -44,16 +57,19 @@
         "featured_image": {
           "type": "featured_image",
           "settings": {
+            "featured_image": "shopify://shop_images/Background_2__cleanup.png",
             "position": 2,
-            "featured_heading": "How to Brew: Pour Over",
+            "featured_heading": "At Noon: Andi’s Rituals",
             "heading_font_size": "heading-medium",
             "featured_text": "",
             "featured_button_text": "Read more",
+            "featured_button_link": "",
             "button_type": "btn--white",
             "button_size": "",
             "button_style": "btn--text",
             "show_arrow": false,
             "featured_color_text": "#ffffff",
+            "overlay_type": "disabled",
             "heading_tag": "automatic"
           }
         }
@@ -77,6 +93,7 @@
     }
   },
   "order": [
+    "baner_img_jwc4kK",
     "collection-image-with-title",
     "subcollections",
     "collection"

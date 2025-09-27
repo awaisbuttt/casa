@@ -1,0 +1,269 @@
+{% schema %}
+{
+  "name": "SCMA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Top Label",
+      "default": "CASA COMPLEX™"
+    },
+    {
+      "type": "text",
+      "id": "heading_top",
+      "label": "Heading (Top Line)",
+      "default": "Hydration you"
+    },
+    {
+      "type": "text",
+      "id": "heading_bottom",
+      "label": "Heading (Bottom Line)",
+      "default": "can feel"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p><strong>The Casa Complex™</strong> is our signature marine </br> blend. Think: microalgae, ocean minerals, and </br>adaptogens that replenish and support your</br> skin barrier.</p><ul><li>Locks in hydration</li><li>Calms sun‑stressed skin</li><li>Works before, during, and after exposure</li></ul>"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "LEARN MORE"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Right Image"
+    },
+    {
+      "type": "text",
+      "id": "image_text",
+      "label": "Overlay Text on Image",
+      "default": "Waterless. Performance-backed. Skin that feels like yours."
+    }
+  ],
+  "presets": [
+    {
+      "name": "SCMA Section"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="scma-section">
+  <div class="scma-wrapper">
+
+    <!-- LEFT TEXT -->
+    <div class="scma-left">
+      {% if section.settings.badge != blank %}
+        <span class="scma-badge">{{ section.settings.badge }}</span>
+      {% endif %}
+
+      <h2 class="scma-heading">
+        {% if section.settings.heading_top != blank %}
+          <div class="scma-heading-top">{{ section.settings.heading_top }}</div>
+        {% endif %}
+        {% if section.settings.heading_bottom != blank %}
+          <div class="scma-heading-bottom">{{ section.settings.heading_bottom }}</div>
+        {% endif %}
+      </h2>
+
+      <div class="scma-description">{{ section.settings.description }}</div>
+
+      {% if section.settings.button_text != blank %}
+        <a href="{{ section.settings.button_link }}" class="scma-btn">{{ section.settings.button_text }}</a>
+      {% endif %}
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="scma-right">
+      {% if section.settings.image != blank %}
+        <div class="scma-image" style="background-image: url({{ section.settings.image | img_url: '2000x' }});">
+          {% if section.settings.image_text != blank %}
+            <p class="scma-overlay">{{ section.settings.image_text }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+
+<style>
+.scma-section {
+  background: #F4F3EC;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.scma-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  background: #F4F3EC;
+}
+
+.scma-left {
+  flex: 1 1 50%;
+  padding: 90px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #F4F3EC;
+}
+
+.scma-right {
+  flex: 1 1 50%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background: #F4F3EC;
+}
+
+.scma-badge {
+  color: #6a7de7;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.scma-heading {
+  font-size: 40px;
+  margin: 10px 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.scma-heading-top { display: block; }
+.scma-heading-bottom { display: block; font-style: italic; }
+
+.scma-description {
+  margin: 15px 0;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+.scma-btn {
+  display: inline-block;
+  background: #E0E07E;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+
+  width: 195px;
+  height: 48px;
+  line-height: 48px;
+  min-width: 150px;
+  
+  border-radius: 300px;
+  transition: all 0.3s ease;
+}
+.scma-btn:hover { background: #d0d06e; }
+
+.scma-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.scma-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d6d636;
+  font-family: cursive;
+  font-size: 1.6rem;
+  text-align: center;
+  max-width: 80%;
+}
+
+/* Tablet responsiveness */
+@media(max-width: 1024px) {
+  .scma-left {
+    padding: 60px 40px;
+  }
+  .scma-heading {
+    font-size: 48px;
+  }
+  .scma-description {
+    font-size: 18px;
+  }
+  .scma-overlay {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media(max-width: 768px) {
+  .scma-left, .scma-right { 
+    flex: 1 1 100%; 
+  }
+  .scma-left {
+    padding: 40px 20px;
+    order: 2;
+  }
+  .scma-right {
+    order: 1;
+  }
+  .scma-image { 
+    height: 300px; 
+  }
+  .scma-btn { 
+    width: 160px; 
+    height: 44px; 
+    line-height: 44px; 
+    font-size: 13px; 
+  }
+  .scma-overlay { 
+    font-size: 1rem; 
+    padding: 0 15px;
+  }
+  .scma-heading {
+    font-size: 36px;
+  }
+  .scma-description {
+    font-size: 16px;
+  }
+  .scma-badge {
+    font-size: 16px;
+  }
+}
+
+/* Small mobile responsiveness */
+@media(max-width: 480px) {
+  .scma-left {
+    padding: 30px 15px;
+  }
+  .scma-heading {
+    font-size: 30px;
+  }
+  .scma-description {
+    font-size: 15px;
+  }
+  .scma-image { 
+    height: 250px; 
+  }
+  .scma-overlay { 
+    font-size: 0.9rem; 
+    padding: 0 10px;
+  }
+}
+</style>

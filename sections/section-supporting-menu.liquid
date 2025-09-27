@@ -33,6 +33,9 @@
   #SupportingMenu--{{ section.id }} {
     --PT: {{ section.settings.padding_top }}px;
     --PB: {{ section.settings.padding_bottom }}px;
+    padding-top: var(--PT);
+    padding-bottom: var(--PB);
+    background-color: #f8f6f0; /* 🚀 Background color added */
   }
 {%- endstyle -%}
 
@@ -61,10 +64,7 @@
     <div class="supporting-menu__item supporting-menu__item--copyright">
       <ul class="supporting-menu__copyright inline-list {{ section.settings.text_font_size }}">
         <li>
-          <a href="{{ shop.secure_url }}"
-            >&copy; {{ shop.name }}
-            {{ 'now' | date: '%Y' -}}
-          </a>
+          <a href="{{ shop.secure_url }}">&copy; {{ shop.name }} {{ 'now' | date: '%Y' -}}</a>
         </li>
         {% for link in linklists[section.settings.linklist].links %}
           <li>

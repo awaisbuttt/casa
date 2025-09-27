@@ -1,0 +1,250 @@
+{% schema %}
+{
+  "name": "Custom Banners",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Background Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_heading",
+      "label": "Heading",
+      "default": "Hydration that actually keeps up"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_subheading",
+      "label": "Subheading",
+      "default": "No overthinking. No overpacking. Just one serum that goes with you."
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Primary Button Text",
+      "default": "SHOP SABBATICAL"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Secondary Button Text",
+      "default": "TAKE THE QUIZ"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Secondary Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banners",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="custom-banner">
+  {% if section.settings.banner_image != blank %}
+    <img src="{{ section.settings.banner_image | image_url }}" class="banner-img" alt="Banner">
+  {% endif %}
+
+  <div class="custom-banner__overlay">
+    <div class="custom-banner__content">
+      <h1>{{ section.settings.banner_heading }}</h1>
+      <p>{{ section.settings.banner_subheading }}</p>
+      <div class="custom-banner__buttons">
+        {% if section.settings.button_1_text != blank %}
+          <a href="{{ section.settings.button_1_link }}" class="btn btn--primary">{{ section.settings.button_1_text }}</a>
+        {% endif %}
+        {% if section.settings.button_2_text != blank %}
+          <a href="{{ section.settings.button_2_link }}" class="btn btn--secondary">{{ section.settings.button_2_text }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .custom-banner {
+    position: relative;
+    width: 100%;
+    height: 530px;       /* Fixed Banner Height for desktop */
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .banner-img {
+    width: 100%;
+  height: 530px;       /* Force equal to Banner height */
+  object-fit: fill;    /* Stretch karega taaki FULL visible ho */
+  
+  display: block;
+  }
+
+  .custom-banner__overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+  }
+
+  .custom-banner__content {
+    max-width: 800px;
+    padding: 20px;
+    color: #fff;
+  }
+
+  .custom-banner__content h1 {
+    font-size: 2.9rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .custom-banner__content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .custom-banner__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .custom-banner__buttons a {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn--primary {
+    background: #f5f57e;
+    border: 2px solid transparent;
+    color: #000;
+  }
+
+  .btn--primary:hover {
+    border: 2px solid #fff;
+    background: #f5f57e;
+    color: #fff;
+  }
+
+  .btn--secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  .btn--secondary:hover {
+    background: #f5f57e;
+    border-color: #f5f57e;
+    color: #000;
+  }
+
+  /* Media Queries for Mobile Responsiveness */
+  
+  /* For tablets and smaller devices */
+  @media screen and (max-width: 768px) {
+    .custom-banner {
+      height: 450px;
+    }
+    
+    .banner-img {
+      height: 450px;
+    }
+    
+    .custom-banner__content h1 {
+      font-size: 2.2rem;
+    }
+    
+    .custom-banner__content p {
+      font-size: 0.95rem;
+    }
+    
+    .custom-banner__buttons a {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* For mobile phones */
+  @media screen and (max-width: 480px) {
+    .custom-banner {
+      height: 380px;
+    }
+    
+    .banner-img {
+      height: 380px;
+    }
+    
+    .custom-banner__overlay {
+      padding: 15px;
+    }
+    
+    .custom-banner__content {
+      padding: 15px;
+    }
+    
+    .custom-banner__content h1 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    
+    .custom-banner__content p {
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+    
+    .custom-banner__buttons {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+    
+    .custom-banner__buttons a {
+      width: 100%;
+      text-align: center;
+      padding: 12px 20px;
+    }
+  }
+  
+  /* For very small mobile phones */
+  @media screen and (max-width: 360px) {
+    .custom-banner {
+      height: 340px;
+    }
+    
+    .banner-img {
+      height: 340px;
+    }
+    
+    .custom-banner__content h1 {
+      font-size: 1.6rem;
+    }
+    
+    .custom-banner__content p {
+      font-size: 0.8rem;
+    }
+  }
+</style>

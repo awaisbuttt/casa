@@ -1,0 +1,399 @@
+<div class="nova-section">
+  <div class="nova-wrapper">
+    
+    <!-- LEFT SIDE BACKGROUND IMAGE + PRODUCT -->
+    <div class="nova-left">
+      {% if section.settings.background_image != blank %}
+        <div class="nova-image" style="background-image: url({{ section.settings.background_image | img_url: '2000x' }});">
+          
+          <!-- PRODUCT CARD CENTERED -->
+          {% if section.settings.product != blank %}
+            {% assign product = all_products[section.settings.product] %}
+            {% if product %}
+              <div class="nova-product-card">
+                <div class="product-image">
+                  <img src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}">
+                  
+                  {% if product.available %}
+                    <!-- ✅ Working Quick Add Form -->
+                    <form method="post" action="/cart/add" id="quick-add-form-{{ product.id }}" enctype="multipart/form-data" class="quick-add-form">
+                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                      <button type="submit" class="quick-add-overlay">Quick Add</button>
+                    </form>
+                  {% else %}
+                    <p class="sold-out sold-overlay">Sold Out</p>
+                  {% endif %}
+                </div>
+                
+                <div class="product-info">
+                  <p class="title">{{ product.title }}</p>
+
+                  {% if section.settings.product_short_desc != blank %}
+                    <p class="short-desc">{{ section.settings.product_short_desc }}</p>
+                  {% endif %}
+                  
+                  <p class="price">{{ product.price | money }}</p>
+                </div>
+              </div>
+            {% endif %}
+          {% endif %}
+          
+          {% if section.settings.image_text != blank %}
+            <p class="nova-overlay">{{ section.settings.image_text }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    
+    <!-- RIGHT SIDE TEXT AREA -->
+    <div class="nova-right">
+      {% if section.settings.badge != blank %}
+        <span class="nova-badge">{{ section.settings.badge }}</span>
+      {% endif %}
+      
+      <h2 class="nova-heading">
+        {% if section.settings.heading_top != blank %}
+          <div class="nova-heading-top">{{ section.settings.heading_top }}</div>
+        {% endif %}
+        {% if section.settings.heading_bottom != blank %}
+          <div class="nova-heading-bottom">{{ section.settings.heading_bottom }}</div>
+        {% endif %}
+      </h2>
+      
+      <div class="nova-description">{{ section.settings.description }}</div>
+      
+      {% if section.settings.button_text != blank %}
+        <a href="{{ section.settings.button_link }}" class="nova-btn">{{ section.settings.button_text }}</a>
+      {% endif %}
+      
+      {% if section.settings.image != blank %}
+        <div class="nova-side-image">
+          <img src="{{ section.settings.image | img_url: '600x' }}" alt="side image">
+        </div>
+      {% endif %}
+    </div>
+    
+  </div>
+</div>
+
+<style>
+.nova-section { 
+  background: #F4F3EC; 
+  width: 100%; 
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden; /* Prevents horizontal scroll */
+}
+.nova-wrapper { 
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: stretch; 
+  width: 100%; 
+}
+.nova-left { 
+  flex: 1 1 50%; 
+  display: flex; 
+}
+.nova-right { 
+  flex: 1 1 50%; 
+  padding: 90px; 
+  box-sizing: border-box; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+}
+
+.nova-badge { 
+  color: #6a7de7; 
+  font-size: 18px; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+}
+.nova-heading { 
+  font-size: 40px; 
+  margin: 10px 0; 
+  font-weight: 500; 
+  line-height: 1.2; 
+}
+.nova-heading-bottom { 
+  font-style: italic; 
+}
+.nova-description { 
+  margin: 15px 0; 
+  line-height: 1.6; 
+  font-size: 20px; 
+}
+.nova-btn { 
+  display: inline-block; 
+  background: #E0E07E; 
+  color: #000; 
+  font-size: 14px; 
+  font-weight: bold; 
+  border-radius: 300px; 
+  height: 48px; 
+  line-height: 48px; 
+  width: 195px; 
+  text-align: center; 
+  text-decoration: none; 
+  transition: 0.3s; 
+}
+.nova-btn:hover { 
+  background: #d0d06e; 
+}
+.nova-side-image img { 
+  max-width: 100%; 
+  margin-top: 20px; 
+}
+
+.nova-image { 
+  flex: 1; 
+  background-size: cover; 
+  background-position: center; 
+  width: 100%; 
+  height: 753px; 
+  min-height: 750px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+}
+.nova-product-card { 
+  background: #fff; 
+  text-align: center; 
+  max-width: 280px; 
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2); 
+  border-radius: 8px; 
+  overflow: hidden; 
+}
+.nova-product-card .product-image { 
+  position: relative; 
+}
+.nova-product-card .product-image img { 
+  width: 100%; 
+}
+.quick-add-overlay { 
+  position: absolute; 
+  bottom: 30px; 
+  right: 10px; 
+  background: #E0E07E; 
+  color: #000; 
+  border: none; 
+  padding: 8px 16px; 
+  font-size: 13px; 
+  font-weight: bold; 
+  border-radius: 50px; 
+  cursor: pointer; 
+  transition: 0.3s; 
+}
+.quick-add-overlay:hover { 
+  background: #d0d06e; 
+}
+.sold-overlay { 
+  position: absolute; 
+  bottom: 12px; 
+  right: 12px; 
+  background: #F4F3EC; 
+  color: red; 
+  font-weight: bold; 
+  padding: 6px 12px; 
+  border-radius: 8px; 
+}
+.nova-product-card .title { 
+  font-weight: 600; 
+  font-size: 23px; 
+  margin: 10px 0 4px; 
+  color: #000; 
+}
+.short-desc { 
+  font-size: 18px; 
+  font-weight: 600; 
+  color: #222; 
+  margin: 6px 0 10px; 
+  text-transform: uppercase; 
+}
+.price { 
+  font-size: 16px; 
+  color: #333; 
+  margin-bottom: 12px; 
+}
+.nova-overlay { 
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  color: #d6d636; 
+  font-family: cursive; 
+  font-size: 1.6rem; 
+  text-align: center; 
+  max-width: 80%; 
+}
+
+/* Tablet Styles */
+@media(max-width: 992px) {
+  .nova-right {
+    padding: 60px 40px;
+  }
+  .nova-heading {
+    font-size: 48px;
+  }
+  .nova-description {
+    font-size: 18px;
+  }
+  .nova-image {
+    height: 600px;
+    min-height: 600px;
+  }
+}
+
+/* Mobile Styles */
+@media(max-width: 768px) {
+  .nova-left, .nova-right { 
+    flex: 1 1 100%; 
+  }
+  .nova-image { 
+    height: 450px; 
+    min-height: 450px; 
+  }
+  .nova-product-card { 
+    max-width: 220px; 
+  }
+  .nova-heading { 
+    font-size: 36px; 
+  }
+  .nova-btn { 
+    width: 180px; 
+    height: 44px; 
+    line-height: 44px; 
+    font-size: 13px; 
+  }
+  .nova-right {
+    padding: 40px 20px;
+  }
+  .nova-badge {
+    font-size: 16px;
+  }
+  .nova-description {
+    font-size: 18px;
+  }
+  .nova-product-card .title {
+    font-size: 20px;
+  }
+  .short-desc {
+    font-size: 16px;
+  }
+  .nova-overlay {
+    font-size: 1.2rem;
+    bottom: 15px;
+  }
+  .quick-add-overlay {
+    bottom: 20px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile Styles */
+@media(max-width: 480px) {
+  .nova-image {
+    height: 350px;
+    min-height: 350px;
+  }
+  .nova-product-card {
+    max-width: 180px;
+  }
+  .nova-heading {
+    font-size: 28px;
+    margin: 8px 0;
+  }
+  .nova-description {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .nova-btn {
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+  }
+  .nova-overlay {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .quick-add-overlay {
+    bottom: 15px;
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  .nova-product-card .title {
+    font-size: 18px;
+  }
+  .short-desc {
+    font-size: 14px;
+  }
+}
+</style>
+
+<!-- ✅ AJAX ADD TO CART with Cart Refresh -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".quick-add-form").forEach(form => {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'X-Requested-With': 'XMLHttpRequest' }
+      })
+      .then(response => response.json())
+      .then(item => {
+        console.log("✅ Added:", item);
+
+        // ✅ Shopify Sections API ko call karke drawer refresh karenge
+        fetch(window.location.pathname + '?sections=cart-drawer,cart-icon-bubble')
+          .then(res => res.json())
+          .then(sections => {
+            // Cart Drawer update
+            const drawer = document.querySelector('cart-drawer'); 
+            if (drawer) {
+              drawer.innerHTML = new DOMParser().parseFromString(sections['cart-drawer'], 'text/html').body.innerHTML;
+              drawer.classList.add('active'); // open drawer
+              document.body.classList.add('overflow-hidden'); 
+            }
+
+            // Cart Icon Bubble update (cart quantity)
+            const bubble = document.querySelector('#cart-icon-bubble');
+            if (bubble && sections['cart-icon-bubble']) {
+              bubble.innerHTML = new DOMParser().parseFromString(sections['cart-icon-bubble'], 'text/html').body.innerHTML;
+            }
+          });
+      })
+      .catch(err => {
+        console.error("❌ Add to cart error:", err);
+      });
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "NOVA Product with Text",
+  "settings": [
+    { "type": "image_picker", "id": "background_image", "label": "Background Image" },
+    { "type": "product", "id": "product", "label": "Select Product" },
+    { "type": "text", "id": "product_short_desc", "label": "Product Short Description", "default": "ALL-IN-ONE HYDRATION SERUM" },
+    { "type": "text", "id": "badge", "label": "Top Label", "default": "CASA COMPLEX™" },
+    { "type": "text", "id": "heading_top", "label": "Heading (Top Line)", "default": "Hydration you" },
+    { "type": "text", "id": "heading_bottom", "label": "Heading (Bottom Line)", "default": "can feel" },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p><strong>The Casa Complex™</strong> is our signature marine blend. Think: microalgae, ocean minerals, and adaptogens that replenish and support your skin barrier.</p><ul><li>Locks in hydration</li><li>Calms sun‑stressed skin</li><li>Works before, during, and after exposure</li></ul>" },
+    { "type": "url", "id": "button_link", "label": "Button Link" },
+    { "type": "text", "id": "button_text", "label": "Button Text", "default": "LEARN MORE" },
+    { "type": "image_picker", "id": "image", "label": "Right Image" },
+    { "type": "text", "id": "image_text", "label": "Overlay Text on Image", "default": "Waterless. Performance-backed. Skin that feels like yours." }
+  ],
+  "presets": [
+    { "name": "NOVA Product with Text" }
+  ]
+}
+{% endschema %}

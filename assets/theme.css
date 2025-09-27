@@ -24751,5 +24751,13 @@ body.has-header-sticky .timeline {
 .guide__right {
   text-align: right;
 }
-
+/* Sirf collection page ke liye border remove */
+.collection {
+  border: none !important;
+  box-shadow: none !important;
+}
+.collection * {
+  border: none !important;
+  box-shadow: none !important;
+}
 /*! ============ Add any custom styles below this line ================== */

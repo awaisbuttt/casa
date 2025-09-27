@@ -1,0 +1,313 @@
+{% schema %}
+{
+  "name": "Custom Ritual",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_label",
+      "label": "Top Label Text (Blue)",
+      "default": "WHAT WE BELIEVE"
+    },
+    {
+      "type": "text",
+      "id": "heading_top",
+      "label": "Heading Top Line",
+      "default": "The Casa Noon"
+    },
+    {
+      "type": "text",
+      "id": "heading_bottom",
+      "label": "Heading Bottom Line",
+      "default": "difference"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+          "type": "url",
+          "id": "card_image_link",
+          "label": "Image Link"
+        },
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title",
+          "default": "Hydration comes first."
+        },
+        {
+          "type": "text",
+          "id": "card_description_top",
+          "label": "Card Description Top",
+          "default": "Because skin is a living organ,"
+        },
+        {
+          "type": "text",
+          "id": "card_description_bottom",
+          "label": "Card Description Bottom",
+          "default": "not a look."
+        },
+        {
+          "type": "range",
+          "id": "radius_top_left",
+          "label": "Top Left Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 50,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "radius_top_right",
+          "label": "Top Right Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 50,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "radius_bottom_right",
+          "label": "Bottom Right Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 50,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "radius_bottom_left",
+          "label": "Bottom Left Radius",
+          "min": 0,
+          "max": 300,
+          "step": 5,
+          "default": 50,
+          "unit": "px"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Custom Ritual Card Section",
+      "category": "Custom",
+      "blocks": [
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="crcs-cards">
+  <div class="crcs-header">
+    {% if section.settings.section_label != blank %}
+      <p class="crcs-label">{{ section.settings.section_label }}</p>
+    {% endif %}
+
+    <h2>
+      {{ section.settings.heading_top }}
+      <em>{{ section.settings.heading_bottom }}</em>
+    </h2>
+  </div>
+
+  <div class="crcs-card-wrapper">
+    {% for block in section.blocks %}
+      <div class="crcs-card" {{ block.shopify_attributes }}>
+        
+        {% if block.settings.card_image %}
+          <div 
+            class="crcs-card-image"
+            style="border-radius: {{ block.settings.radius_top_left }}px {{ block.settings.radius_top_right }}px {{ block.settings.radius_bottom_right }}px {{ block.settings.radius_bottom_left }}px;">
+            
+            {% if block.settings.card_image_link != blank %}
+              <a href="{{ block.settings.card_image_link }}" target="_blank">
+                <img src="{{ block.settings.card_image | image_url: width: 200 }}" alt="{{ block.settings.card_title }}">
+              </a>
+            {% else %}
+              <img src="{{ block.settings.card_image | image_url: width: 200 }}" alt="{{ block.settings.card_title }}">
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <!-- TEXT -->
+        <div class="crcs-card-content">
+          <!-- Title and top description inline -->
+          <p>
+            <strong>{{ block.settings.card_title }}</strong> 
+            {% if block.settings.card_description_top != blank %}
+              {{ block.settings.card_description_top }}
+            {% endif %}
+          </p>
+
+          <!-- Bottom description in new line -->
+          {% if block.settings.card_description_bottom != blank %}
+            <p class="crcs-bottom-text">{{ block.settings.card_description_bottom }}</p>
+          {% endif %}
+        </div>
+
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+.crcs-cards {
+  padding: 60px 80px;
+  background: #f7f5ef;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Header */
+.crcs-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+.crcs-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f4fc9;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.crcs-header h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #000;
+}
+.crcs-header h2 em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Layout */
+.crcs-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 60px;
+}
+.crcs-card {
+  display: flex;
+  align-items: center; /* ✅ Center text with image (now for desktop + mobile) */
+  text-align: left;
+}
+
+/* Image */
+.crcs-card-image {
+  width: 70px;
+  height: 80px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crcs-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text */
+.crcs-card-content p {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+}
+.crcs-card-content p strong {
+  font-weight: 700;
+  color: #000;
+  margin-right: 4px;
+}
+.crcs-bottom-text {
+  margin-top: 4px;
+  color: #555;
+  font-size: 14px;
+}
+ 
+/* ===================
+   ✅ Responsive
+   =================== */
+@media(max-width: 768px) {
+  .crcs-cards {
+    padding: 40px 20px;   /* smaller padding */
+  }
+
+  .crcs-header {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .crcs-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .crcs-header h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .crcs-card-wrapper {
+    grid-template-columns: 1fr; /* stack single column */
+    gap: 20px;
+  }
+
+  .crcs-card {
+    align-items: center;   /* ✅ keep image and text CENTER aligned on mobile too */
+  }
+
+  .crcs-card-image {
+    width: 60px;
+    height: 70px;
+    margin-right: 12px;
+  }
+
+  .crcs-card-content p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .crcs-bottom-text {
+    font-size: 13px;
+    margin-top: 3px;
+  }
+}
+
+@media(max-width: 480px) {
+  .crcs-cards {
+    padding: 30px 15px;
+  }
+
+  .crcs-header h2 {
+    font-size: 20px;
+  }
+
+  .crcs-card-image {
+    width: 50px;
+    height: 60px;
+  }
+
+  .crcs-card-content p {
+    font-size: 15px;
+  }
+}
+</style>

@@ -21,7 +21,7 @@
   assign header_icons_height = 34
 
   assign transparent_header = false
-  if template contains 'collection' and collection.image and section.settings.transparent_collection
+  if template contains 'collection' and section.settings.transparent_collection
     assign transparent_header = true
   elsif template contains 'article' and section.settings.transparent_article
     assign transparent_header = true
@@ -169,6 +169,33 @@
   {%- unless transparent_header -%}
     .main-content > .shopify-section:first-of-type .backdrop--linear:before { display: none; }
   {%- endunless -%}
+  
+  /* Force transparent header on product pages - completely remove background */
+  {%- if template.name == 'product' -%}
+    .theme__header {
+      background-color: transparent !important;
+      background-image: none !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+    }
+    .theme__header.has-border {
+      border-bottom: none !important;
+    }
+    .theme__header::before,
+    .theme__header::after {
+      display: none !important;
+    }
+    
+    /* Only switch to transparent logo if it exists, otherwise keep regular logo */
+    {%- if transparent_logo != blank -%}
+      .logo__img--color {
+        display: none !important;
+      }
+      .logo__img--transparent {
+        display: block !important;
+      }
+    {%- endif -%}
+  {%- endif -%}
 {%- endstyle -%}
 
 {%- capture logos -%}

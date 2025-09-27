@@ -1,0 +1,267 @@
+<style>
+  .mf-section {
+    background-color: #F4F3EC;
+    padding: 60px 20px;
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mf-container {
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    margin: 0 auto;
+  }
+
+  .mf-image {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .mf-founder-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+
+  .mf-overlay-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .mf-overlay-logo {
+    max-width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .mf-overlay-text {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    font-size: 85px;
+    font-weight: 400;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .mf-content {
+    flex: 1;
+    max-width: 400px;
+    color: #000000;
+    margin-top: -20px;
+  }
+
+  .mf-name {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-top: 65px;
+    margin-bottom: 12px;
+    font-weight: 400;
+    display: block;
+  }
+
+  .mf-title {
+    font-size: 48px;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .mf-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 30px;
+  }
+
+  .mf-quote {
+    font-style: italic;
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.5;
+    padding-left: 0;
+    border-left: none;
+    margin-top: 30px;
+  }
+
+  /* ===================== */
+  /* Mobile responsiveness */
+  /* ===================== */
+  @media (max-width: 768px) {
+    .mf-section {
+      padding: 40px 15px;
+      min-height: auto;
+    }
+
+    .mf-container {
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .mf-image {
+      max-width: 90%;
+    }
+
+    .mf-content {
+      max-width: 90%;
+      margin-top: 0;
+    }
+
+    .mf-title {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .mf-name {
+      margin-top: 20px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
+
+    .mf-desc {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .mf-quote {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .mf-overlay-text {
+      font-size: 24px;
+      bottom: 10px;
+      padding: 0 10px;
+      line-height: 1.1;
+    }
+
+    .mf-overlay-logo {
+      max-width: 50px;
+    }
+  }
+
+  /* Smaller phones (like iPhone SE / older Androids) */
+  @media (max-width: 480px) {
+    .mf-title {
+      font-size: 24px;
+    }
+
+    .mf-overlay-text {
+      font-size: 20px;
+    }
+
+    .mf-desc, .mf-quote {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<section class="mf-section">
+  <div class="mf-container">
+    <div class="mf-image">
+      {% if section.settings.founder_image %}
+        <img src="{{ section.settings.founder_image | image_url: width: 800 }}" alt="{{ section.settings.founder_name | default: 'Founder' }}" class="mf-founder-img">
+      {% else %}
+        <img src="https://via.placeholder.com/400x500/f5f1eb/000000?text=Founder+Image" alt="Founder Image Placeholder" class="mf-founder-img">
+      {% endif %}
+      
+      {% if section.settings.image_overlay_image != blank %}
+        <div class="mf-overlay-top">
+          <img src="{{ section.settings.image_overlay_image | image_url: width: 200 }}" alt="Overlay Image" class="mf-overlay-logo">
+        </div>
+      {% endif %}
+
+      {% if section.settings.image_overlay_text != blank %}
+        <div class="mf-overlay-text">{{ section.settings.image_overlay_text }}</div>
+      {% endif %}
+    </div>
+    
+    <div class="mf-content">
+      <div class="mf-name">{{ section.settings.founder_name | default: 'ANDI EATON ALLEMAN' }}</div>
+      
+      <h2 class="mf-title">{{ section.settings.main_title | default: 'Meet the Founder' }}</h2>
+      
+      <div class="mf-desc">
+        {{ section.settings.description | default: '<p>Andi Eaton Alleman has always built from the inside out — skin, ritual, movement, and meaning.</p><p>Before launching Casa Noor, she spent a decade on the road — first as a travel writer, then alongside her musician husband, clocking thousands of hours in airports, saltwater, and unfamiliar cities. Along the way, she studied Ayurveda, yoga, and ritual practices across cultures, always returning to one truth:</p>' }}
+      </div>
+      
+      <div class="mf-quote">
+        {{ section.settings.quote | default: "Skincare should feel like a place. Like your body knows it's safe here." }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Meet the Founder",
+  "settings": [
+    {
+      "type": "text",
+      "id": "founder_name",
+      "label": "Founder Name",
+      "default": "ANDI EATON ALLEMAN"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main Title",
+      "default": "Meet the Founder"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Andi Eaton Alleman has always built from the inside out — skin, ritual, movement, and meaning.</p><p>Before launching Casa Noor, she spent a decade on the road — first as a travel writer, then alongside her musician husband, clocking thousands of hours in airports, saltwater, and unfamiliar cities. Along the way, she studied Ayurveda, yoga, and ritual practices across cultures, always returning to one truth:</p>"
+    },
+    {
+      "type": "text",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Skincare should feel like a place. Like your body knows it's safe here."
+    },
+    {
+      "type": "image_picker",
+      "id": "founder_image",
+      "label": "Founder Image"
+    },
+    {
+      "type": "text",
+      "id": "image_overlay_text",
+      "label": "Overlay Text",
+      "default": "Meet Andi"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_overlay_image",
+      "label": "Overlay Image (Logo/Graphic)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Meet the Founder (Custom Responsive)"
+    }
+  ]
+}
+{% endschema %}

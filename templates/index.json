@@ -79,7 +79,7 @@
       "name": "NOVA Product with Text",
       "settings": {
         "background_image": "shopify://shop_images/dbfcb608-94a6-47d5-813e-89fae0f5c074_1.png",
-        "product": "sabbatical",
+        "product": "product-name-1",
         "product_short_desc": "ALL-IN-ONE HYDRATION SERUM",
         "badge": "our essentials",
         "heading_top": "One serum.",
@@ -101,7 +101,7 @@
         "button_link": "",
         "button_text": "LEARN MORE",
         "image": "shopify://shop_images/auzenir-_monteiro-dupe_1.png",
-        "image_text": ""
+        "image_text": "Waterless.  Performance-backed.Skin that feels like yours"
       }
     },
     "section-double": {
@@ -150,6 +150,7 @@
         "text",
         "buttons"
       ],
+      "disabled": true,
       "settings": {
         "image_width": "one-half",
         "text_alignment": "text-left",
@@ -166,6 +167,7 @@
     },
     "section-collection": {
       "type": "section-collection",
+      "disabled": true,
       "settings": {
         "featured_collection": "",
         "heading": "Our Best Sellers",
@@ -224,6 +226,7 @@
         "heading-1",
         "buttons-0"
       ],
+      "disabled": true,
       "settings": {
         "end_date": "2025-8-30",
         "end_time": "11:59",
@@ -246,6 +249,7 @@
     },
     "section-product": {
       "type": "section-product",
+      "disabled": true,
       "settings": {
         "product": "",
         "show_product_card": true,
@@ -278,6 +282,7 @@
         "collection",
         "collection-0"
       ],
+      "disabled": true,
       "settings": {
         "heading_font_size": "heading-x-large",
         "height": "sixty-fifty-height-hero",
@@ -316,6 +321,7 @@
         "image",
         "image-0"
       ],
+      "disabled": true,
       "settings": {
         "subheading": "",
         "heading": "More Than Just a Coffee Shop",
@@ -398,6 +404,7 @@
         "image-2",
         "image-3"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_font_size": "heading-medium",
@@ -451,6 +458,7 @@
         "button",
         "button-0"
       ],
+      "disabled": true,
       "settings": {
         "link": "",
         "message_spacing": 10,
@@ -507,6 +515,7 @@
         "logo-item-header-0",
         "logo-item-header-1"
       ],
+      "disabled": true,
       "settings": {
         "enable_heading_slider": true,
         "logo_opacity": 60,
@@ -518,6 +527,7 @@
     },
     "section-divider": {
       "type": "section-divider",
+      "disabled": true,
       "settings": {
         "show_line": true,
         "width": "wrapper",
@@ -562,6 +572,7 @@
         "review-0",
         "review-1"
       ],
+      "disabled": true,
       "settings": {
         "show_featured_image": true,
         "image_aspect_ratio": 1.3,
@@ -616,6 +627,7 @@
         "text-0",
         "product"
       ],
+      "disabled": true,
       "settings": {
         "image_width": "one-half",
         "text_alignment": "text-left",
@@ -636,37 +648,210 @@
         "newsletter": {
           "type": "newsletter",
           "settings": {
-            "subheading": "",
+            "badge_size": "80",
             "heading": "Sign up for our mailing list",
-            "heading_font_size": "heading-medium",
+            "heading_size": "28",
             "text": "<p>Sign up for our newsletter to stay in the loop on all things Groove, from exclusive offers to behind-the-scenes stories. Let’s stay connected and keep the coffee love going strong.</p>",
-            "text_font_size": "body-medium",
-            "text_columns": 1,
-            "align_text": "text-center",
-            "button_text": "Join",
-            "show_arrow": false,
-            "terms": false,
+            "text_size": "16",
             "show_name": true,
+            "button_text": "Join",
             "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_social_links": false,
-            "bg_color": "",
-            "color": "",
-            "heading_tag": "automatic"
+            "show_arrow": false
           }
         }
       },
       "block_order": [
         "newsletter"
       ],
+      "disabled": true,
+      "settings": {}
+    },
+    "founder_story_4ttktf": {
+      "type": "Founder-Story",
+      "name": "Founder Story Row With Collage",
       "settings": {
-        "width": "wrapper",
-        "height": "three-fifty-height-hero",
-        "mobile_height": "screen-height-one-half--mobile",
-        "color_scheme": "scheme-7",
-        "padding_top": 50,
-        "padding_bottom": 50
+        "label": "FOUNDER'S STORY",
+        "title": "Why Casa Noon Exists",
+        "text1": "Andi Alleman built Casa Noon because sunscreen wasn’t enough.\nShe spent years in the sun and still felt like her skin was missing something.\nSo she made skincare that hydrates, restores, and actually keeps up. One product. Built for motion. \nThis isn’t a vanity shelf serum. It earned a spot in her bag.",
+        "text2": "",
+        "text3": "",
+        "text4": "",
+        "button_text": "ALL ABOUT ANDI",
+        "button_link": "",
+        "image1": "shopify://shop_images/1-1272_1_1.png",
+        "image2": "shopify://shop_images/Meet_Andi_Alleman_2.png",
+        "image3": "shopify://shop_images/1-1391_1_1.png",
+        "image4": "shopify://shop_images/Screen_Recording_2025-08-22_at_1.21.20_PM_1_1.png",
+        "image5": "shopify://shop_images/Group_13_1.png"
+      }
+    },
+    "rituals_collection_7eB7hw": {
+      "type": "Rituals-Collection",
+      "name": "Rituals Collection",
+      "settings": {
+        "heading": "For your daily rituals",
+        "quote": "<p>Elevate your everyday with our carefully curated collection of essentials designed to bring comfort and style to your daily routines.</p>",
+        "button_text": "SHOP THE COLLECTION",
+        "button_link": "shopify://collections/all",
+        "featured_collection": "secrol-prodect",
+        "products_to_show": 9
+      }
+    },
+    "image_cards_with_GGnmBe": {
+      "type": "Image-Cards-with",
+      "blocks": {
+        "image_yk3gaP": {
+          "type": "image",
+          "settings": {
+            "card_image": "shopify://shop_images/Screenshot_2025-07-14_at_3.24.25_PM_1_1.png"
+          }
+        },
+        "image_DK6nLa": {
+          "type": "image",
+          "settings": {
+            "card_image": "shopify://shop_images/Screenshot_2025-07-14_at_3.26.34_PM_1.png"
+          }
+        },
+        "image_M8pynY": {
+          "type": "image",
+          "settings": {
+            "card_image": "shopify://shop_images/Screenshot_2025-07-14_at_3.26.54_PM_1.png"
+          }
+        },
+        "image_PRH9Dr": {
+          "type": "image",
+          "settings": {
+            "card_image": "shopify://shop_images/Screenshot_2025-07-14_at_3.27.58_PM_1.png"
+          }
+        },
+        "image_UqLTLL": {
+          "type": "image",
+          "settings": {
+            "card_image": "shopify://shop_images/Screenshot_2025-07-14_at_3.28.26_PM_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_yk3gaP",
+        "image_DK6nLa",
+        "image_M8pynY",
+        "image_PRH9Dr",
+        "image_UqLTLL"
+      ],
+      "name": "Image Cards Section",
+      "settings": {
+        "top_heading": "Skincare Made to Move.",
+        "bottom_heading": "Shared by The Women Who Do",
+        "top_text": "Real skin. Real movement. Real-life rituals.",
+        "bottom_text": "From post-swim mist downs to mid-flight resets, here's how the Casa community uses Sabbatical.",
+        "button_text": "SHOP SABBATICAL",
+        "button_link": "shopify://collections/all"
+      }
+    },
+    "custom_banner_ynDmW9": {
+      "type": "Custom-Banner",
+      "name": "Custom Banners",
+      "settings": {
+        "banner_image": "shopify://shop_images/awaii_512b7605-ce50-4439-be43-62878372089e.jpg",
+        "banner_heading": "Hydration that actually keeps up",
+        "banner_subheading": "No overthinking. No overpacking. Just one serum that goes with you.",
+        "button_1_text": "SHOP SABBATICAL",
+        "button_1_link": "",
+        "button_2_text": "TAKE THE QUIZ",
+        "button_2_link": ""
+      }
+    },
+    "image_card_section_CLYgb7": {
+      "type": "Image-Card-Section",
+      "blocks": {
+        "card_GcMgd7": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/casa-noon-tube-table-mockup_1_1.png",
+            "card_image_link": "",
+            "card_title": "Join the List",
+            "card_description_top": "Lorem ipsum dolor sit amet,",
+            "card_description_bottom": "consectetur adipiscing elit.",
+            "card_button_text": "SIGN UP",
+            "card_button_link": "shopify://collections",
+            "radius_top_left": 65,
+            "radius_top_right": 95,
+            "radius_bottom_right": 120,
+            "radius_bottom_left": 120
+          }
+        },
+        "card_GnD7K7": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/ac885689-8739-4e49-a5f5-a8fd98e25370_1_3.png",
+            "card_image_link": "",
+            "card_title": "Join TYB Community",
+            "card_description_top": "Lorem ipsum dolor sit amet,",
+            "card_description_bottom": "consectetur adipiscing elit.",
+            "card_button_text": "GET ACCESS",
+            "card_button_link": "shopify://collections",
+            "radius_top_left": 120,
+            "radius_top_right": 120,
+            "radius_bottom_right": 95,
+            "radius_bottom_left": 95
+          }
+        },
+        "card_M4RDq9": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/victoria-harder-dupe_1_1.png",
+            "card_image_link": "",
+            "card_title": "Read the Blog",
+            "card_description_top": "Lorem ipsum dolor sit amet,",
+            "card_description_bottom": "consectetur adipiscing elit.",
+            "card_button_text": "READ MORE",
+            "card_button_link": "shopify://collections",
+            "radius_top_left": 65,
+            "radius_top_right": 95,
+            "radius_bottom_right": 120,
+            "radius_bottom_left": 120
+          }
+        }
+      },
+      "block_order": [
+        "card_GcMgd7",
+        "card_GnD7K7",
+        "card_M4RDq9"
+      ],
+      "name": "SCMA Image Card Section",
+      "settings": {
+        "section_label": "COMMUNITY RITUALS",
+        "heading_top": "More than skincare.",
+        "heading_bottom": "This is how we live it.",
+        "subheading_top": "We’re not chasing trends — we’re building what skin actually needs in the sun and in real life.",
+        "subheading_bottom": "Join the women who’ve made Sabbatical a ritual."
+      }
+    },
+    "section_newsletter_9VXiad": {
+      "type": "section-newsletter",
+      "blocks": {
+        "newsletter_e4MQXm": {
+          "type": "newsletter",
+          "settings": {
+            "badge_image": "shopify://shop_images/Group_18_1.png",
+            "badge_size": "80",
+            "heading": "The key to the casa is yours",
+            "heading_size": "28",
+            "text": "<p>Sign up to receive news, promos, and inspiration via email.</p>",
+            "text_size": "16",
+            "show_name": true,
+            "button_text": "GET THE KEY",
+            "button_type": "btn--primary",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_e4MQXm"
+      ],
+      "name": "Newsletter",
+      "settings": {
+        "bg_image": "shopify://shop_images/maddien525_httpss.mj.runOWbsdRpHV-g_Two_blue_and_white_stripe_54ff8dd7-8805-44b1-a87c-86ac07e571b4_3_1.png"
       }
     }
   },
@@ -687,6 +872,12 @@
     "section-divider",
     "section-reviews",
     "section-double-0",
-    "section-newsletter"
+    "section-newsletter",
+    "founder_story_4ttktf",
+    "rituals_collection_7eB7hw",
+    "image_cards_with_GGnmBe",
+    "custom_banner_ynDmW9",
+    "image_card_section_CLYgb7",
+    "section_newsletter_9VXiad"
   ]
 }

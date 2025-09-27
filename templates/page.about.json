@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "baner_img_ea9EhB": {
+      "type": "baner-img",
+      "name": "SCMA Banner",
+      "settings": {
+        "banner_image": "shopify://shop_images/dbfcb608-94a6-47d5-813e-89fae0f5c074_2.png",
+        "banner_heading": "The Casa Story",
+        "banner_text1": "Built for women who live in motion, find calm in chaos,",
+        "banner_text2": "and crave something that works without asking for too much",
+        "banner_text3": ""
+      }
+    },
     "main-page": {
       "type": "main-page",
       "disabled": true,
@@ -26,317 +37,328 @@
         "heading_tag": "automatic"
       }
     },
-    "section-double": {
-      "type": "section-double",
+    "meet_the_founder_ePYRyf": {
+      "type": "Meet-the-Founder",
+      "name": "Meet the Founder",
+      "settings": {
+        "founder_name": "ANDI EATON ALLEMAN",
+        "main_title": "Meet the Founder",
+        "description": "<p>Andi Eaton Alleman has always built from the inside out — skin, ritual, movement, and meaning.</p><p>Before launching Casa Noor, she spent a decade on the road — first as a travel writer, then alongside her musician husband, clocking thousands of hours in airports, saltwater, and unfamiliar cities. Along the way, she studied Ayurveda, yoga, and ritual practices across cultures, always returning to one truth:</p>",
+        "quote": "Skincare should feel like a place. Like your body knows it's safe here.",
+        "founder_image": "shopify://shop_images/1-1445_1.png",
+        "image_overlay_text": "Meet Andi",
+        "image_overlay_image": "shopify://shop_images/Frame_119.avif"
+      }
+    },
+    "striped_background_mdEndF": {
+      "type": "Striped-Background",
+      "name": "Striped Background With Name",
+      "settings": {
+        "title": ""
+      }
+    },
+    "testimonial_with_logos_UyhKdH": {
+      "type": "Testimonial-With-Logos",
+      "name": "Testimonial With Logos",
+      "settings": {
+        "testimonial_text": "My skin was constantly in recovery mode — sun exposure, dry cabin air, long days on set or backstage. I didn’t need another 10-step routine. I needed hydration that actually held.",
+        "logo_1": "shopify://shop_images/Bon_Appetit_logo_png_200x_9f72eec0-5b86-45b2-91a5-9dd2bc65b42c.webp",
+        "logo_2": "shopify://shop_images/apartment-therapy-logo-vector_png_200x_0fea851f-3a9c-4e37-9775-122a098c9c3b.webp",
+        "logo_3": "shopify://shop_images/HYPEBEAST-Logo__2022_png_200x_d811951e-a14f-4537-ba29-d4b59f9ef7e7.avif"
+      }
+    },
+    "nova_product_wX3kz3": {
+      "type": "NOVAProduct",
+      "name": "NOVA Product with Text",
+      "settings": {
+        "background_image": "shopify://shop_images/1-1336_2.png",
+        "product": "",
+        "product_short_desc": "ALL-IN-ONE HYDRATION SERUM",
+        "badge": "how she got here",
+        "heading_top": "The Road to Casa Noon",
+        "heading_bottom": "",
+        "description": "<p>Andi has spent her career at the intersection of beauty, culture, and community. She led strategy in the beauty industry before founding a global studio that supports creative founders and future-focused brands. <br/></p><p>She’s also the author of three books on rituals, creativity, and modern living, guiding women worldwide toward ease, intuition, and self-trust.</p><p>Casa Noon is the next evolution of that work—hydration-first skincare shaped by years of experience, built for women who live in motion and need products that keep up.</p>",
+        "button_link": "",
+        "button_text": "",
+        "image_text": ""
+      }
+    },
+    "right_img_AbkXt4": {
+      "type": "right-img",
+      "name": "SCMA Section",
+      "settings": {
+        "badge": "what we make",
+        "heading_top": "Hydration-first skincare. Powered by the ocean. Built for motion.",
+        "heading_bottom": "",
+        "description": "<p>Our signature Casa Complex™ is a marine-powered hydration shield made with microalgae, ocean minerals, and adaptogenic botanicals. It restores what sun, salt, sweat, and stress strip away — before, during, and after exposure.</p>",
+        "button_link": "",
+        "button_text": "",
+        "image": "shopify://shop_images/auzenir-_monteiro-dupe_1.png",
+        "image_text": ""
+      }
+    },
+    "formulas_icons_section_3TdzGn": {
+      "type": "Formulas-Icons-Section",
       "blocks": {
-        "subheading": {
-          "type": "subheading",
+        "icon_block_qm4wRD": {
+          "type": "icon_block",
           "settings": {
-            "subheading": "Crafting the Perfect Cup",
-            "padding_bottom": 16
+            "icon": "shopify://shop_images/Frame_1.png",
+            "title": "Waterless",
+            "text": "(for potency + less waste)"
           }
         },
-        "heading": {
-          "type": "heading",
+        "icon_block_RHcjU8": {
+          "type": "icon_block",
           "settings": {
-            "title": "About our Brand",
-            "heading_font_size": "heading-medium",
-            "padding_bottom": 16,
-            "heading_tag": "automatic"
+            "icon": "shopify://shop_images/Frame_2.png",
+            "title": "Certified organic",
+            "text": "when possible"
           }
         },
-        "text": {
-          "type": "text",
+        "icon_block_zzhptj": {
+          "type": "icon_block",
           "settings": {
-            "text": "<p>We're more than a coffee brand—we're a community. We’re here to connect with fellow coffee lovers, share our passion, and explore the endless possibilities that coffee offers. From our local events and workshops to our online community, we’re all about bringing people together over a shared love of great coffee.</p>",
-            "text_font_size": "body-medium",
-            "padding_bottom": 16
+            "icon": "shopify://shop_images/Container_3.png",
+            "title": "Designed to Travel",
+            "text": "& Layer Effortlessly"
+          }
+        },
+        "icon_block_fc3jDJ": {
+          "type": "icon_block",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_3.png",
+            "title": "Made in",
+            "text": "the USA"
           }
         }
       },
       "block_order": [
-        "subheading",
-        "heading",
-        "text"
+        "icon_block_qm4wRD",
+        "icon_block_RHcjU8",
+        "icon_block_zzhptj",
+        "icon_block_fc3jDJ"
       ],
+      "name": "Formulas Icons Section",
       "settings": {
-        "image_width": "one-half",
-        "text_alignment": "text-left",
-        "layout": "is-reversed",
-        "width": "wrapper--full",
-        "height": "sixty-fifty-height-hero",
-        "mobile_height": "four-fifty-height-hero--mobile",
-        "reverse_blocks": false,
-        "color_scheme": "scheme-10",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_placeholder": true
+        "heading": "Our formulas are always:"
       }
     },
-    "section-announcement": {
-      "type": "section-announcement",
+    "custom_ritual_UHEJTF": {
+      "type": "Custom-Ritual",
       "blocks": {
-        "heading-0": {
-          "type": "heading",
+        "card_X4LE4X": {
+          "type": "card",
           "settings": {
-            "heading": "The right roast for the right vibe.",
-            "heading_font_size": "heading-x-small"
+            "card_image": "shopify://shop_images/auzenir-_monteiro-dupe_1_1.png",
+            "card_image_link": "",
+            "card_title": "Hydration comes first.",
+            "card_description_top": "Because skin is",
+            "card_description_bottom": "a living organ,not a look.",
+            "radius_top_left": 85,
+            "radius_top_right": 110,
+            "radius_bottom_right": 75,
+            "radius_bottom_left": 70
+          }
+        },
+        "card_nMRALe": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/mandi-carolina-dupe_1.png",
+            "card_image_link": "",
+            "card_title": "Less can do more.",
+            "card_description_top": "One serum > a full",
+            "card_description_bottom": "shelf.",
+            "radius_top_left": 85,
+            "radius_top_right": 110,
+            "radius_bottom_right": 75,
+            "radius_bottom_left": 75
+          }
+        },
+        "card_KzNWTw": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/fd50aed3-6426-4146-9808-978d6f8f3c09_1.png",
+            "card_image_link": "",
+            "card_title": "Clean is a starting line.",
+            "card_description_top": "Performance is",
+            "card_description_bottom": "the standard.",
+            "radius_top_left": 85,
+            "radius_top_right": 110,
+            "radius_bottom_right": 75,
+            "radius_bottom_left": 75
+          }
+        },
+        "card_bqCain": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/cameron-murray-dupe_2_1.png",
+            "card_image_link": "",
+            "card_title": "Skin should feel like yours.",
+            "card_description_top": "Even after",
+            "card_description_bottom": "hours in the sun.",
+            "radius_top_left": 85,
+            "radius_top_right": 110,
+            "radius_bottom_right": 75,
+            "radius_bottom_left": 75
+          }
+        },
+        "card_r3fPY7": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/alex-finley-dupe_2_2.png",
+            "card_image_link": "",
+            "card_title": "Luxury is ease.",
+            "card_description_top": "Not excess",
+            "card_description_bottom": "",
+            "radius_top_left": 85,
+            "radius_top_right": 110,
+            "radius_bottom_right": 75,
+            "radius_bottom_left": 75
           }
         }
       },
       "block_order": [
-        "heading-0"
+        "card_X4LE4X",
+        "card_nMRALe",
+        "card_KzNWTw",
+        "card_bqCain",
+        "card_r3fPY7"
       ],
+      "name": "Custom Ritual Card Section",
       "settings": {
-        "slider_speed": 7,
-        "text_alignment": "center",
-        "marquee_speed": 100,
-        "direction": "ticker-rtl",
-        "message_spacing": 10,
-        "show_border": false,
-        "layout": "marquee",
-        "color_scheme": "scheme-11",
-        "padding_top": 40,
-        "padding_bottom": 0
+        "section_label": "WHAT WE BELIEVE",
+        "heading_top": "The Casa Noon",
+        "heading_bottom": "difference"
       }
     },
-    "section-multicolumn": {
-      "type": "section-multicolumn",
+    "custom_banners_TMfrn4": {
+      "type": "Custom-Banners",
+      "name": "Custom Banner haf",
+      "settings": {
+        "banner_image": "shopify://shop_images/1-1093_2_1.png",
+        "heading_text": "Daily Rituals from our Founder"
+      }
+    },
+    "three_image_zFJrQ6": {
+      "type": "Three-Image",
       "blocks": {
-        "image": {
-          "type": "image",
+        "image_block_YYeGbh": {
+          "type": "image_block",
           "settings": {
-            "column_width": 33,
-            "image_width": 80,
-            "image_aspect_ratio": 1.2,
-            "mobile_image_aspect_ratio": 1,
-            "image_shape": "blob-three",
-            "title": "Quality Over Everything",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>From the moment our beans are hand-picked on sustainable farms, to the careful roasting process that brings out their unique flavors, every step is taken with precision and care. We believe that coffee should be fresh, flavorful, and ethically sourced, so you can feel good about every sip.</p>",
-            "text_font_size": "body-medium",
-            "button_text": "",
-            "button_url": "",
-            "button_type": "btn--primary hero__btn",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "heading_tag": "automatic"
+            "image": "shopify://shop_images/Screenshot_2025-07-19_at_11.54.24_AM_1.png",
+            "title_line1": "The title of a blog post goes",
+            "title_line2": "here",
+            "date": "August 04, 2025"
           }
         },
-        "image-0": {
-          "type": "image",
+        "image_block_XYNTDf": {
+          "type": "image_block",
           "settings": {
-            "column_width": 33,
-            "image_width": 80,
-            "image_aspect_ratio": 1.2,
-            "mobile_image_aspect_ratio": 1,
-            "image_shape": "blob-three",
-            "title": "Sustainability & Responsibility",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>We believe in doing good while making great coffee. That’s why we partner with farmers who practice sustainable agriculture, ensuring that our coffee is not only delicious but also responsibly sourced. We’re committed to reducing our environmental impact, from our eco-friendly packaging to our efforts to support the communities where our beans are grown.</p>",
-            "text_font_size": "body-medium",
-            "button_text": "",
-            "button_url": "",
-            "button_type": "btn--primary hero__btn",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "heading_tag": "automatic"
+            "image": "shopify://shop_images/IMG_3056_1_1.png",
+            "title_line1": "The title of a blog post goes",
+            "title_line2": "here",
+            "date": "August 04, 2025"
           }
         },
-        "image-1": {
-          "type": "image",
+        "image_block_MNdjrG": {
+          "type": "image_block",
           "settings": {
-            "column_width": 33,
-            "image_width": 80,
-            "image_aspect_ratio": 1.2,
-            "mobile_image_aspect_ratio": 1,
-            "image_shape": "blob-three",
-            "title": "A Community of Coffee Lovers",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>Each of our blends is crafted to bring out the best in every bean, highlighting the distinct flavors and aromas that make each cup special. Whether you’re drawn to the bold, adventurous notes of our signature blends, or the refined, complex tastes of our single-origin selections, we’ve got something for every coffee enthusiast.</p>",
-            "text_font_size": "body-medium",
-            "button_text": "",
-            "button_url": "",
-            "button_type": "btn--primary hero__btn",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "heading_tag": "automatic"
+            "image": "shopify://shop_images/alex-finley-dupe_2_1.png",
+            "title_line1": "The title of a blog post goes",
+            "title_line2": "here",
+            "date": "August 04, 2025"
           }
         }
       },
       "block_order": [
-        "image",
-        "image-0",
-        "image-1"
+        "image_block_YYeGbh",
+        "image_block_XYNTDf",
+        "image_block_MNdjrG"
       ],
-      "settings": {
-        "title": "",
-        "heading_font_size": "heading-medium",
-        "description": "",
-        "align_heading": "text-center",
-        "align_text": "text-center",
-        "width": "wrapper--full-padded",
-        "align_columns": "flex-align-top",
-        "layout_mobile": "1",
-        "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 0,
-        "heading_tag": "automatic"
-      }
+      "name": "Three Images with Two Titles & Date",
+      "settings": {}
     },
-    "section-custom-content": {
-      "type": "section-custom-content",
+    "custom_image_card_section_3dqAHE": {
+      "type": "Custom-Image-Card-Section",
       "blocks": {
-        "video": {
-          "type": "video",
+        "card_TPpMUN": {
+          "type": "card",
           "settings": {
-            "show_video_popup": false,
-            "video_popup_social": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "title": "",
-            "heading_font_size": "heading-large",
-            "text": "",
-            "text_font_size": "body-medium",
-            "flex_align": "align--middle-center",
-            "link_text": "",
-            "link": "",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "show_text_background": false,
-            "bg_color": "",
-            "color": "#ffffff",
-            "heading_tag": "automatic"
+            "card_image": "shopify://shop_images/casa-noon-tube-table-mockup_1_2.png",
+            "card_image_link": "",
+            "card_title": "Shop Sabbatical",
+            "card_description_top": "Lorem ipsum dolor sit amet,",
+            "card_description_bottom": "consectetur adipiscing elit.",
+            "card_button_text": "BUY NOW",
+            "card_button_link": "shopify://collections/frontpage",
+            "radius_top_left": 65,
+            "radius_top_right": 95,
+            "radius_bottom_right": 120,
+            "radius_bottom_left": 120
+          }
+        },
+        "card_mRxqYX": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/fd50aed3-6426-4146-9808-978d6f8f3c09_1_1.png",
+            "card_image_link": "",
+            "card_title": "Meet the Casa Complex",
+            "card_description_top": "Lorem ipsum dolor sit amet,",
+            "card_description_bottom": "consectetur adipiscing elit.",
+            "card_button_text": "INGREDIENTS",
+            "card_button_link": "shopify://collections/frontpage",
+            "radius_top_left": 120,
+            "radius_top_right": 120,
+            "radius_bottom_right": 95,
+            "radius_bottom_left": 95
+          }
+        },
+        "card_YwyjxK": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/katie-huber-rhoades-dupe_2_1.png",
+            "card_image_link": "",
+            "card_title": "Join the List",
+            "card_description_top": "Lorem ipsum dolor sit amet,",
+            "card_description_bottom": "consectetur adipiscing elit.",
+            "card_button_text": "SIGN UP",
+            "card_button_link": "shopify://collections/frontpage",
+            "radius_top_left": 65,
+            "radius_top_right": 95,
+            "radius_bottom_right": 120,
+            "radius_bottom_left": 120
           }
         }
       },
       "block_order": [
-        "video"
+        "card_TPpMUN",
+        "card_mRxqYX",
+        "card_YwyjxK"
       ],
+      "name": "Custom Image Card Section",
       "settings": {
-        "borders": false,
-        "gutters": false,
-        "width": "wrapper--full-padded",
-        "height": "five-fifty-height-hero",
-        "mobile_height": "screen-height-one-half--mobile",
-        "reverse_blocks": false,
-        "color_scheme": "",
-        "padding_top": 60,
-        "padding_bottom": 20
-      }
-    },
-    "section-custom-content-0": {
-      "type": "section-custom-content",
-      "blocks": {
-        "collection": {
-          "type": "collection",
-          "settings": {
-            "title": "All Products",
-            "bg_color": "#343d66",
-            "color": "#fafafa"
-          }
-        },
-        "image-2": {
-          "type": "image",
-          "settings": {
-            "title": "",
-            "heading_font_size": "heading-large",
-            "text": "",
-            "text_font_size": "body-medium",
-            "flex_align": "align--middle-center",
-            "show_text_background": false,
-            "bg_color": "",
-            "color": "",
-            "link_text": "",
-            "link": "",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "heading_tag": "automatic"
-          }
-        }
-      },
-      "block_order": [
-        "collection",
-        "image-2"
-      ],
-      "settings": {
-        "borders": false,
-        "gutters": false,
-        "width": "wrapper--full-padded",
-        "height": "screen-height-one-half",
-        "mobile_height": "screen-height-one-half--mobile",
-        "reverse_blocks": false,
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "section-press-logos": {
-      "type": "section-press-logos",
-      "blocks": {
-        "logo-item-text": {
-          "type": "logo-item-text",
-          "settings": {
-            "logo_width": 160,
-            "link": "",
-            "text": "",
-            "text_font_size": "body-x-large"
-          }
-        },
-        "logo-item-text-0": {
-          "type": "logo-item-text",
-          "settings": {
-            "logo_width": 160,
-            "link": "",
-            "text": "",
-            "text_font_size": "body-x-large"
-          }
-        },
-        "logo-item-text-1": {
-          "type": "logo-item-text",
-          "settings": {
-            "logo_width": 160,
-            "link": "",
-            "text": "",
-            "text_font_size": "body-x-large"
-          }
-        }
-      },
-      "block_order": [
-        "logo-item-text",
-        "logo-item-text-0",
-        "logo-item-text-1"
-      ],
-      "settings": {
-        "enable_heading_slider": false,
-        "logo_opacity": 60,
-        "title": "As seen in",
-        "color_scheme": "",
-        "padding_top": 80,
-        "padding_bottom": 50
-      }
-    },
-    "section-divider": {
-      "type": "section-divider",
-      "settings": {
-        "show_line": true,
-        "width": "wrapper",
-        "color_scheme": "scheme-11",
-        "padding_top": 0,
-        "padding_bottom": 50
+        "section_label": "COMMUNITY RITUALS",
+        "heading_top": "We don’t sell routines.",
+        "heading_bottom": "We build rituals.",
+        "subheading_top": "Casa Noon is skincare made for in-between hours and in-the-elements",
+        "subheading_middle": "moments. It’s a daily reset — no filters, no fluff.",
+        "subheading_bottom": "And it was built for you"
       }
     }
   },
   "order": [
+    "baner_img_ea9EhB",
     "main-page",
-    "section-double",
-    "section-announcement",
-    "section-multicolumn",
-    "section-custom-content",
-    "section-custom-content-0",
-    "section-press-logos",
-    "section-divider"
+    "meet_the_founder_ePYRyf",
+    "striped_background_mdEndF",
+    "testimonial_with_logos_UyhKdH",
+    "nova_product_wX3kz3",
+    "right_img_AbkXt4",
+    "formulas_icons_section_3TdzGn",
+    "custom_ritual_UHEJTF",
+    "custom_banners_TMfrn4",
+    "three_image_zFJrQ6",
+    "custom_image_card_section_3dqAHE"
   ]
 }

@@ -5,6 +5,16 @@
   #AnchorLogo--{{ section.id }} {
     --PT: {{ section.settings.padding_top }}px;
     --PB: {{ section.settings.padding_bottom }}px;
+    padding-top: var(--PT);
+    padding-bottom: var(--PB);
+    padding-left: 0;   /* 🚀 Left padding removed */
+    padding-right: 0;  /* 🚀 Right padding removed */
+    background-color: #f8f6f0; /* 🚀 Background color added */
+  }
+
+  #AnchorLogo--{{ section.id }} .wrapper--full-padded {
+    padding-left: 0 !important;   /* override left */
+    padding-right: 0 !important;  /* override right */
   }
 {%- endstyle -%}
 
@@ -25,7 +35,7 @@
       {%- if section.settings.logo -%}
         {%- render 'image',
           image: section.settings.logo,
-          sizes: '(min-width: 1400px) calc(100vw - 100px), (min-width: 750px) calc(100vw - 50px), calc(100vw - 32px)',
+          sizes: '(min-width: 1400px) 100vw, (min-width: 750px) 100vw, 100vw',
           desktop_height: 'image-height',
           mobile_height: 'image-height--mobile',
           show_backfill: false
@@ -45,7 +55,7 @@
       "type": "image_picker",
       "id": "logo",
       "label": "Image",
-      "info": "3200 x 1200px .jpg recommended. [Learn more](http://presidiodev.com/link/broadcast/images)"
+      "info": "3200 x 1200px .jpg recommended."
     },
     {
       "type": "header",

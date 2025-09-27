@@ -1,0 +1,306 @@
+{% comment %}
+  Section: Blog Grid Manual with Pagination
+  Save as: sections/blog-grid.liquid
+{% endcomment %}
+
+<section id="section-{{ section.id }}" class="blog-grid-section">
+  <div class="blog-grid-wrapper" id="blogGrid-{{ section.id }}">
+    {% for block in section.blocks %}
+      <div class="blog-item" data-index="{{ forloop.index }}">
+        {% if block.settings.image != blank %}
+          <img src="{{ block.settings.image | img_url: 'large' }}" alt="{{ block.settings.title }}">
+        {% endif %}
+        <h3 class="blog-title">{{ block.settings.title }}</h3>
+        <p class="blog-date">{{ block.settings.date }}</p>
+        <p class="blog-text">{{ block.settings.text }}</p>
+        <a href="{{ block.settings.link }}" class="blog-link">READ MORE</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Pagination -->
+  <div class="blog-pagination" id="pagination-{{ section.id }}"></div>
+</section>
+
+<style>
+  /* ✅ Section background color added */
+  .blog-grid-section {
+    background-color: #F4F3EC;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .blog-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .blog-item {
+    display: none; /* by default hidden, JS will show */
+  }
+
+  .blog-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .blog-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #000; /* black title */
+  }
+
+  .blog-date {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #000; /* black date */
+  }
+
+  .blog-text {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #000; /* black description */
+  }
+
+  .blog-link {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 500;
+    color: #000; /* black link */
+  }
+
+  .blog-pagination {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  /* General button reset */
+  .blog-pagination button {
+    font-size: 14px;
+    padding: 5px 10px;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none; /* default no border */
+    color: #000; /* all buttons black text */
+  }
+
+  /* Number buttons style */
+  .blog-pagination button.page-number {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    color: #000; /* black page numbers */
+  }
+
+  /* Hover effect for page numbers */
+  .blog-pagination button.page-number:hover {
+    border: 1px solid #000; /* hover border also black */
+    color: #000;
+  }
+
+  /* Active button styling (for numbers only) */
+  .blog-pagination button.page-number.active {
+    border: 1px solid #000;
+    background: none !important;
+    color: #000;
+    font-weight: bold;
+  }
+
+  /* Prev & Next plain link style */
+  .blog-pagination button.prev,
+  .blog-pagination button.next {
+    border: none !important;
+    background: none !important;
+    font-weight: normal;
+    color: #000; /* black for prev/next */
+  }
+
+  /* Mobile Responsive Styles */
+  @media(max-width: 768px) {
+    .blog-grid-wrapper {
+      grid-template-columns: 1fr;
+      padding-left: 20px;
+      padding-right: 20px;
+      gap: 20px;
+    }
+    
+    .blog-item img {
+      margin-bottom: 12px;
+    }
+    
+    .blog-title {
+      font-size: 16px;
+    }
+    
+    .blog-date {
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    
+    .blog-text {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    
+    .blog-link {
+      font-size: 13px;
+    }
+    
+    .blog-pagination {
+      margin-top: 25px;
+      gap: 8px;
+    }
+    
+    .blog-pagination button {
+      font-size: 13px;
+      padding: 6px 12px;
+      min-width: 40px; /* Better for touch targets */
+    }
+  }
+
+  /* Extra Small Mobile Devices */
+  @media(max-width: 480px) {
+    .blog-grid-wrapper {
+      padding-left: 15px;
+      padding-right: 15px;
+      gap: 15px;
+    }
+    
+    .blog-title {
+      font-size: 15px;
+    }
+    
+    .blog-date {
+      font-size: 12px;
+    }
+    
+    .blog-text {
+      font-size: 13px;
+    }
+    
+    .blog-link {
+      font-size: 12px;
+    }
+    
+    .blog-pagination {
+      gap: 5px;
+    }
+    
+    .blog-pagination button {
+      font-size: 12px;
+      padding: 8px 10px;
+      min-width: 36px;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  var sectionId = "{{ section.id }}";
+  var items = document.querySelectorAll("#blogGrid-" + sectionId + " .blog-item");
+  var pagination = document.getElementById("pagination-" + sectionId);
+  var perPage = 4;
+  var currentPage = 1;
+  var totalPages = Math.ceil(items.length / perPage);
+
+  function showPage(page){
+    currentPage = page;
+    items.forEach(function(item, index){
+      item.style.display = (index >= (page-1)*perPage && index < page*perPage) ? "block" : "none";
+    });
+    renderPagination();
+  }
+
+  function renderPagination(){
+    pagination.innerHTML = "";
+    if(totalPages <= 1) return;
+
+    // Prev button
+    if(currentPage > 1){
+      var prevBtn = document.createElement("button");
+      prevBtn.innerText = "Prev";
+      prevBtn.classList.add("prev");
+      prevBtn.onclick = function(){ showPage(currentPage-1); };
+      pagination.appendChild(prevBtn);
+    }
+
+    // Page numbers
+    for(var i=1; i<=totalPages; i++){
+      var btn = document.createElement("button");
+      btn.innerText = i;
+      btn.classList.add("page-number");
+      if(i === currentPage) btn.classList.add("active");
+      btn.onclick = (function(i){ return function(){ showPage(i); }; })(i);
+      pagination.appendChild(btn);
+    }
+
+    // Next button
+    if(currentPage < totalPages){
+      var nextBtn = document.createElement("button");
+      nextBtn.innerText = "Next";
+      nextBtn.classList.add("next");
+      nextBtn.onclick = function(){ showPage(currentPage+1); };
+      pagination.appendChild(nextBtn);
+    }
+  }
+
+  showPage(1);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Blog Grid Manual",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "blog_post",
+      "name": "Blog Post",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Blog Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Blog Title",
+          "default": "Title of blog post goes here"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "default": "September 04, 2024"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Read More Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Grid Manual",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

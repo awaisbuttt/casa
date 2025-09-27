@@ -9,36 +9,115 @@
  */
 {
   "sections": {
-    "featured-posts": {
-      "type": "featured-posts",
+    "bloom_fTFXhx": {
+      "type": "Bloom",
+      "name": "Bloom Section",
+      "settings": {
+        "badge": "FEATURED POST",
+        "heading": "Title of blog post\ngoes right here",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit\nNunc vulputate libero et velit interdum, ac aliquet odio\nmattis. Class aptent taciti sociosqu ad litora torquent..",
+        "readmore_text": "Read More",
+        "readmore_url": "shopify://pages/blog",
+        "image": "shopify://shop_images/alex-finley-dupe_2_1.png",
+        "image_text": ""
+      }
+    },
+    "blog_grid_manual_gc8yaq": {
+      "type": "Blog-Grid-Manual",
       "blocks": {
-        "featured_post": {
-          "type": "featured_post",
+        "blog_post_iXMhAg": {
+          "type": "blog_post",
           "settings": {
-            "subheading": "Featured post"
+            "image": "shopify://shop_images/cora-pursley-dupe_2_3_4x_1736504d-26a2-4156-b5be-859a9c8549f5.png",
+            "title": "Title of blog post goes here",
+            "date": "September 04, 2024",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "link": "shopify://pages/blog"
+          }
+        },
+        "blog_post_Hifite": {
+          "type": "blog_post",
+          "settings": {
+            "image": "shopify://shop_images/LogOff-15_3_4x_bceb0332-e366-4282-ab3c-f5d7396724be.png",
+            "title": "Title of blog post goes here",
+            "date": "September 04, 2024",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "link": "shopify://pages/blog"
+          }
+        },
+        "blog_post_7KQBBQ": {
+          "type": "blog_post",
+          "settings": {
+            "image": "shopify://shop_images/chandler-roberson-dupe_2_1.png",
+            "title": "Title of blog post goes here",
+            "date": "September 04, 2024",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "link": "shopify://pages/blog"
+          }
+        },
+        "blog_post_jUHHEL": {
+          "type": "blog_post",
+          "settings": {
+            "image": "shopify://shop_images/caitlin-smith-dupe_1_1.png",
+            "title": "Title of blog post goes here",
+            "date": "September 04, 2024",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "link": "shopify://pages/blog"
+          }
+        },
+        "blog_post_zTWxCd": {
+          "type": "blog_post",
+          "settings": {
+            "image": "shopify://shop_images/LogOff-15_3_4x_bceb0332-e366-4282-ab3c-f5d7396724be.png",
+            "title": "Title of blog post goes here",
+            "date": "September 04, 2024",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "link": "shopify://pages/blog"
+          }
+        },
+        "blog_post_tefNik": {
+          "type": "blog_post",
+          "settings": {
+            "image": "shopify://shop_images/cora-pursley-dupe_2_3_4x_1736504d-26a2-4156-b5be-859a9c8549f5.png",
+            "title": "Title of blog post goes here",
+            "date": "September 04, 2024",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "link": "shopify://pages/blog"
+          }
+        },
+        "blog_post_rEqWYU": {
+          "type": "blog_post",
+          "settings": {
+            "image": "shopify://shop_images/caitlin-smith-dupe_1_1.png",
+            "title": "Title of blog post goes here",
+            "date": "September 04, 2024",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "link": "shopify://pages/blog"
+          }
+        },
+        "blog_post_kxjgJn": {
+          "type": "blog_post",
+          "settings": {
+            "image": "shopify://shop_images/chandler-roberson-dupe_2_1.png",
+            "title": "Title of blog post goes here",
+            "date": "September 04, 2024",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "link": "shopify://pages/blog"
           }
         }
       },
       "block_order": [
-        "featured_post"
+        "blog_post_iXMhAg",
+        "blog_post_Hifite",
+        "blog_post_7KQBBQ",
+        "blog_post_jUHHEL",
+        "blog_post_zTWxCd",
+        "blog_post_tefNik",
+        "blog_post_rEqWYU",
+        "blog_post_kxjgJn"
       ],
-      "settings": {
-        "show_author": false,
-        "show_date": false,
-        "heading_font_size": "heading-large",
-        "show_button": true,
-        "button_text": "Read more",
-        "button_type": "btn--white",
-        "button_size": "",
-        "button_style": "btn--text",
-        "show_arrow": false,
-        "width": "wrapper--full",
-        "height": "five-fifty-height-hero",
-        "mobile_height": "screen-height-one-half--mobile",
-        "color_scheme": "scheme-10",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
+      "name": "Blog Grid Manual",
+      "settings": {}
     },
     "blog": {
       "type": "blog",
@@ -63,7 +142,8 @@
     }
   },
   "order": [
-    "featured-posts",
+    "bloom_fTFXhx",
+    "blog_grid_manual_gc8yaq",
     "blog"
   ]
 }
